@@ -16,7 +16,7 @@ const App: React.FC = () => {
                     <Route path="/" exact>
                         <Login />
                     </Route>
-                    <Route path="/pages" exact>
+                    <Route path="/pages">
                         <ContentPage />
                     </Route>
                 </Switch>

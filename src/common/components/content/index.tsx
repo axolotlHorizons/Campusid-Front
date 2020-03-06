@@ -4,18 +4,19 @@ import { Route, Switch } from 'react-router-dom';
 import Planning from '../planning';
 import Notes from '../notes';
 
+import styles from './style';
 const Content = () => {
+    const classes = styles();
     return (
-        <div>
+        <div className={classes.container}>
             <Switch>
-                <Route path="/planning" exact>
+                <Route path="/pages/planning">
                     <Planning />
                 </Route>
-                <Route path="/notes" exact>
+                <Route path="/pages/notes">
                     <Notes />
                 </Route>
             </Switch>
-            ;
         </div>
     );
 };

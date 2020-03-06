@@ -11,19 +11,19 @@ const Sidebar = () => {
     return (
         <div className={classes.container}>
             <MenuList>
-                <Link to="/config" className={classes.link}>
+                <Link to="/pages/config" className={classes.link}>
                     <MenuItem>Configuration</MenuItem>
                 </Link>
-                <Link to="/actu" className={classes.link}>
+                <Link to="/pages/actu" className={classes.link}>
                     <MenuItem>Actualitées</MenuItem>
                 </Link>
-                <Link to="/demande-admin" className={classes.link}>
-                    <MenuItem>Demandes administratives</MenuItem>
+                <Link to="/pages/planning" className={classes.link}>
+                    <MenuItem>Planning</MenuItem>
                 </Link>
-                <Link to="/orga" className={classes.link}>
-                    <MenuItem>Vie étudiante</MenuItem>
+                <Link to="/pages/notes" className={classes.link}>
+                    <MenuItem>Notes</MenuItem>
                 </Link>
-                <Link to="/external" className={classes.link}>
+                <Link to="/pages/external" className={classes.link}>
                     <MenuItem>Liens externes</MenuItem>
                 </Link>
                 <MenuItem>Logout</MenuItem>
