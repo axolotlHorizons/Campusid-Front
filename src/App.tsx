@@ -1,12 +1,12 @@
 import React from 'react';
 
-import ReduxExemple from './common/component/ReduxExemple';
 import './App.css';
+import ButtonCustom from './common/component/ButtonCustom';
 
 const App: React.FC = () => {
     return (
         <div className="App">
-            <ReduxExemple />
+           <ButtonCustom></ButtonCustom>
         </div>
     );
 };
