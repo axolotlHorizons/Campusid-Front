@@ -1,4 +1,6 @@
-export default {
+import { createUseStyles } from 'react-jss';
+
+export default createUseStyles({
     container: {
         position: 'absolute' as 'absolute',
         width: '100%',
@@ -14,4 +16,4 @@ export default {
     backgroundText: {
         color: '#fff',
     },
-};
+});

@@ -1,13 +1,27 @@
 import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import ReduxExemple from './common/component/ReduxExemple';
-import './App.css';
+import Login from './common/login';
+import ContentPage from './common/contentPage';
+
+import styles from './style';
 
 const App: React.FC = () => {
+    const classes = styles();
+
     return (
-        <div className="App">
-            <ReduxExemple />
-        </div>
+        <>
+            <BrowserRouter>
+                <Switch>
+                    <Route path="/" exact>
+                        <Login />
+                    </Route>
+                    <Route path="/pages" exact>
+                        <ContentPage />
+                    </Route>
+                </Switch>
+            </BrowserRouter>
+        </>
     );
 };
 

@@ -1,5 +1,4 @@
 import React, { useState } from 'react'; //import de modules en premier
-import { createUseStyles } from 'react-jss'; //import de modules en premier
 import { useDispatch, useSelector } from 'react-redux'; //import de modules en premier
 
 import { setLocale } from '../../state/actions';
@@ -13,8 +12,7 @@ const ReduxExemple = () => {
     const dispatch = useDispatch();
 
     /********* To access JSS inside component ***********/
-    const useStyles = createUseStyles(styles);
-    const classes = useStyles();
+    const classes = styles();
     /****************************************************/
 
     const [color, setColor] = useState([0, 0, 0]);
