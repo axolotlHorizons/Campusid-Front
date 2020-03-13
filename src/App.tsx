@@ -7,7 +7,7 @@ import './App.css';
 const App: React.FC = () => {
     return (
         <div className="App">
-            <Accordeon />
+            <Accordeon note="Default-Note" matiere="Default-Matiere" />
         </div>
     );
 };
