@@ -14,11 +14,9 @@ const ContentPage = () => {
     return (
         <>
             <Header />
-            <div className={classes.container}>
+            <div className={classes.contentContainer}>
                 <Sidebar />
-                <div className={classes.contentContainer}>
-                    <Content />
-                </div>
+                <Content />
             </div>
             <Footer />
         </>

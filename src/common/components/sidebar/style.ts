@@ -2,12 +2,19 @@ import { createUseStyles } from 'react-jss';
 
 export default createUseStyles({
     container: {
-        display: 'flex',
-        flexGrow: 0,
+        height: '100%',
+        backgroundColor: 'Firebrick',
+        color: 'white',
+        position: 'fixed',
     },
     link: {
+        display: 'flex',
         maxWidth: 240,
         textDecoration: 'none',
-        color: '#333',
+        color: '#FFF',
+    },
+    label: {
+        display: 'block',
+        marginLeft: 12,
     },
 });

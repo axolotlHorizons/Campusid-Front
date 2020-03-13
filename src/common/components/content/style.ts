@@ -4,6 +4,5 @@ export default createUseStyles({
     container: {
         display: 'flex',
         flexGrow: 1,
-        backgroundColor: 'purple',
     },
 });

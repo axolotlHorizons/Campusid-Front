@@ -1,7 +1,14 @@
 import { createUseStyles } from 'react-jss';
 
 export default createUseStyles({
-    container: {
-        backgroundColor: 'blue',
+    container: {},
+    toolbar: {
+        backgroundColor: 'Firebrick',
+    },
+    menuButton: {},
+    title: {},
+    profileIcon: {
+        position: 'absolute',
+        right: 0,
     },
 });
