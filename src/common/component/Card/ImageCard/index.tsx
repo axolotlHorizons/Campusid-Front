@@ -4,8 +4,8 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import { createUseStyles } from 'react-jss';
-import styles from './style';
+import Grid from '@material-ui/core/Grid';
+import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 
 type Props = {
     title: string;
@@ -13,45 +13,84 @@ type Props = {
     image: string;
     hasButton: boolean;
     buttonText: string;
+    altImage: string;
 };
 
 export default function ImageCard(props: Props) {
-    const useStyles = createUseStyles(styles);
-    const classes: Record<string, string> = useStyles();
+    // const classes: Record<string, string> = styles();
 
     const handleClick = () => {
         alert('Button clicked ! :D');
     };
 
-    const { image, title, hasButton, buttonText, text = '' } = props;
+    const { image, title, hasButton, buttonText, altImage, text = '' } = props;
+
+    const useStyles = makeStyles((theme: Theme) =>
+        createStyles({
+            root: {
+                flexGrow: 1,
+            },
+            content: {
+                padding: theme.spacing(2),
+                margin: '0',
+            },
+            image: {
+                width: 128,
+                height: 128,
+            },
+            img: {
+                margin: 'auto',
+                display: 'block',
+                maxWidth: '100%',
+                maxHeight: '100%',
+            },
+
+            buttonContainer: {
+                alignSelf: 'flex-end',
+            },
+        })
+    );
+
+    const classes = useStyles();
 
     return (
-        <Card classes={{ root: classes.customCard }}>
-            <CardContent>
-                <Typography variant="h3">{title}</Typography>
-            </CardContent>
+        <Card>
+            <Grid container direction-xs-column wrap="nowrap">
+                <Grid container justify="center" md={4} xs={12}>
+                    <img
+                        className={classes.img}
+                        src={image}
+                        alt={altImage}
+                    ></img>
+                </Grid>
 
-            <div className={classes.imgContainer}>
-                <img src={image}></img>
-            </div>
+                <Grid item md={6} xs={12} className={classes.content}>
+                    <CardContent>
+                        <Typography variant="h5">{title}</Typography>
+                    </CardContent>
 
-            <hr className={classes.hrStyle} />
-
-            <span>{text}</span>
-
-            {hasButton ? (
-                <CardActions>
-                    <Button
-                        classes={{ text: classes.btn }}
-                        size="small"
-                        onClick={handleClick}
+                    <span>{text}</span>
+                </Grid>
+                {hasButton ? (
+                    <Grid
+                        className={classes.buttonContainer}
+                        item
+                        md={2}
+                        xs={12}
                     >
-                        {buttonText}
-                    </Button>
-                </CardActions>
-            ) : (
-                ''
-            )}
+                        <CardActions>
+                            <Button
+                                size="medium"
+                                onClick={handleClick}
+                                variant="outlined"
+                                color="secondary"
+                            >
+                                {buttonText}
+                            </Button>
+                        </CardActions>
+                    </Grid>
+                ) : null}
+            </Grid>
         </Card>
     );
 }
