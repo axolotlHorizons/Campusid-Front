@@ -5,7 +5,8 @@ import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
+
+import styles from './style';
 
 type Props = {
     title: string;
@@ -23,26 +24,7 @@ export default function ImageCard(props: Props) {
 
     const { image, title, hasButton, buttonText, altImage, text = '' } = props;
 
-    const useStyles = makeStyles((theme: Theme) =>
-        createStyles({
-            content: {
-                padding: theme.spacing(2),
-                margin: '0',
-            },
-            img: {
-                margin: 'auto',
-                display: 'block',
-                maxWidth: '100%',
-                maxHeight: '100%',
-            },
-
-            buttonContainer: {
-                alignSelf: 'flex-end',
-            },
-        })
-    );
-
-    const classes = useStyles();
+    const classes = styles();
 
     return (
         <Card>

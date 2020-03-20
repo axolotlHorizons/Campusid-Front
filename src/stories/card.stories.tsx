@@ -1,6 +1,6 @@
 import React from 'react';
-import ImageCard from '../common/component/Card/ImageCard/index';
-import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
+import ImageCard from 'common/components/Card/ImageCard/index';
+import { withKnobs, text, boolean } from '@storybook/addon-knobs';
 import { createUseStyles } from 'react-jss';
 
 export default {

@@ -4,7 +4,6 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import { createUseStyles } from 'react-jss';
 import styles from './style';
 
 type Props = {
@@ -14,8 +13,7 @@ type Props = {
 };
 
 export default function SimpleCard(props: Props) {
-    const useStyles = createUseStyles(styles);
-    const classes: Record<string, string> = useStyles();
+    const classes: Record<string, string> = styles();
 
     const { title, text = '', style = 'darkTheme' } = props;
 
