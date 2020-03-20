@@ -9,67 +9,29 @@ import useStyles from './style'; //import relatifs en dernier
 
 function Accordeon(props : any) {
     const classes = useStyles();
-    
+    let matieres = props.matieres;
     return (
         <>
             <div className={classes.root}>
-                <ExpansionPanel>
-                    <ExpansionPanelSummary
-                    expandIcon={<ExpandMoreIcon />}
-                    aria-controls="panel1a-content"
-                    id="panel1a-header"
-                    >
-                    <Typography className={classes.heading}>{props.matiere}</Typography>
-                    </ExpansionPanelSummary>
-                    <ExpansionPanelDetails>
-                    <Typography>
-                        {props.note}
-                    </Typography>
-                    </ExpansionPanelDetails>
-                    <ExpansionPanelDetails>
-                    <Typography>
-                        {props.note}
-                    </Typography>
-                    </ExpansionPanelDetails>
-                </ExpansionPanel>
-                <ExpansionPanel>
-                    <ExpansionPanelSummary
-                    expandIcon={<ExpandMoreIcon />}
-                    aria-controls="panel2a-content"
-                    id="panel2a-header"
-                    >
-                    <Typography className={classes.heading}>{props.matiere}</Typography>
-                    </ExpansionPanelSummary>
-                    <ExpansionPanelDetails>
-                    <Typography>
-                        {props.note}
-                    </Typography>
-                    </ExpansionPanelDetails>
-                    <ExpansionPanelDetails>
-                    <Typography>
-                        {props.note}
-                    </Typography>
-                    </ExpansionPanelDetails>
-                </ExpansionPanel>
-                <ExpansionPanel>
-                    <ExpansionPanelSummary
-                    expandIcon={<ExpandMoreIcon />}
-                    aria-controls="panel3a-content"
-                    id="panel3a-header"
-                    >
-                    <Typography className={classes.heading}>{props.matiere}</Typography>
-                    </ExpansionPanelSummary>
-                    <ExpansionPanelDetails>
-                    <Typography>
-                        {props.note}
-                    </Typography>
-                    </ExpansionPanelDetails>
-                    <ExpansionPanelDetails>
-                    <Typography>
-                        {props.note}
-                    </Typography>
-                    </ExpansionPanelDetails>
-                </ExpansionPanel>
+                {matieres.map(function(matiere : any, index : any){
+                    return <ExpansionPanel>
+                        <ExpansionPanelSummary
+                            expandIcon={<ExpandMoreIcon />}
+                            aria-controls="panel1a-content"
+                            id="panel1a-header"
+                        >
+                            <Typography className={classes.heading}>{matiere.name}</Typography>
+                        </ExpansionPanelSummary>
+
+                        {matiere.results.map(function(note : any, indexB : any){
+                            return <ExpansionPanelDetails>
+                                <Typography>
+                                    {note.name}
+                                </Typography>
+                            </ExpansionPanelDetails>
+                        })}
+                    </ExpansionPanel>
+                })}
             </div>
         </>
     );
