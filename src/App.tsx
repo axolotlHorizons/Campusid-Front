@@ -1,13 +1,10 @@
 import React from 'react';
-
-import ReduxExemple from './common/component/ReduxExemple';
-import Accordeon from './common/component/Accordeon';
 import './App.css';
+import CallButtonCustom from './common/component/ButtonCustom/CallButtonCustom';
 
 const App: React.FC = () => {
     return (
         <div className="App">
-
         </div>
     );
 };
