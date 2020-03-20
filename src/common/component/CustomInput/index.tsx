@@ -1,6 +1,7 @@
 import React from 'react'
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
+import '@storybook/addon-knobs/register'; 
 
 type Props = {
     title: string;
@@ -39,6 +40,7 @@ export default function CustomInput() {
 
 
   return (
+    <div>
     <form className={classes.root} noValidate autoComplete="off">
      
       <div className="inputText">
@@ -48,9 +50,18 @@ export default function CustomInput() {
           label="CustomInput"
           defaultValue="valeur par défaut"
           variant="outlined"
+          size="small"
+          
         />
       </div>
     </form>
+   
+
+
+    </div>
+
+
+    
   );
 }
 
