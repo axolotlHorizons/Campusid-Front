@@ -1,16 +1,12 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+
 import { AppBar, Toolbar, IconButton, MenuItem, Menu } from '@material-ui/core';
-import { showSidebar } from '../../state/actions';
-import { getSidebar } from '../../state/selectors';
-import MenuIcon from '@material-ui/icons/Menu';
+
 import AccountCircle from '@material-ui/icons/AccountCircle';
 
 import styles from './style';
 
 const Header = () => {
-    const dispatch = useDispatch();
-    const sidebar = useSelector(getSidebar);
     const classes = styles();
     const [auth, setAuth] = React.useState(true);
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);

@@ -1,14 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import Login from './common/login';
-import ContentPage from './common/contentPage';
-
-import styles from './style';
+import Login from './pages/login';
+import Layout from './pages/layout';
 
 const App: React.FC = () => {
-    const classes = styles();
-
     return (
         <>
             <BrowserRouter>
@@ -16,8 +12,8 @@ const App: React.FC = () => {
                     <Route path="/" exact>
                         <Login />
                     </Route>
-                    <Route path="/pages">
-                        <ContentPage />
+                    <Route path="/">
+                        <Layout />
                     </Route>
                 </Switch>
             </BrowserRouter>

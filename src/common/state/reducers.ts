@@ -1,4 +1,4 @@
-import { SET_LOCALE, SHOW_SIDEBAR, SET_BACKGROUND_COLOR } from './actions';
+import { SET_LOCALE } from './actions';
 import { Reducer } from 'react';
 import { Action } from 'redux';
 
@@ -15,18 +15,6 @@ const commonReducer: Reducer<Record<string, any>, Action<any>> = (
                 locale: action.payload,
                 // The Reducer update the locale with the payload* provided in SET_LOCALE
             };
-        case SET_BACKGROUND_COLOR: {
-            return {
-                ...state,
-                backgroundColor: action.payload,
-            };
-        }
-        case SHOW_SIDEBAR: {
-            return {
-                ...state,
-                sidebar: action.payload,
-            };
-        }
 
         default:
             return state;

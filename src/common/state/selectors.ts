@@ -6,5 +6,3 @@ export const getLocale = (state: Record<string, any>) => state.locale;
 //Here we are targeting the backgroundColor
 export const getBackgroundColor = (state: Record<string, any>) =>
     state.backgroundColor;
-
-export const getSidebar = (state: Record<string, boolean>) => state.sidebar;

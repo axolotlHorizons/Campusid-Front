@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
 
 import { MenuList, MenuItem, Typography } from '@material-ui/core';
 
@@ -10,64 +9,58 @@ import ScheduleIcon from '@material-ui/icons/Schedule';
 import GradeIcon from '@material-ui/icons/Grade';
 import LinkIcon from '@material-ui/icons/Link';
 
-import { getSidebar } from '../../state/selectors';
-
 import styles from './style';
 
 const Sidebar = () => {
     const classes = styles();
 
     return (
-        <div className={classes.container}>
-            <MenuList>
+        <MenuList className={classes.container}>
+            <Link to="/configuration" className={classes.link}>
                 <MenuItem>
-                    <Link to="/pages/config" className={classes.link}>
-                        <SettingsIcon />
-                        <Typography className={classes.label}>
-                            Configuration
-                        </Typography>
-                    </Link>
+                    <SettingsIcon />
+                    <Typography classes={{ root: classes.label }}>
+                        Configuration
+                    </Typography>
                 </MenuItem>
-                <hr />
+            </Link>
 
+            <hr />
+            <Link to="/news" className={classes.link}>
                 <MenuItem>
-                    <Link to="/pages/actu" className={classes.link}>
-                        <SpeakerNotesIcon />
-                        <Typography classes={{ root: classes.label }}>
-                            Actualités
-                        </Typography>
-                    </Link>
+                    <SpeakerNotesIcon />
+                    <Typography className={classes.label}>
+                        Actualités
+                    </Typography>
                 </MenuItem>
-                <hr />
+            </Link>
 
+            <hr />
+            <Link to="/planning" className={classes.link}>
                 <MenuItem>
-                    <Link to="/pages/planning" className={classes.link}>
-                        <ScheduleIcon />
-                        <Typography className={classes.label}>
-                            Planning
-                        </Typography>
-                    </Link>
+                    <ScheduleIcon />
+                    <Typography className={classes.label}>Planning</Typography>
                 </MenuItem>
-                <hr />
+            </Link>
 
+            <hr />
+            <Link to="/grades" className={classes.link}>
                 <MenuItem>
-                    <Link to="/pages/notes" className={classes.link}>
-                        <GradeIcon />
-                        <Typography className={classes.label}>Notes</Typography>
-                    </Link>
+                    <GradeIcon />
+                    <Typography className={classes.label}>Notes</Typography>
                 </MenuItem>
-                <hr />
+            </Link>
 
+            <hr />
+            <Link to="/external-links" className={classes.link}>
                 <MenuItem>
-                    <Link to="/pages/external" className={classes.link}>
-                        <LinkIcon />
-                        <Typography className={classes.label}>
-                            Liens externes
-                        </Typography>
-                    </Link>
+                    <LinkIcon />
+                    <Typography className={classes.label}>
+                        Liens externes
+                    </Typography>
                 </MenuItem>
-            </MenuList>
-        </div>
+            </Link>
+        </MenuList>
     );
 };
 
