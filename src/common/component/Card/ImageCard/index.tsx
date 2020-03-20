@@ -27,6 +27,11 @@ export default function ImageCard(props: Props) {
 
     const useStyles = makeStyles((theme: Theme) =>
         createStyles({
+            [theme.breakpoints.down('xs')]: {
+                responsiveDirection: {
+                    flexDirection: 'column-reverse',
+                },
+            },
             root: {
                 flexGrow: 1,
             },
@@ -55,7 +60,7 @@ export default function ImageCard(props: Props) {
 
     return (
         <Card>
-            <Grid container direction-xs-column wrap="nowrap">
+            <Grid container className={classes.responsiveDirection} wrap="nowrap">
                 <Grid container justify="center" md={4} xs={12}>
                     <img
                         className={classes.img}
