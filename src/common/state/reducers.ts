@@ -1,6 +1,6 @@
-import { SET_LOCALE } from './actions';
 import { Reducer } from 'react';
 import { Action } from 'redux';
+import { SET_LOCALE } from './actions';
 
 //The Reducer is listening to all dispatched actions
 const commonReducer: Reducer<Record<string, any>, Action<any>> = (
