@@ -1,16 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import '@storybook/addon-knobs/register'; 
 
-type Props = {
-    title: string;
-    text: string;
-    type : string;
-    // image: string;
-    hasButton: boolean;
-    // buttonText: string;
-};
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -23,40 +15,27 @@ const useStyles = makeStyles((theme: Theme) =>
     },
   }),
 );
-export default function CustomInput() {
-  
+
+export default function CustomInput(props : any) {
+  let type = props.type;
+  let label = props.name;
+  let callBack = props.callBack;
   const classes = useStyles();
-
-  //  const useStyles = createUseStyles(styles);
-  //  const classes: Record<string, string> = useStyles();
-
-//     const handleClick = () => {
-//         alert('Button clicked ');
-//     };
-
-   //const { image, title,type, hasButton, text = '' } = props;
-
-
-
-
   return (
     <div>
-    <form className={classes.root} noValidate autoComplete="off">
      
       <div className="inputText">
         <TextField
           required
           id="outlined-required"
-          label="CustomInput"
+          label={label}
           defaultValue="valeur par défaut"
           variant="outlined"
           size="small"
-          
+          type={type}
+          onChange={(value) => callBack(value)}
         />
       </div>
-    </form>
-   
-
 
     </div>
 

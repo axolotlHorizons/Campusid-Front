@@ -10,13 +10,33 @@ export default {
     decorators: [withKnobs],
 };
 
-export const customInput = () => {
-   
-
+export const customInputPassword = () => {
+    let inputComputed = (value : any) => {
+        console.log("value");
+        console.log(value.target.value);
+    };
     return (
         <div className="customInput">
         <CustomInput
-        // title={text('Title', 'searchBar')}
+         name="Enter your password"
+         type="password"
+         callBack={inputComputed}
+        />
+        </div>
+    );
+};
+
+export const customInputMail = () => {
+    let inputComputed = (value : any) => {
+      console.log("value");
+      console.log(value.target.value);
+    };
+    return (
+        <div className="customInput">
+        <CustomInput
+         name="Enter your mail"
+         type="mail"
+         callBack={inputComputed}
         />
         </div>
     );
