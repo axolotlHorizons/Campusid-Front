@@ -17,8 +17,6 @@ type Props = {
 };
 
 export default function ImageCard(props: Props) {
-    // const classes: Record<string, string> = styles();
-
     const handleClick = () => {
         alert('Button clicked ! :D');
     };
@@ -27,16 +25,9 @@ export default function ImageCard(props: Props) {
 
     const useStyles = makeStyles((theme: Theme) =>
         createStyles({
-            root: {
-                flexGrow: 1,
-            },
             content: {
                 padding: theme.spacing(2),
                 margin: '0',
-            },
-            image: {
-                width: 128,
-                height: 128,
             },
             img: {
                 margin: 'auto',
@@ -55,8 +46,8 @@ export default function ImageCard(props: Props) {
 
     return (
         <Card>
-            <Grid container direction-xs-column wrap="nowrap">
-                <Grid container justify="center" md={4} xs={12}>
+            <Grid container direction="row">
+                <Grid item container justify="center" md={4} xs={12}>
                     <img
                         className={classes.img}
                         src={image}
