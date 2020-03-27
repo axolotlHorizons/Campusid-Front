@@ -3,7 +3,9 @@
 import { createStore, compose } from 'redux';
 import commonReducer from './common/state/reducers';
 
-const initialState = { locale: 'fr', backgroundColor: [] };
+const initialState = {
+    locale: 'fr',
+};
 
 export default createStore(
     commonReducer,

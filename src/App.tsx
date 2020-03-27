@@ -1,13 +1,23 @@
 import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import ReduxExemple from './common/component/ReduxExemple';
-import './App.css';
+import Login from 'pages/login';
+import Layout from 'pages/layout';
 
 const App: React.FC = () => {
     return (
-        <div className="App">
-            <ReduxExemple />
-        </div>
+        <>
+            <BrowserRouter>
+                <Switch>
+                    <Route path="/" exact>
+                        <Login />
+                    </Route>
+                    <Route path="/">
+                        <Layout />
+                    </Route>
+                </Switch>
+            </BrowserRouter>
+        </>
     );
 };
 
