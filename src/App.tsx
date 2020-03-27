@@ -1,12 +1,12 @@
 import React from 'react';
 
-import ReduxExemple from './common/component/ReduxExemple';
+import TabCustom from './common/component/TabCustom';
 import './App.css';
 
 const App: React.FC = () => {
     return (
         <div className="App">
-            <ReduxExemple />
+            <TabCustom />
         </div>
     );
 };
