@@ -1,21 +1,24 @@
 import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import ReduxExemple from './common/component/ReduxExemple';
-import './App.css';
-import ImgInformations from './common/component/ImgInformation';
-import Button from '@material-ui/core/Button';
-
+import Login from 'pages/login';
+import Layout from 'pages/layout';
 
 const App: React.FC = () => {
-    let listEleve = ["", "",""];
     return (
-        <div className="App">
-            {listEleve.map((eleve) => {
-                return <ImgInformations></ImgInformations>
-            })}
-        </div>
+        <>
+            <BrowserRouter>
+                <Switch>
+                    <Route path="/" exact>
+                        <Login />
+                    </Route>
+                    <Route path="/">
+                        <Layout />
+                    </Route>
+                </Switch>
+            </BrowserRouter>
+        </>
     );
 };
 
 export default App;
-
