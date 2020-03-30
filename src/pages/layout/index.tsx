@@ -12,7 +12,9 @@ const Layout = () => {
 
     return (
         <>
-            <Header />
+            <div>
+                <Header />
+            </div>
             <div className={classes.container}>
                 <div>
                     <Sidebar />
