@@ -14,7 +14,7 @@ const Layout = () => {
         <>
             <Header />
             <div className={classes.container}>
-                <div className={classes.sidebarContainer}>
+                <div>
                     <Sidebar />
                 </div>
                 <Content />
