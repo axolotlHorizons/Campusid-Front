@@ -24,10 +24,14 @@ const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         paper: {
             background: "#B70000",
-            color: "white"
+            color: "white",
+            top: "unset",
+            position: "unset",
+            boxShadow: "inset 0px -2px 2px 0px rgba(0,0,0,0.15)"
         },
         root: {
             display: 'flex',
+            height: "100%"
         },
         appBar: {
             zIndex: theme.zIndex.drawer + 1,
@@ -117,18 +121,17 @@ const Sidebar = () => {
                         {!open ? <ChevronRightIcon style={{ fontSize: 30, color: "white" }} ></ChevronRightIcon> : <ChevronLeftIcon style={{ fontSize: 40, color: "white" }}></ChevronLeftIcon>}
                     </IconButton>
                 </div>
-                <Divider />
-                <List>
+                <List >
                     <Link to="/grades" style={{textDecoration: "none" }}>
-                        <ListItem button>
-                                <ListItemIcon >
+                        <ListItem button divider={true} style={{marginTop: "10px", paddingTop: "25px", paddingBottom: "25px"}}>
+                                <ListItemIcon>
                                     <GradeIcon style={{ fontSize: 30, color: "white" }} />
                                 </ListItemIcon>
                                 <ListItemText style={{ fontSize: 30, color: "white"}} primary={'Vie étudiante'} />
                         </ListItem>
                     </Link>
                     <Link to="/news" style={{textDecoration: "none" }}>
-                        <ListItem button>
+                        <ListItem button divider={true} style={{ paddingTop: "25px", paddingBottom: "25px"}}>
                                 <ListItemIcon >
                                     <SpeakerNotesIcon style={{ fontSize: 30, color: "white" }}  />
                                 </ListItemIcon>
@@ -136,7 +139,7 @@ const Sidebar = () => {
                         </ListItem>
                     </Link>
                     <Link to="/external-links" style={{textDecoration: "none" }}>
-                        <ListItem button>
+                        <ListItem button divider={true}>
                                 <ListItemIcon >
                                     <LinkIcon style={{ fontSize: 30, color: "white" }} />
                                 </ListItemIcon>
@@ -144,7 +147,7 @@ const Sidebar = () => {
                         </ListItem>
                     </Link>
                     <Link to="/configuration" color="White" style={{textDecoration: "none" }}>
-                        <ListItem button>
+                        <ListItem button divider={true} style={{paddingTop: "25px", paddingBottom: "25px"}}>
                                 <ListItemIcon >
                                     <SettingsIcon style={{ fontSize: 30, color: "white" }} />
                                 </ListItemIcon>
