@@ -7,8 +7,6 @@ import store from './store';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-import Planning from '../src/common/components/Planning/index';
-
 ReactDOM.render(
     <Provider store={store}>
         <App />
