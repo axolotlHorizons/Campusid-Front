@@ -1,13 +1,23 @@
 import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import TabCustom from './common/component/TabCustom';
-import './App.css';
+import Login from 'pages/login';
+import Layout from 'pages/layout';
 
 const App: React.FC = () => {
     return (
-        <div className="App">
-            <TabCustom />
-        </div>
+        <>
+            <BrowserRouter>
+                <Switch>
+                    <Route path="/" exact>
+                        <Login />
+                    </Route>
+                    <Route path="/">
+                        <Layout />
+                    </Route>
+                </Switch>
+            </BrowserRouter>
+        </>
     );
 };
 
