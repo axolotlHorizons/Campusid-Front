@@ -5,6 +5,7 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import interactionPlugin from '@fullcalendar/interaction'; // needed for dayClick
 import styles from './style';
+import moment from 'moment';
 import '@fullcalendar/core/main.css';
 import '@fullcalendar/daygrid/main.css';
 import '@fullcalendar/timegrid/main.css';
@@ -13,7 +14,10 @@ import '@fullcalendar/list/main.css';
 type Props = {
     title?: string;
     start?: Date;
+    end?: Date;
     allDay?: String;
+    rendering?: String;
+    backgroundColor?: String;
 };
 
 interface DemoAppState {
@@ -29,9 +33,14 @@ export default function Planning(props: Props) {
     const [calendarWeekends, setCalendarWeekends] = useState(true);
     const [calendarEvents, setcalendarEvents] = useState([
         {
-            title: 'Event Now',
-            start: new Date(),
+            title: 'JAVA',
+            start: moment().toDate(),
+            end: moment()
+                .add(3, 'hours')
+                .toDate(),
             allDay: '',
+            // rendering: 'background',
+            backgroundColor: 'red',
         },
     ]);
 
@@ -43,9 +52,13 @@ export default function Planning(props: Props) {
         alert('here');
         let newEvent = {
             // creates a new array
-            title: 'New Event',
-            start: arg.date,
+            title: 'DEEP LEARNING',
+            start: moment().toDate(),
+            end: moment()
+                .add(6, 'hours')
+                .toDate(),
             allDay: arg.allDay,
+            backgroundColor: 'green',
         };
 
         setcalendarEvents([...calendarEvents, newEvent]);
