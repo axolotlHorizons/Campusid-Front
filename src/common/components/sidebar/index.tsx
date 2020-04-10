@@ -16,6 +16,7 @@ import SettingsIcon from '@material-ui/icons/Settings';
 import SpeakerNotesIcon from '@material-ui/icons/SpeakerNotes';
 import GradeIcon from '@material-ui/icons/Grade';
 import LinkIcon from '@material-ui/icons/Link';
+import QueryBuilderIcon from '@material-ui/icons/QueryBuilder';
 
 const drawerWidth = 240;
 
@@ -129,6 +130,27 @@ const Sidebar = () => {
                     </IconButton>
                 </div>
                 <List>
+                    <Link to="/planning" style={{ textDecoration: 'none' }}>
+                        <ListItem
+                            button
+                            divider={true}
+                            style={{
+                                marginTop: '10px',
+                                paddingTop: '25px',
+                                paddingBottom: '25px',
+                            }}
+                        >
+                            <ListItemIcon>
+                                <QueryBuilderIcon
+                                    style={{ fontSize: 30, color: 'white' }}
+                                />
+                            </ListItemIcon>
+                            <ListItemText
+                                style={{ fontSize: 30, color: 'white' }}
+                                primary={'Planning'}
+                            />
+                        </ListItem>
+                    </Link>
                     <Link to="/grades" style={{ textDecoration: 'none' }}>
                         <ListItem
                             button
