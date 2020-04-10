@@ -3,9 +3,9 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import Login from 'pages/login';
 import Layout from 'pages/layout';
-import TabCustom from 'common/component/TabCustom'
 
-var tabArray = ["Note", "Admin", "Perso"]
+
+
 
 const App: React.FC = () => {
     return (
@@ -20,7 +20,6 @@ const App: React.FC = () => {
                     </Route>
                 </Switch>
             </BrowserRouter>
-            <TabCustom onglets={tabArray}></TabCustom>
         </>
     );
 };

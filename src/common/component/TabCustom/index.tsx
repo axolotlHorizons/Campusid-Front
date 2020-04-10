@@ -46,22 +46,24 @@ function TabCustom(props : any)
     setValue(newValue);
   };
   
-  const printOnglet = props.onglets.map((onglet:any) =>
-    <div className="Onglet">
-      <Tabs value={onglet} onChange={handleChange}>
-        <Tab label={onglet}/>
-      </Tabs>
-    </div>
-  )
+  const printOnglet = props.onglets.map((onglet:any, index: any) =>
+        <Tab label={onglet} id={'simple-tab-' + index}/>
+  );
 
   return (
     <div className={classes.root}>
       <AppBar position="static">
-        {printOnglet}
+          <div className="Onglet">
+              <Tabs value={value} onChange={handleChange}>
+                  {printOnglet}
+              </Tabs>
+          </div>
       </AppBar>
-      <TabPanel value={value} index={1}>
-        {printOnglet}
-      </TabPanel>
+        {props.onglets.map((onglet: any, index: any) =>
+            <TabPanel value={value} index={index}>
+                <p>Onglet : {index}</p>
+            </TabPanel>
+        )}
     </div>
   );
 }
