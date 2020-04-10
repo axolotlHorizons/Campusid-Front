@@ -20,13 +20,13 @@ function Accordeon(props : any) {
                             aria-controls="panel1a-content"
                             id="panel1a-header"
                         >
-                            <Typography className={classes.heading}>{matiere.name}</Typography>
+                            <Typography className={classes.heading}>{matiere.name} {matiere.icon} {matiere.credit}</Typography>
                         </ExpansionPanelSummary>
 
                         {matiere.results.map(function(note : any, indexB : any){
                             return <ExpansionPanelDetails>
                                 <Typography>
-                                    {note.name}
+                                    {note.name} {note.type} {note.coeficient} {note.note} {note.moyenneClasse} {note.commentaire}
                                 </Typography>
                             </ExpansionPanelDetails>
                         })}
