@@ -14,6 +14,7 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
+import { Link } from 'react-router-dom';
 
 
 export default function FormDialog() {
@@ -76,13 +77,15 @@ export default function FormDialog() {
                 />
 
                 <DialogActions style={{display: 'flex'}}>
-                    <div style ={{ margin:"auto", backgroundColor: 'white'  }} >
-                        <ButtonCustom
-                        callBack={callBackButton}
-                        typeButton="contained"
-                        valueButton="Se connecter"
-                         />
-                    </div>
+                    <Link to="/index" style={{textDecoration: "none" }}>
+                        <div style ={{ margin:"auto", backgroundColor: 'white'  }} >
+                            <ButtonCustom
+                            callBack={callBackButton}
+                            typeButton="contained"
+                            valueButton="Se connecter"
+                             />
+                        </div>
+                    </Link>
                 </DialogActions>
                 </Dialog>
             </div>
