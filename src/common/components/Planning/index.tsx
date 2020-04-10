@@ -11,13 +11,32 @@ import '@fullcalendar/daygrid/main.css';
 import '@fullcalendar/timegrid/main.css';
 import '@fullcalendar/list/main.css';
 
+type EventCourse = {
+    idCourse: number;
+    idTypeCourse: number;
+    idMatter: number;
+    idTeacher: number;
+    idClass: number;
+    dateStart: string;
+    dateEnd: string;
+    presentTeacher: boolean;
+    comments: string;
+    idClassNavigation: number;
+    idMatterNavigation: number;
+    idTeacherNavigation: number;
+    idTypeCourseNavigation: number;
+    title: string; // todo aggregated datas ...
+    backgroundColor: string;
+};
+
 type Props = {
-    title?: string;
-    start?: Date;
-    end?: Date;
-    allDay?: String;
-    rendering?: String;
-    backgroundColor?: String;
+    // title?: string;
+    // start?: Date;
+    // end?: Date;
+    // allDay?: String;
+    // rendering?: String;
+    // backgroundColor?: String;
+    events: EventCourse;
 };
 
 interface DemoAppState {
@@ -25,43 +44,62 @@ interface DemoAppState {
     calendarEvents: EventInput[];
 }
 
-export default function Planning(props: Props) {
+const fakesEvents: EventCourse[] = [
+    {
+        idCourse: 1,
+        idTypeCourse: 1,
+        idMatter: 1,
+        idTeacher: 1,
+        idClass: 1,
+        dateStart: '2020-04-10 09:00:00',
+        dateEnd: '2020-04-10 11:00:00',
+        presentTeacher: true,
+        comments: 'No comment',
+        idClassNavigation: 1,
+        idMatterNavigation: 1,
+        idTeacherNavigation: 1,
+        idTypeCourseNavigation: 1,
+        title: 'Java',
+        backgroundColor: 'red',
+    },
+    {
+        idCourse: 2,
+        idTypeCourse: 2,
+        idMatter: 2,
+        idTeacher: 2,
+        idClass: 2,
+        dateStart: '2020-04-10 11:00:00',
+        dateEnd: '2020-04-10 13:00:00',
+        presentTeacher: true,
+        comments: 'No comment',
+        idClassNavigation: 2,
+        idMatterNavigation: 2,
+        idTeacherNavigation: 2,
+        idTypeCourseNavigation: 2,
+        title: 'C#',
+        backgroundColor: 'purple',
+    },
+];
+
+const transformEvents = fakesEvents.map(event => ({
+    start: moment(event.dateStart).toDate(),
+    end: moment(event.dateEnd).toDate(),
+    title: event.title,
+    backgroundColor: event.backgroundColor,
+}));
+
+export default function Planning() {
+    console.log(transformEvents);
     const classes = styles();
 
     const calendarComponentRef = React.createRef<FullCalendar>();
 
     const [calendarWeekends, setCalendarWeekends] = useState(true);
-    const [calendarEvents, setcalendarEvents] = useState([
-        {
-            title: 'JAVA',
-            start: moment().toDate(),
-            end: moment()
-                .add(3, 'hours')
-                .toDate(),
-            allDay: '',
-            // rendering: 'background',
-            backgroundColor: 'red',
-        },
-    ]);
+    const [calendarEvents, setcalendarEvents] = useState(transformEvents);
 
+    console.log(calendarEvents);
     const toggleWeekends = () => {
         setCalendarWeekends(!calendarWeekends);
-    };
-
-    const handleDateClick = (arg: any) => {
-        alert('here');
-        let newEvent = {
-            // creates a new array
-            title: 'DEEP LEARNING',
-            start: moment().toDate(),
-            end: moment()
-                .add(6, 'hours')
-                .toDate(),
-            allDay: arg.allDay,
-            backgroundColor: 'green',
-        };
-
-        setcalendarEvents([...calendarEvents, newEvent]);
     };
 
     return (
@@ -82,7 +120,11 @@ export default function Planning(props: Props) {
                     ref={calendarComponentRef}
                     weekends={calendarWeekends}
                     events={calendarEvents}
-                    dateClick={handleDateClick}
+                    // dateClick={handleDateClick}
+                    locale={'fr'}
+                    minTime="08:00:00"
+                    maxTime="19:00:00"
+                    height="auto"
                 />
             </div>
         </div>
