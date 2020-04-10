@@ -122,7 +122,7 @@ const Sidebar = () => {
                     </IconButton>
                 </div>
                 <List >
-                    <Link to="/grades" style={{textDecoration: "none" }}>
+                    <Link to="/planning" style={{textDecoration: "none" }}>
                         <ListItem button divider={true} style={{marginTop: "10px", paddingTop: "25px", paddingBottom: "25px"}}>
                                 <ListItemIcon>
                                     <GradeIcon style={{ fontSize: 30, color: "white" }} />

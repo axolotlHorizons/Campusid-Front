@@ -38,6 +38,7 @@ const useStyles = makeStyles((theme: Theme) =>
       '& .MuiTextField-root': {
         margin: theme.spacing(1),
         width: 200,
+        background: "white"
       },
     },
   }),
