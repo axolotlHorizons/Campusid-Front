@@ -25,7 +25,7 @@ export default function FormDialog() {
     };
 
     const handleClose = () => {
-        setOpen(false);
+        //setOpen(false);
     };
 
     const callBackButton = (event: any) => {
@@ -44,8 +44,8 @@ export default function FormDialog() {
     };
     
     return (
-        <div>
-            <Dialog open={open} onClose={handleClose} PaperProps={{style: {backgroundColor: '#870D0D', boxShadow: 'none',}, }} aria-labelledby="form-dialog-title">
+        <div >
+            <Dialog style={{backgroundImage: "url('https://thumbs.gfycat.com/NeedyFalseGosling-size_restricted.gif')", backgroundSize: "cover"}} open={open} onClose={handleClose} PaperProps={{style: {backgroundColor: '#870D0D', boxShadow: 'none',}, }} aria-labelledby="form-dialog-title">
                 <DialogTitle style={{textAlign:"center",backgroundColor: 'white'}} id="form-dialog-title" >Connexion</DialogTitle>
                 <DialogContent>
                     <CustomInput
