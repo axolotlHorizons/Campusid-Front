@@ -12,6 +12,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 
+import SchoolIcon from '@material-ui/icons/School';
 import SettingsIcon from '@material-ui/icons/Settings';
 import SpeakerNotesIcon from '@material-ui/icons/SpeakerNotes';
 import GradeIcon from '@material-ui/icons/Grade';
@@ -128,6 +129,14 @@ const Sidebar = () => {
                                     <GradeIcon style={{ fontSize: 30, color: "white" }} />
                                 </ListItemIcon>
                                 <ListItemText style={{ fontSize: 30, color: "white"}} primary={'Vie étudiante'} />
+                        </ListItem>
+                    </Link>
+                    <Link to="/grades" style={{textDecoration: "none" }}>
+                        <ListItem button divider={true} style={{marginTop: "10px", paddingTop: "25px", paddingBottom: "25px"}}>
+                            <ListItemIcon>
+                                <SchoolIcon style={{ fontSize: 30, color: "white" }} />
+                            </ListItemIcon>
+                            <ListItemText style={{ fontSize: 30, color: "white"}} primary={'Notes'} />
                         </ListItem>
                     </Link>
                     <Link to="/news" style={{textDecoration: "none" }}>
