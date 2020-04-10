@@ -16,6 +16,7 @@ import SettingsIcon from '@material-ui/icons/Settings';
 import SpeakerNotesIcon from '@material-ui/icons/SpeakerNotes';
 import GradeIcon from '@material-ui/icons/Grade';
 import LinkIcon from '@material-ui/icons/Link';
+import PeopleIcon from '@material-ui/icons/People';
 
 
 const drawerWidth = 240;
@@ -152,6 +153,14 @@ const Sidebar = () => {
                                     <SettingsIcon style={{ fontSize: 30, color: "white" }} />
                                 </ListItemIcon>
                                 <ListItemText primary={'Configuration'} style={{ fontSize: 30, color: "white"}}/>
+                        </ListItem>
+                    </Link>
+                    <Link to="/trombinoscope" color="White" style={{textDecoration: "none" }}>
+                        <ListItem button divider={true} style={{paddingTop: "25px", paddingBottom: "25px"}}>
+                            <ListItemIcon >
+                                <PeopleIcon style={{ fontSize: 30, color: "white" }} />
+                            </ListItemIcon>
+                            <ListItemText primary={'Trombinoscope'} style={{ fontSize: 30, color: "white"}}/>
                         </ListItem>
                     </Link>
                 </List>
