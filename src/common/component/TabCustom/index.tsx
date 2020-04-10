@@ -47,7 +47,7 @@ function TabCustom(props : any)
   };
   
   const printOnglet = props.onglets.map((onglet:any, index: any) =>
-        <Tab label={onglet} id={'simple-tab-' + index}/>
+        <Tab label={onglet.name} id={'simple-tab-' + index}/>
   );
 
   return (
@@ -61,7 +61,7 @@ function TabCustom(props : any)
       </AppBar>
         {props.onglets.map((onglet: any, index: any) =>
             <TabPanel value={value} index={index}>
-                <p>Onglet : {index}</p>
+                {onglet.component}
             </TabPanel>
         )}
     </div>
