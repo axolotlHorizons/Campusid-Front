@@ -22,11 +22,11 @@ import ButtonCustom from '../ButtonCustom';
 type User = {
     name: string;
     firstname: string;
-    avatar: string;
+    avatar?: string;
 };
 const Header = () => {
     const classes = styles();
-    const auth = localStorage.getItem('id_token');
+    const auth = !!localStorage.getItem('id_token');
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
     const open = Boolean(anchorEl);
     const user: User = useSelector(getUser);
@@ -58,7 +58,9 @@ const Header = () => {
                                 component="h6"
                                 className={classes.userName}
                             >
-                                {user?.firstname ? user?.firstname : 'Prénom'}
+                                {user
+                                    ? `${user.name} ${user.firstname}`
+                                    : 'Nom Prénom'}
                             </Typography>
                             <IconButton
                                 aria-label="account of current user"
@@ -69,8 +71,8 @@ const Header = () => {
                             >
                                 {user?.avatar ? (
                                     <img
-                                        width="75%"
-                                        src={user?.avatar}
+                                        width="20%"
+                                        src={user.avatar}
                                         alt="avatar"
                                     />
                                 ) : (
@@ -113,24 +115,24 @@ const Header = () => {
                                             height: '75px',
                                             width: '75px',
                                         }}
-                                        alt="Prénom"
+                                        alt="Nom Prénom"
                                     >
                                         {user?.avatar ? (
                                             <img
-                                                width="75%"
-                                                src={user?.avatar}
+                                                width="50%"
+                                                src={user.avatar}
                                                 alt="avatar"
                                             />
                                         ) : (
-                                            <AccountCircle />
+                                            'NP'
                                         )}
                                     </Avatar>
                                     <Typography
                                         variant="h6"
-                                        component="div"
+                                        component="h6"
                                         style={{ textAlign: 'center' }}
                                     >
-                                        {user?.name && user?.firstname
+                                        {user
                                             ? `${user.name} ${user.firstname}`
                                             : 'Nom Prénom'}
                                     </Typography>

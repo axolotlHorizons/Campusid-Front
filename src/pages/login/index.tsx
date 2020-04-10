@@ -8,7 +8,6 @@ import {
     DialogTitle,
     Radio,
     FormControlLabel,
-    Button,
 } from '@material-ui/core';
 
 import CustomInput from 'common/components/CustomInput';
@@ -22,11 +21,6 @@ export default function FormDialog() {
     const [isAuthenticated, setIsAuthenticated] = useState(
         !!localStorage.getItem('id_token')
     );
-    const onClick = () => {
-        getUser(1).then(res => dispatch(setUser(res)));
-        localStorage.setItem('id_token', authentication_key);
-        setIsAuthenticated(!!localStorage.getItem('id_token'));
-    };
 
     const [open, setOpen] = React.useState(true);
 
@@ -41,6 +35,11 @@ export default function FormDialog() {
     const callBackButton = (event: any) => {
         console.log('event');
         console.log(event);
+        ////////DB TEST TO REMOVE
+        getUser(1).then(res => dispatch(setUser(res)));
+        localStorage.setItem('id_token', authentication_key);
+        setIsAuthenticated(!!localStorage.getItem('id_token'));
+        ///////
     };
 
     const inputMailComputed = (value: any) => {
@@ -118,8 +117,6 @@ export default function FormDialog() {
                     </Link>
                 </DialogActions>
             </Dialog>
-            <Button onClick={onClick} />
-            {isAuthenticated ? 'logged' : 'not logged'}
         </div>
     );
 }

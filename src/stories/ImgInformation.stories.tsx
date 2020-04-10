@@ -1,5 +1,5 @@
 import React from 'react';
-import ImgInformation from '../common/component/ImgInformation';
+import ImgInformation from 'common/components/ImgInformation';
 import { Provider } from 'react-redux';
 
 import store from '../store';
@@ -10,12 +10,12 @@ export default {
 };
 
 export const ImgInformations = () => {
-    let listEleve = ["", "",""];
+    let listEleve = ['', '', ''];
     return (
         <div>
-            {listEleve.map((eleve) => {
-                return <ImgInformation></ImgInformation>
+            {listEleve.map(eleve => {
+                return <ImgInformation></ImgInformation>;
             })}
         </div>
     );
-}
+};
