@@ -1,10 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import clsx from 'clsx';
-import { Drawer, makeStyles, Theme, createStyles} from '@material-ui/core';
+import { Drawer, makeStyles, Theme, createStyles } from '@material-ui/core';
 import List from '@material-ui/core/List';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
@@ -17,21 +16,20 @@ import SpeakerNotesIcon from '@material-ui/icons/SpeakerNotes';
 import GradeIcon from '@material-ui/icons/Grade';
 import LinkIcon from '@material-ui/icons/Link';
 
-
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         paper: {
-            background: "#B70000",
-            color: "white",
-            top: "unset",
-            position: "unset",
-            boxShadow: "inset 0px -2px 2px 0px rgba(0,0,0,0.15)"
+            background: '#B70000',
+            color: 'white',
+            top: 'unset',
+            position: 'unset',
+            boxShadow: 'inset 0px -2px 2px 0px rgba(0,0,0,0.15)',
         },
         root: {
             display: 'flex',
-            height: "100%"
+            height: '100%',
         },
         appBar: {
             zIndex: theme.zIndex.drawer + 1,
@@ -89,7 +87,7 @@ const useStyles = makeStyles((theme: Theme) =>
             flexGrow: 1,
             padding: theme.spacing(3),
         },
-    }),
+    })
 );
 
 const Sidebar = () => {
@@ -112,46 +110,107 @@ const Sidebar = () => {
                     paper: clsx({
                         [classes.drawerOpen]: open,
                         [classes.drawerClose]: !open,
-                        [classes.paper]: true
+                        [classes.paper]: true,
                     }),
                 }}
             >
                 <div className={classes.toolbar}>
                     <IconButton onClick={handleDrawerOpen}>
-                        {!open ? <ChevronRightIcon style={{ fontSize: 30, color: "white" }} ></ChevronRightIcon> : <ChevronLeftIcon style={{ fontSize: 40, color: "white" }}></ChevronLeftIcon>}
+                        {!open ? (
+                            <ChevronRightIcon
+                                style={{ fontSize: 30, color: 'white' }}
+                            ></ChevronRightIcon>
+                        ) : (
+                            <ChevronLeftIcon
+                                style={{ fontSize: 40, color: 'white' }}
+                            ></ChevronLeftIcon>
+                        )}
                     </IconButton>
                 </div>
-                <List >
-                    <Link to="/grades" style={{textDecoration: "none" }}>
-                        <ListItem button divider={true} style={{marginTop: "10px", paddingTop: "25px", paddingBottom: "25px"}}>
-                                <ListItemIcon>
-                                    <GradeIcon style={{ fontSize: 30, color: "white" }} />
-                                </ListItemIcon>
-                                <ListItemText style={{ fontSize: 30, color: "white"}} primary={'Vie étudiante'} />
+                <List>
+                    <Link to="/grades" style={{ textDecoration: 'none' }}>
+                        <ListItem
+                            button
+                            divider={true}
+                            style={{
+                                marginTop: '10px',
+                                paddingTop: '25px',
+                                paddingBottom: '25px',
+                            }}
+                        >
+                            <ListItemIcon>
+                                <GradeIcon
+                                    style={{ fontSize: 30, color: 'white' }}
+                                />
+                            </ListItemIcon>
+                            <ListItemText
+                                style={{ fontSize: 30, color: 'white' }}
+                                primary={'Vie étudiante'}
+                            />
                         </ListItem>
                     </Link>
-                    <Link to="/news" style={{textDecoration: "none" }}>
-                        <ListItem button divider={true} style={{ paddingTop: "25px", paddingBottom: "25px"}}>
-                                <ListItemIcon >
-                                    <SpeakerNotesIcon style={{ fontSize: 30, color: "white" }}  />
-                                </ListItemIcon>
-                                <ListItemText primary={'Actualités'} style={{ fontSize: 30, color: "white"}}/>
+                    <Link to="/news" style={{ textDecoration: 'none' }}>
+                        <ListItem
+                            button
+                            divider={true}
+                            style={{
+                                paddingTop: '25px',
+                                paddingBottom: '25px',
+                            }}
+                        >
+                            <ListItemIcon>
+                                <SpeakerNotesIcon
+                                    style={{ fontSize: 30, color: 'white' }}
+                                />
+                            </ListItemIcon>
+                            <ListItemText
+                                primary={'Actualités'}
+                                style={{ fontSize: 30, color: 'white' }}
+                            />
                         </ListItem>
                     </Link>
-                    <Link to="/external-links" style={{textDecoration: "none" }}>
+                    <Link
+                        to="/external-links"
+                        style={{ textDecoration: 'none' }}
+                    >
                         <ListItem button divider={true}>
-                                <ListItemIcon >
-                                    <LinkIcon style={{ fontSize: 30, color: "white" }} />
-                                </ListItemIcon>
-                                <ListItemText primary={'Demande administrative'} style={{ fontSize: 30, color: "white", whiteSpace: "normal"}}/>
+                            <ListItemIcon>
+                                <LinkIcon
+                                    style={{ fontSize: 30, color: 'white' }}
+                                />
+                            </ListItemIcon>
+                            <ListItemText
+                                primary={'Demande administrative'}
+                                style={{
+                                    fontSize: 30,
+                                    color: 'white',
+                                    whiteSpace: 'normal',
+                                }}
+                            />
                         </ListItem>
                     </Link>
-                    <Link to="/configuration" color="White" style={{textDecoration: "none" }}>
-                        <ListItem button divider={true} style={{paddingTop: "25px", paddingBottom: "25px"}}>
-                                <ListItemIcon >
-                                    <SettingsIcon style={{ fontSize: 30, color: "white" }} />
-                                </ListItemIcon>
-                                <ListItemText primary={'Configuration'} style={{ fontSize: 30, color: "white"}}/>
+                    <Link
+                        to="/configuration"
+                        color="White"
+                        style={{ textDecoration: 'none' }}
+                    >
+                        <ListItem
+                            button
+                            divider={true}
+                            style={{
+                                paddingTop: '25px',
+                                paddingBottom: '25px',
+                            }}
+                        >
+                            <ListItemIcon>
+                                <SettingsIcon
+                                    style={{ fontSize: 30, color: 'white' }}
+                                />
+                            </ListItemIcon>
+                            <ListItemText
+                                primary={'Configuration'}
+                                style={{ fontSize: 30, color: 'white' }}
+                            />
                         </ListItem>
                     </Link>
                 </List>
