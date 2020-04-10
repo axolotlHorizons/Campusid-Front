@@ -1,12 +1,22 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Button, Snackbar } from '@material-ui/core';
-
 import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
+import {
+    Dialog,
+    DialogActions,
+    DialogContent,
+    DialogTitle,
+    Radio,
+    FormControlLabel,
+    Button,
+} from '@material-ui/core';
+
+import CustomInput from 'common/components/CustomInput';
+import ButtonCustom from 'common/components/ButtonCustom';
 import { setUser } from 'common/state/actions';
 import { getUser } from 'api';
 
-const Login = () => {
+export default function FormDialog() {
     const dispatch = useDispatch();
     const authentication_key = 'toto';
     const [isAuthenticated, setIsAuthenticated] = useState(
@@ -18,41 +28,98 @@ const Login = () => {
         setIsAuthenticated(!!localStorage.getItem('id_token'));
     };
 
-    return (
-        <>
-            <div>
-                <Button onClick={onClick} variant="outlined">
-                    Send user info to redux + auth key to localestorage
-                </Button>
-            </div>
-            <div>
-                <Snackbar
-                    anchorOrigin={{
-                        vertical: 'bottom',
-                        horizontal: 'left',
-                    }}
-                    open={true}
-                    message={
-                        isAuthenticated ? (
-                            <span>
-                                "You are logged !
-                                <Link style={{ color: 'red' }} to="/idboard">
-                                    Click here to go to the IDboard
-                                </Link>
-                            </span>
-                        ) : (
-                            <span>
-                                "You are not logged !
-                                <Link style={{ color: 'red' }} to="/idboard">
-                                    Click here to go to the IDboard
-                                </Link>
-                            </span>
-                        )
-                    }
-                />
-            </div>
-        </>
-    );
-};
+    const [open, setOpen] = React.useState(true);
 
-export default Login;
+    const handleClickOpen = () => {
+        setOpen(true);
+    };
+
+    const handleClose = () => {
+        //setOpen(false);
+    };
+
+    const callBackButton = (event: any) => {
+        console.log('event');
+        console.log(event);
+    };
+
+    const inputMailComputed = (value: any) => {
+        console.log('Value ID : ');
+        console.log(value.target.value);
+    };
+
+    const inputPasswordComputed = (value: any) => {
+        console.log('value Password : ');
+        console.log(value.target.value);
+    };
+
+    return (
+        <div>
+            <Dialog
+                style={{
+                    backgroundImage:
+                        "url('https://thumbs.gfycat.com/NeedyFalseGosling-size_restricted.gif')",
+                    backgroundSize: 'cover',
+                }}
+                open={open}
+                onClose={handleClose}
+                PaperProps={{
+                    style: { backgroundColor: '#870D0D', boxShadow: 'none' },
+                }}
+                aria-labelledby="form-dialog-title"
+            >
+                <DialogTitle
+                    style={{ textAlign: 'center', backgroundColor: 'white' }}
+                    id="form-dialog-title"
+                >
+                    Connexion
+                </DialogTitle>
+                <DialogContent>
+                    <CustomInput
+                        id="outlined-required"
+                        variant="outlined"
+                        name="N°IDBoard"
+                        type="ID"
+                        style={{ margin: 20, backgroundColor: 'white' }}
+                        size="medium"
+                        callBack={inputMailComputed}
+                        hasIcon={false}
+                    />
+
+                    <CustomInput
+                        id="outlined-required"
+                        variant="outlined"
+                        name="Mot de passe"
+                        type="password"
+                        style={{ margin: 20, backgroundColor: 'white' }}
+                        size="medium"
+                        callBack={inputPasswordComputed}
+                        hasIcon={false}
+                    />
+                </DialogContent>
+                <FormControlLabel
+                    value="Save"
+                    control={<Radio />}
+                    style={{ margin: 20, backgroundColor: '870D0D' }}
+                    label="Se souvenir de moi"
+                />
+
+                <DialogActions style={{ display: 'flex' }}>
+                    <Link to="/index" style={{ textDecoration: 'none' }}>
+                        <div
+                            style={{ margin: 'auto', backgroundColor: 'white' }}
+                        >
+                            <ButtonCustom
+                                callBack={callBackButton}
+                                typeButton="contained"
+                                valueButton="Se connecter"
+                            />
+                        </div>
+                    </Link>
+                </DialogActions>
+            </Dialog>
+            <Button onClick={onClick} />
+            {isAuthenticated ? 'logged' : 'not logged'}
+        </div>
+    );
+}
