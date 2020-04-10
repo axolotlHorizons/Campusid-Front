@@ -1,17 +1,14 @@
 //@ts-nocheck
 
-import { createStore, compose } from 'redux';
+import { createStore, compose, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
 import commonReducer from './common/state/reducers';
 
-const initialState = {
-    locale: 'fr',
-};
+const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-export default createStore(
+const store = createStore(
     commonReducer,
-    initialState,
-    compose(
-        window.__REDUX_DEVTOOLS_EXTENSION__ &&
-            window.__REDUX_DEVTOOLS_EXTENSION__()
-    )
+    composeEnhancer(applyMiddleware(thunk))
 );
+
+export default store;

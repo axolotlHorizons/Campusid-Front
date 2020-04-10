@@ -1,5 +1,5 @@
 import React from 'react';
-import TabCustom from '../common/component/TabCustom'
+import TabCustom from 'common/components/TabCustom';
 
 export default {
     title: 'TabCustom',
@@ -7,11 +7,11 @@ export default {
 };
 
 export const TabCustoms = () => {
-    let tabArray = ["Note", "Admin", "Perso"];
+    let tabArray = ['Note', 'Admin', 'Perso'];
 
     return (
         <div>
             <TabCustom onglets={tabArray}></TabCustom>
         </div>
     );
-}
+};

@@ -1,21 +1,18 @@
 import React from 'react';
 import styles from './style';
-import TabCustom from '../../common/component/TabCustom';
-import Accordeon from '../../common/components/Accordeon';
-
+import TabCustom from 'common/components/TabCustom';
+import Accordeon from 'common/components/Accordeon';
 
 const Grades = () => {
     let matieres = [
         {
             id: 0,
             name: 'JavaScript',
-            icon:
-                '',
+            icon: '',
             credit: 4,
             results: [
                 {
-                    name:
-                        'default-name',
+                    name: 'default-name',
                     type: 'default-type',
                     note: 14,
                     coeficient: 1,
@@ -23,21 +20,18 @@ const Grades = () => {
                     commentaire: 'Bla bla bla',
                 },
                 {
-                    name:
-                        'default-name',
+                    name: 'default-name',
                 },
             ],
         },
         {
             id: 1,
             name: 'C++',
-            icon:
-                '',
+            icon: '',
             credit: 4,
             results: [
                 {
-                    name:
-                        'default-name',
+                    name: 'default-name',
                     type: 'default-type',
                     note: 14,
                     coeficient: 1,
@@ -45,21 +39,18 @@ const Grades = () => {
                     commentaire: 'Bla bla bla',
                 },
                 {
-                    name:
-                        'default-name',
+                    name: 'default-name',
                 },
             ],
         },
         {
             id: 2,
             name: 'PHP',
-            icon:
-                '',
+            icon: '',
             credit: 4,
             results: [
                 {
-                    name:
-                        'default-name',
+                    name: 'default-name',
                     type: 'default-type',
                     note: 14,
                     coeficient: 1,
@@ -67,21 +58,18 @@ const Grades = () => {
                     commentaire: 'Bla bla bla',
                 },
                 {
-                    name:
-                        'default-name',
+                    name: 'default-name',
                 },
             ],
         },
         {
             id: 3,
             name: 'Java',
-            icon:
-                '',
+            icon: '',
             credit: 4,
             results: [
                 {
-                    name:
-                        'default-name',
+                    name: 'default-name',
                     type: 'default-type',
                     note: 14,
                     coeficient: 1,
@@ -89,21 +77,18 @@ const Grades = () => {
                     commentaire: 'Bla bla bla',
                 },
                 {
-                    name:
-                        'default-name',
+                    name: 'default-name',
                 },
             ],
         },
         {
             id: 4,
             name: 'Algorithmique',
-            icon:
-                '',
+            icon: '',
             credit: 4,
             results: [
                 {
-                    name:
-                        'default-name',
+                    name: 'default-name',
                     type: 'default-type',
                     note: 14,
                     coeficient: 1,
@@ -111,21 +96,18 @@ const Grades = () => {
                     commentaire: 'Bla bla bla',
                 },
                 {
-                    name:
-                        'default-name',
+                    name: 'default-name',
                 },
             ],
         },
         {
             id: 5,
             name: 'Ambassadeur',
-            icon:
-                '',
+            icon: '',
             credit: 4,
             results: [
                 {
-                    name:
-                        'default-name',
+                    name: 'default-name',
                     type: 'default-type',
                     note: 14,
                     coeficient: 1,
@@ -133,21 +115,18 @@ const Grades = () => {
                     commentaire: 'Bla bla bla',
                 },
                 {
-                    name:
-                        'default-name',
+                    name: 'default-name',
                 },
             ],
         },
         {
             id: 6,
             name: 'Anglais',
-            icon:
-                '',
+            icon: '',
             credit: 4,
             results: [
                 {
-                    name:
-                        'default-name',
+                    name: 'default-name',
                     type: 'default-type',
                     note: 14,
                     coeficient: 1,
@@ -155,21 +134,18 @@ const Grades = () => {
                     commentaire: 'Bla bla bla',
                 },
                 {
-                    name:
-                        'default-name',
+                    name: 'default-name',
                 },
             ],
         },
         {
             id: 7,
             name: 'Droit',
-            icon:
-                '',
+            icon: '',
             credit: 4,
             results: [
                 {
-                    name:
-                        'default-name',
+                    name: 'default-name',
                     type: 'default-type',
                     note: 14,
                     coeficient: 1,
@@ -177,21 +153,18 @@ const Grades = () => {
                     commentaire: 'Bla bla bla',
                 },
                 {
-                    name:
-                        'default-name',
+                    name: 'default-name',
                 },
             ],
         },
         {
             id: 8,
             name: 'Domotique',
-            icon:
-                '',
+            icon: '',
             credit: 4,
             results: [
                 {
-                    name:
-                        'default-name',
+                    name: 'default-name',
                     type: 'default-type',
                     note: 14,
                     coeficient: 1,
@@ -199,21 +172,18 @@ const Grades = () => {
                     commentaire: 'Bla bla bla',
                 },
                 {
-                    name:
-                        'default-name',
+                    name: 'default-name',
                 },
             ],
         },
         {
             id: 9,
             name: 'Experience Professionnelle',
-            icon:
-                '',
+            icon: '',
             credit: 4,
             results: [
                 {
-                    name:
-                        'default-name',
+                    name: 'default-name',
                     type: 'default-type',
                     note: 14,
                     coeficient: 1,
@@ -221,21 +191,18 @@ const Grades = () => {
                     commentaire: 'Bla bla bla',
                 },
                 {
-                    name:
-                        'default-name',
+                    name: 'default-name',
                 },
             ],
         },
         {
             id: 10,
             name: 'IdLabs',
-            icon:
-                '',
+            icon: '',
             credit: 4,
             results: [
                 {
-                    name:
-                        'default-name',
+                    name: 'default-name',
                     type: 'default-type',
                     note: 14,
                     coeficient: 1,
@@ -243,21 +210,18 @@ const Grades = () => {
                     commentaire: 'Bla bla bla',
                 },
                 {
-                    name:
-                        'default-name',
+                    name: 'default-name',
                 },
             ],
         },
         {
             id: 11,
             name: 'Langage C-CPP',
-            icon:
-                '',
+            icon: '',
             credit: 4,
             results: [
                 {
-                    name:
-                        'default-name',
+                    name: 'default-name',
                     type: 'default-type',
                     note: 14,
                     coeficient: 1,
@@ -265,21 +229,18 @@ const Grades = () => {
                     commentaire: 'Bla bla bla',
                 },
                 {
-                    name:
-                        'default-name',
+                    name: 'default-name',
                 },
             ],
         },
         {
             id: 12,
             name: 'Langage CSharp',
-            icon:
-                '',
+            icon: '',
             credit: 4,
             results: [
                 {
-                    name:
-                        'default-name',
+                    name: 'default-name',
                     type: 'default-type',
                     note: 14,
                     coeficient: 1,
@@ -287,21 +248,18 @@ const Grades = () => {
                     commentaire: 'Bla bla bla',
                 },
                 {
-                    name:
-                        'default-name',
+                    name: 'default-name',
                 },
             ],
         },
         {
             id: 13,
             name: 'Methodologie',
-            icon:
-                '',
+            icon: '',
             credit: 4,
             results: [
                 {
-                    name:
-                        'default-name',
+                    name: 'default-name',
                     type: 'default-type',
                     note: 14,
                     coeficient: 1,
@@ -309,21 +267,18 @@ const Grades = () => {
                     commentaire: 'Bla bla bla',
                 },
                 {
-                    name:
-                        'default-name',
+                    name: 'default-name',
                 },
             ],
         },
         {
             id: 14,
             name: 'Sciences Appliquees',
-            icon:
-                '',
+            icon: '',
             credit: 4,
             results: [
                 {
-                    name:
-                        'default-name',
+                    name: 'default-name',
                     type: 'default-type',
                     note: 14,
                     coeficient: 1,
@@ -331,16 +286,14 @@ const Grades = () => {
                     commentaire: 'Bla bla bla',
                 },
                 {
-                    name:
-                        'default-name',
+                    name: 'default-name',
                 },
             ],
         },
         {
             id: 15,
             name: 'Python',
-            icon:
-                '',
+            icon: '',
             credit: 4,
             results: [
                 {
@@ -352,8 +305,7 @@ const Grades = () => {
                     commentaire: 'Bla bla bla',
                 },
                 {
-                    name:
-                        'default-name',
+                    name: 'default-name',
                 },
             ],
         },
@@ -362,7 +314,10 @@ const Grades = () => {
         return <Accordeon matieres={matieres} />;
     };
 
-    let tabArray = [{name : "Note", component: getComponentAccordeon}, {name: "Graph", component: "Ici ce sera les charts"}];
+    let tabArray = [
+        { name: 'Note', component: getComponentAccordeon },
+        { name: 'Graph', component: 'Ici ce sera les charts' },
+    ];
     const classes = styles();
 
     return <TabCustom onglets={tabArray}></TabCustom>;
