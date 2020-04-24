@@ -4,7 +4,6 @@ import { EventInput } from '@fullcalendar/core';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import interactionPlugin from '@fullcalendar/interaction'; // needed for dayClick
-import Tooltip from '@material-ui/core/Tooltip';
 import styles from './style';
 import moment from 'moment';
 import '@fullcalendar/core/main.css';
@@ -89,7 +88,7 @@ const fakesEvents: EventCourse[] = [
         idTypeCourse: 1,
         idMatter: 1,
         idTeacher: 1,
-        teacherName: 'Jérémy',
+        teacherName: 'Billy',
         idClass: 1,
         dateStart: '2020-05-14 14:00:00',
         dateEnd: '2020-05-14 16:00:00',
@@ -125,7 +124,7 @@ const fakesEvents: EventCourse[] = [
         idTypeCourse: 1,
         idMatter: 1,
         idTeacher: 1,
-        teacherName: 'Jérémy',
+        teacherName: 'Sebastien',
         idClass: 1,
         dateStart: '2020-05-14 10:00:00',
         dateEnd: '2020-05-14 13:00:00',
@@ -143,7 +142,7 @@ const fakesEvents: EventCourse[] = [
         idTypeCourse: 2,
         idMatter: 2,
         idTeacher: 2,
-        teacherName: 'Jérémy',
+        teacherName: ' _ ',
         idClass: 2,
         dateStart: '2020-05-15 14:00:00',
         dateEnd: '2020-05-15 18:00:00',
@@ -167,7 +166,6 @@ const transformEvents = fakesEvents.map(event => ({
 }));
 
 export default function Planning() {
-
     const classes = styles();
     const calendarComponentRef = React.createRef<FullCalendar>();
     const [calendarWeekends, setCalendarWeekends] = useState(false);
@@ -177,12 +175,10 @@ export default function Planning() {
         setCalendarWeekends(!calendarWeekends);
     };
 
-    const eventRender = ({ info }: any) => {
-        return (
-            <Tooltip title={info.el.title}>
-                <div>{info.el.description}</div>
-            </Tooltip>
-        );
+    const eventRender = ({ event, el, view }: any) => {
+        const description = event.extendedProps.description;
+        console.log(description);
+        el.append('Enseignant : ' + description);
     };
 
     return (
@@ -218,6 +214,7 @@ export default function Planning() {
                     minTime="09:00:00"
                     maxTime="18:00:00"
                     eventRender={eventRender}
+                    height={850}
                 />
             </div>
         </div>
