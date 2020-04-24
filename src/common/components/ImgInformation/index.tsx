@@ -7,7 +7,9 @@ import ListItem, { ListItemProps } from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 
 import styles from './style'; //import relatifs en dernier
-import { Button, Grid, GridSpacing, Container } from '@material-ui/core';
+import { Button, Grid, GridSpacing,Container } from '@material-ui/core';
+
+
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -19,7 +21,7 @@ const useStyles = makeStyles((theme: Theme) =>
             textAlign: 'center',
             color: theme.palette.text.secondary,
         },
-    })
+    }),
 );
 
 const imgInformations = makeStyles((theme: Theme) =>
@@ -38,10 +40,10 @@ const imgInformations = makeStyles((theme: Theme) =>
             width: theme.spacing(20),
             height: theme.spacing(20),
         },
-    })
+    }),
 );
 
-export default function ImageAvatars() {
+export default function ImageAvatars(props:any) {
     const classes = imgInformations();
     const [spacing, setSpacing] = React.useState<GridSpacing>(2);
     const useStyles = makeStyles((theme: Theme) =>
@@ -54,121 +56,52 @@ export default function ImageAvatars() {
                 textAlign: 'center',
                 color: theme.palette.text.secondary,
             },
-        })
+        }),
     );
+
+
 
     function FormRow() {
         return (
             <React.Fragment>
-                <Grid
-                    item
-                    xs={12}
-                    container
-                    justify="center"
-                    alignItems="center"
-                >
-                    <Paper className={classes.root}>
-                        {' '}
-                        <Avatar
-                            alt="Etudiant CampusID"
-                            src="https://www.nautiljon.com/images/manga_persos/00/57/guts_175.jpg"
-                            className={classes.large}
-                        />{' '}
-                    </Paper>
+                <Grid item xs={12}  container justify="center" alignItems="center">
+                    <Paper className={classes.root}> <Avatar alt="Etudiant CampusID" src={props.eleve.img} className={classes.large}/> </Paper>
                 </Grid>
-                <Grid
-                    item
-                    xs={12}
-                    container
-                    justify="center"
-                    alignItems="center"
-                >
-                    <Paper className={classes.root}>
-                        <Grid
-                            container
-                            direction="column"
-                            justify="center"
-                            alignItems="center"
-                        >
+                <Grid item xs={12}  container justify="center" alignItems="center">
+                    <Paper className={classes.root} >
+                        <Grid container direction="column" justify="center" alignItems="center">
                             <ListItem button>
-                                <ListItemText primary="Leguman Patate" />
+                                <ListItemText primary={props.eleve.name} />
+                                <li></li>
+                                <ListItemText primary={props.eleve.lastName} />
+
                             </ListItem>
-                            <Button
-                                variant="contained"
-                                color="primary"
-                                disableElevation
-                            >
+                            <Button variant="contained" color="primary" disableElevation >
                                 Message
                             </Button>
                         </Grid>
                     </Paper>
                 </Grid>
 
-                <Grid
-                    item
-                    xs={12}
-                    container
-                    justify="center"
-                    alignItems="center"
-                >
-                    <Paper className={classes.root}>
-                        {' '}
-                        <Avatar
-                            alt="Etudiant CampusID"
-                            src="https://www.nautiljon.com/images/manga_persos/00/57/guts_175.jpg"
-                            className={classes.large}
-                        />{' '}
-                    </Paper>
-                </Grid>
-                <Grid
-                    item
-                    xs={12}
-                    container
-                    justify="center"
-                    alignItems="center"
-                >
-                    <Paper className={classes.root}>
-                        <Grid
-                            container
-                            direction="column"
-                            justify="center"
-                            alignItems="center"
-                        >
-                            <ListItem button>
-                                <ListItemText primary="Leguman Patate" />
-                            </ListItem>
-                            <Button
-                                variant="contained"
-                                color="primary"
-                                disableElevation
-                            >
-                                Message
-                            </Button>
-                        </Grid>
-                    </Paper>
-                </Grid>
+
             </React.Fragment>
+
         );
     }
 
     return (
         <div className={classes.root}>
-            <Grid container spacing={1}>
-                <Grid container item xs={6} spacing={1}>
-                    <FormRow />
-                </Grid>
-                <Grid container item xs={6} spacing={1}>
-                    <FormRow />
-                </Grid>
-            </Grid>
-            <Grid container spacing={1}>
-                <Grid container item xs={6} spacing={1}>
-                    <FormRow />
-                </Grid>
+            <Grid container spacing={2}>
                 <Grid container item xs={6} spacing={1}>
                     <FormRow />
                 </Grid>
             </Grid>
         </div>
+
     );
+
+
+
+
 }
+
