@@ -4,9 +4,8 @@ export default createUseStyles({
     demoApp: {
         fontFamily: 'Arial, Helvetica Neue, Helvetica, sans-serif',
         fontSize: '14px',
-        backgroundColor: 'white',
         paddingBottom: '5%',
-        width: '70%',
+        width: 'auto',
 
         '& .MuiButtonBase-root': {
             backgroundColor: '#B70000',

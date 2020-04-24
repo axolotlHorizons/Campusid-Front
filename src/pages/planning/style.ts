@@ -8,5 +8,7 @@ export default createUseStyles({
     containerPlanning: {
         display: 'flex',
         justifyContent: 'center',
+        backgroundColor: 'white',
+        width: '100%',
     },
 });
