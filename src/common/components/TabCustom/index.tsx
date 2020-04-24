@@ -33,8 +33,12 @@ function TabPanel(props: TabPanelProps) {
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
-    flexGrow: 1
+    flexGrow: 1,
     },
+    backgroundColorStyle: {
+        backgroundColor: "white",
+        color: "black",
+    }
 }));
 
 function TabCustom(props : any)
@@ -53,7 +57,7 @@ function TabCustom(props : any)
   return (
     <div className={classes.root}>
       <AppBar position="static">
-          <div className="Onglet">
+          <div className={classes.backgroundColorStyle}>
               <Tabs value={value} onChange={handleChange}>
                   {printOnglet}
               </Tabs>
