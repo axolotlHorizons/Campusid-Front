@@ -78,7 +78,7 @@ export default function CustomInput(props: any) {
                         color={color}
                         type={type}
                         placeholder={placeholder}
-                        onChange={value => inputComputed(value)} // TODO CHECK
+                        onChange={value => callBack(value)} // TODO CHECK
                         InputProps={{
                             startAdornment: (
                                 <InputAdornment position="start">
