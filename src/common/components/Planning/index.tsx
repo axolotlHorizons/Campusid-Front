@@ -177,12 +177,18 @@ export default function Planning() {
         setCalendarWeekends(!calendarWeekends);
     };
 
-    const eventRender = ({ info }: any) => {
-        return (
-            <Tooltip title={info.el.title}>
-                <div>{info.el.description}</div>
-            </Tooltip>
-        );
+    const eventRender = ( info : any) => {
+        console.log("info");
+        console.log(info);
+        info.el.className = "custom-event-container fc-day-grid-event fc-h-event fc-event fc-start fc-end"
+        // edit the child's class
+        info.el.children[0].className = "custom-event-container fc-content"
+        return info.el
+        //return (
+          //  <Tooltip title={info.event.title}>
+           //     <div>{info.event.description}</div>
+           // </Tooltip>
+        //);
     };
 
     return (
