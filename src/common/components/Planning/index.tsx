@@ -175,25 +175,10 @@ export default function Planning() {
         setCalendarWeekends(!calendarWeekends);
     };
 
-<<<<<<< HEAD
     const eventRender = ({ event, el, view }: any) => {
         const description = event.extendedProps.description;
         console.log(description);
         el.append('Enseignant : ' + description);
-=======
-    const eventRender = ( info : any) => {
-        console.log("info");
-        console.log(info);
-        info.el.className = "custom-event-container fc-day-grid-event fc-h-event fc-event fc-start fc-end"
-        // edit the child's class
-        info.el.children[0].className = "custom-event-container fc-content"
-        return info.el
-        //return (
-          //  <Tooltip title={info.event.title}>
-           //     <div>{info.event.description}</div>
-           // </Tooltip>
-        //);
->>>>>>> e30cfec8674b3f4723a8aab4cf88c756db2325f2
     };
 
     return (
