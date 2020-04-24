@@ -10,6 +10,7 @@ const Grades = () => {
             name: 'JavaScript',
             icon: '',
             credit: 4,
+            valid: true,
             results: [
                 {
                     name: 'default-name',
@@ -17,6 +18,13 @@ const Grades = () => {
                     note: 14,
                     coeficient: 1,
                     moyenneClasse: 10,
+                    commentaire: 'Bla bla bla',
+                },{
+                    name: 'default-name',
+                    type: 'default-type',
+                    note: 9,
+                    coeficient: 1,
+                    moyenneClasse: 15,
                     commentaire: 'Bla bla bla',
                 },
                 {
@@ -29,18 +37,16 @@ const Grades = () => {
             name: 'C++',
             icon: '',
             credit: 4,
+            valid: false,
             results: [
                 {
                     name: 'default-name',
                     type: 'default-type',
-                    note: 14,
+                    note: 9,
                     coeficient: 1,
                     moyenneClasse: 10,
                     commentaire: 'Bla bla bla',
-                },
-                {
-                    name: 'default-name',
-                },
+                }
             ],
         },
         {
