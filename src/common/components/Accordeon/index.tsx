@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 import useStyles from './style';
-import { Card, ExpansionPanelActions, Button, Divider } from '@material-ui/core';
+import { Card, ExpansionPanelActions, Button, Divider, CardMedia } from '@material-ui/core';
 import { CardContent } from '@material-ui/core';
 
 function Accordeon(props: any) {
@@ -34,14 +34,17 @@ function Accordeon(props: any) {
                                 id="panel1a-header"
                                 className={getBackgroundHeading(matiere)}
                             >
-                                <div className={classes.details}>
-                                    <Typography component="h6" variant="h6">
-                                        <strong>{matiere.name} {matiere.icon}</strong>
-                                    </Typography>
-                                    <Typography component="h6" variant="h6">
-                                        ECTS : <strong>{matiere.credit}</strong>
-                                    </Typography>
+                                <div className={classes.column}>
+                                    <CardMedia
+                                        className={classes.logo}
+                                        image={matiere.icon}
+                                        title="Campus ID"
+                                    />
                                 </div>
+                                <div className={classes.column + " " + classes.marginCenterY}>
+                                    <strong>{matiere.name}</strong>
+                                </div>
+
                             </ExpansionPanelSummary>
 
                             {matiere.results.map(function(
@@ -54,7 +57,10 @@ function Accordeon(props: any) {
                                             <div className={classes.details}>
                                                 <CardContent className={getClassOfNote(note)} >
                                                     <Typography component="h6" variant="h6">
-                                                        {note.name} / {note.type}
+                                                       {note.name} / {note.type}
+                                                    </Typography>
+                                                    <Typography variant="subtitle1">
+                                                        Date : <strong>24/04/2020</strong>
                                                     </Typography>
                                                     <Typography variant="subtitle1">
                                                         Note : <strong>{note.note}</strong>

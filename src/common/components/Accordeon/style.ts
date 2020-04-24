@@ -24,6 +24,17 @@ const useStyles = makeStyles((theme: Theme) =>
         backgroundInvalid: {
             backgroundColor: 'rgba(214, 69, 65, 1)',
             color: "white"
+        },
+        logo: {
+            width: "50px",
+            height: "50px"
+        },
+        column: {
+            flexBasis: '6.33%',
+        },
+        marginCenterY: {
+            marginTop: "auto",
+            marginBottom: "auto"
         }
     })
 );
