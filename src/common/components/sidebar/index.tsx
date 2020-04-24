@@ -17,6 +17,7 @@ import SpeakerNotesIcon from '@material-ui/icons/SpeakerNotes';
 import GradeIcon from '@material-ui/icons/Grade';
 import LinkIcon from '@material-ui/icons/Link';
 import QueryBuilderIcon from '@material-ui/icons/QueryBuilder';
+import PeopleIcon from '@material-ui/icons/People';
 
 const drawerWidth = 240;
 
@@ -156,7 +157,6 @@ const Sidebar = () => {
                             button
                             divider={true}
                             style={{
-                                marginTop: '10px',
                                 paddingTop: '25px',
                                 paddingBottom: '25px',
                             }}
@@ -169,6 +169,26 @@ const Sidebar = () => {
                             <ListItemText
                                 style={{ fontSize: 30, color: 'white' }}
                                 primary={'Vie étudiante'}
+                            />
+                        </ListItem>
+                    </Link>
+                    <Link to="/trombinoscope" style={{ textDecoration: 'none' }}>
+                        <ListItem
+                            button
+                            divider={true}
+                            style={{
+                                paddingTop: '25px',
+                                paddingBottom: '25px',
+                            }}
+                        >
+                            <ListItemIcon>
+                                <PeopleIcon
+                                    style={{ fontSize: 30, color: 'white' }}
+                                />
+                            </ListItemIcon>
+                            <ListItemText
+                                style={{ fontSize: 30, color: 'white' }}
+                                primary={'Trombinoscope'}
                             />
                         </ListItem>
                     </Link>
