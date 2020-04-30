@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './style';
 import TabCustom from 'common/components/TabCustom';
 import Accordeon from 'common/components/Accordeon';
+import GraphsContainer from 'common/components/GraphsContainer';
 
 const Grades = () => {
     let matieres = [
@@ -409,9 +410,24 @@ const Grades = () => {
         return <Accordeon matieres={matieres} />;
     };
 
+    const getComponentGraphs = () => {
+        let matiereAverage = [];
+        for (let y = 0; y < matieres.length; y++){
+            let objToPush = {name: matieres[y].name, average: 0};
+            if (matieres[y].results.length > 0){
+                for (let i = 0; i < matieres[y].results.length; i++){
+                    objToPush.average += matieres[y].results[i].note;
+                }
+                objToPush.average = objToPush.average / matieres[y].results.length;
+            }
+            matiereAverage.push(objToPush);
+        }
+      return <GraphsContainer dataAverage={matiereAverage}/>
+    };
+
     let tabArray = [
         { name: 'Note', component: getComponentAccordeon },
-        { name: 'Graph', component: 'Ici ce sera les charts' },
+        { name: 'Graph', component: getComponentGraphs },
     ];
     const classes = styles();
 
