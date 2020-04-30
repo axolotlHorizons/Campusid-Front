@@ -2,13 +2,14 @@ import React from 'react';
 import styles from './style';
 import TabCustom from 'common/components/TabCustom';
 import Accordeon from 'common/components/Accordeon';
+import GraphsContainer from 'common/components/GraphsContainer';
 
 const Grades = () => {
     let matieres = [
         {
             id: 0,
             name: 'ALGORITHMIQUE',
-            icon: 'https://image.flaticon.com/icons/png/512/1551/1551209.png',
+            icon: 'https://image.flaticon.com/icons/svg/1925/1925128.svg',
             credit: 1,
 	        valid: true,
             results: [
@@ -33,7 +34,7 @@ const Grades = () => {
         {
             id: 1,
             name: 'AMBASSADEUR',
-            icon: 'https://www.promoliege.com/wp-content/uploads/2016/05/ambassador_icon.png',
+            icon: 'https://image.flaticon.com/icons/svg/1999/1999218.svg',
             credit: 2,
             valid: true,
             results: [
@@ -58,7 +59,7 @@ const Grades = () => {
         {
             id: 2,
             name: 'ANGLAIS',
-            icon: 'https://test.linguaphone.fr/wp-content/uploads/2018/10/drapeau-anglais-300x300.png',
+            icon: 'https://image.flaticon.com/icons/svg/1377/1377975.svg',
             credit: 2,
             results: [
                 {
@@ -82,7 +83,7 @@ const Grades = () => {
         {
             id: 3,
             name: 'DROIT',
-            icon: 'https://image.flaticon.com/icons/png/512/39/39850.png',
+            icon: 'https://image.flaticon.com/icons/svg/1208/1208198.svg',
             credit: 1.5,
             valid: true,
             results: [
@@ -107,7 +108,7 @@ const Grades = () => {
         {
             id: 4,
             name: 'ELECTRONIQUE',
-            icon: 'https://image.flaticon.com/icons/png/512/99/99465.png',
+            icon: 'https://image.flaticon.com/icons/svg/2861/2861557.svg',
             credit: 1,
             valid: true,
             results: [
@@ -132,7 +133,7 @@ const Grades = () => {
         {
             id: 5,
             name: 'EXPERIENCE PROFESSIONNELLE',
-            icon: 'https://www.privacytech.fr/wp-content/uploads/professional_life.png',
+            icon: 'https://image.flaticon.com/icons/svg/1063/1063196.svg',
             credit: 10,
             valid: true,
             results: [
@@ -157,7 +158,7 @@ const Grades = () => {
         {
             id: 6,
             name: 'LANGAGE JAVA',
-            icon: 'https://getdrawings.com/free-icon-bw/java-icon-17.png',
+            icon: 'https://image.flaticon.com/icons/svg/2721/2721271.svg',
             credit: 6.5,
             valid: true,
             results: [
@@ -182,7 +183,7 @@ const Grades = () => {
         {
             id: 7,
             name: 'LANGAGE JAVASCRIPT',
-            icon: 'https://cdn.iconscout.com/icon/free/png-512/javascript-20-555998.png',
+            icon: 'https://image.flaticon.com/icons/svg/2721/2721272.svg',
             credit: 2.5,
             valid: true,
             results: [
@@ -207,7 +208,7 @@ const Grades = () => {
         {
             id: 8,
             name: 'LANGAGE SQL',
-            icon: 'https://cdn2.iconfinder.com/data/icons/programming-50/64/206_programming-sql-data-database-512.png',
+            icon: 'https://image.flaticon.com/icons/svg/2721/2721297.svg',
             credit: 0.5,
             valid: true,
             results: [
@@ -232,7 +233,7 @@ const Grades = () => {
         {
             id: 9,
             name: 'LES LOGICIELS',
-            icon: 'https://cdn1.iconfinder.com/data/icons/software-development-blue/64/development-software-engineering-preference-setting-512.png',
+            icon: 'https://image.flaticon.com/icons/svg/2828/2828879.svg',
             credit: 2.5,
             valid: true,
             results: [
@@ -257,7 +258,7 @@ const Grades = () => {
         {
             id: 10,
             name: 'METHODOLOGIE',
-            icon: 'https://static.thenounproject.com/png/300489-200.png',
+            icon: 'https://image.flaticon.com/icons/svg/2620/2620853.svg',
             credit: 2,
             valid: true,
             results: [
@@ -282,7 +283,7 @@ const Grades = () => {
         {
             id: 11,
             name: 'PROJET',
-            icon: 'https://static.thenounproject.com/png/72583-200.png',
+            icon: 'https://image.flaticon.com/icons/svg/2837/2837044.svg',
             credit: 10,
             valid: true,
             results: [
@@ -307,7 +308,7 @@ const Grades = () => {
         {
             id: 12,
             name: 'ECONOMIE',
-            icon: 'https://static.thenounproject.com/png/1424050-200.png',
+            icon: 'https://image.flaticon.com/icons/svg/845/845703.svg',
             credit: 1,
             valid: false,
             results: [
@@ -382,7 +383,7 @@ const Grades = () => {
         {
             id: 15,
             name: 'Python',
-            icon: 'https://f0.pngfuel.com/png/266/560/python-computer-icons-programmer-javascript-programming-language-python-logo-png-clip-art.png',
+            icon: 'https://image.flaticon.com/icons/svg/2721/2721287.svg',
             credit: 4,
             valid: false,
             results: [
@@ -409,9 +410,24 @@ const Grades = () => {
         return <Accordeon matieres={matieres} />;
     };
 
+    const getComponentGraphs = () => {
+        let matiereAverage = [];
+        for (let y = 0; y < matieres.length; y++){
+            let objToPush = {name: matieres[y].name, average: 0};
+            if (matieres[y].results.length > 0){
+                for (let i = 0; i < matieres[y].results.length; i++){
+                    objToPush.average += matieres[y].results[i].note;
+                }
+                objToPush.average = objToPush.average / matieres[y].results.length;
+            }
+            matiereAverage.push(objToPush.average);
+        }
+      return <GraphsContainer dataAverage={matiereAverage}/>
+    };
+
     let tabArray = [
         { name: 'Note', component: getComponentAccordeon },
-        { name: 'Graph', component: 'Ici ce sera les charts' },
+        { name: 'Graph', component: getComponentGraphs },
     ];
     const classes = styles();
 
