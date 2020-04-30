@@ -2,19 +2,116 @@
     "student": [
         {
             "id": 1,
-            "name": "Fname",
-            "firstname": "Lname",
-            "avatar": "https://thispersondoesnotexist.com/image"
+            "classId": 1,
+            "name": "Lastname",
+            "firstname": "Firstname",
+            "avatar": "https://thispersondoesnotexist.com/image",
+            "email": "test1@campusid.eu",
+            "password": "1234"
+        },
+        {
+            "id": 2,
+            "classId": 1,
+            "name": "Lastname",
+            "firstname": "Firstname",
+            "avatar": "https://thispersondoesnotexist.com/image",
+            "email": "test2@campusid.eu",
+            "password": "1234"
+        },
+        {
+            "id": 3,
+            "classId": 1,
+            "name": "Lastname",
+            "firstname": "Firstname",
+            "avatar": "https://thispersondoesnotexist.com/image",
+            "email": "test3@campusid.eu",
+            "password": "1234"
+        },
+        {
+            "id": 4
         }
     ],
-    "comments": [
+    "courses": [
         {
             "id": 1,
-            "body": "some comment",
-            "postId": 1
+            "idCourse": 1,
+            "idTypeCourse": "ID-City",
+            "idMatter": "Contribution des ...",
+            "idTeacher": "Aucun",
+            "dateStart": "2020-04-10 11:00:00",
+            "dateEnd": "2020-04-10 13:00:00",
+            "presentTeacher": false,
+            "comments": "string",
+            "backgroundColor": "red",
+            "barColor": "red",
+            "fontColor": "#000"
+        },
+        {
+            "id": 2,
+            "idCourse": 2,
+            "idTypeCourse": "ID-City",
+            "idMatter": "Contribution des ...",
+            "idTeacher": "Aucun",
+            "dateStart": "2020-04-10 11:00:00",
+            "dateEnd": "2020-04-10 13:00:00",
+            "presentTeacher": false,
+            "comments": "string",
+            "backgroundColor": "red",
+            "barColor": "red",
+            "fontColor": "#000"
+        },
+        {
+            "id": 3,
+            "idCourse": 3,
+            "idTypeCourse": "ID-City",
+            "idMatter": "Contribution des ...",
+            "idTeacher": "Aucun",
+            "dateStart": "2020-04-10 11:00:00",
+            "dateEnd": "2020-04-10 13:00:00",
+            "presentTeacher": false,
+            "comments": "string",
+            "backgroundColor": "red",
+            "barColor": "red",
+            "fontColor": "#000"
+        },
+        {
+            "idCourse": 4,
+            "idTypeCourse": "ID-City",
+            "idMatter": "Contribution des ...",
+            "idTeacher": "Aucun",
+            "dateStart": "2020-04-10 11:00:00",
+            "dateEnd": "2020-04-10 13:00:00",
+            "presentTeacher": false,
+            "comments": "string",
+            "backgroundColor": "red",
+            "barColor": "red",
+            "fontColor": "#000"
+        },
+        {
+            "idCourse": 5,
+            "idTypeCourse": "ID-City",
+            "idMatter": "Contribution des ...",
+            "idTeacher": "Aucun",
+            "dateStart": "2020-04-10 11:00:00",
+            "dateEnd": "2020-04-10 13:00:00",
+            "presentTeacher": false,
+            "comments": "string",
+            "backgroundColor": "red",
+            "barColor": "red",
+            "fontColor": "#000"
+        },
+        {
+            "idCourse": 6,
+            "idTypeCourse": "ID-City",
+            "idMatter": "Contribution des ...",
+            "idTeacher": "Aucun",
+            "dateStart": "2020-04-10 11:00:00",
+            "dateEnd": "2020-04-10 13:00:00",
+            "presentTeacher": false,
+            "comments": "string",
+            "backgroundColor": "red",
+            "barColor": "red",
+            "fontColor": "#000"
         }
-    ],
-    "profile": {
-        "name": "typicode"
-    }
+    ]
 }
