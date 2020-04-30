@@ -1,20 +1,117 @@
 {
-    "student": [
-        {
-            "id": 1,
-            "name": "Le roi des pigeons",
-            "firstname": "Roucoul",
-            "avatar": "https://www.pokepedia.fr/images/thumb/9/94/Roucool-RFVF.png/250px-Roucool-RFVF.png"
-        }
-    ],
-    "comments": [
-        {
-            "id": 1,
-            "body": "some comment",
-            "postId": 1
-        }
-    ],
-    "profile": {
-        "name": "typicode"
+  "student": [
+    {
+      "id": 1,
+      "classId": 1,
+      "name": "Smith",
+      "firstname": "Morty",
+      "avatar": "https://i1.sndcdn.com/avatars-000313137274-zojf90-t500x500.jpg",
+      "email": "test1@campusid.eu",
+      "password": "1234"
+    },
+    {
+      "id": 2,
+      "classId": 1,
+      "name": "Sanchez",
+      "firstname": "Rick",
+      "avatar": "https://store.playstation.com/store/api/chihiro/00_09_000/container/FR/fr/999/EP0149-CUSA09988_00-AV00000000000001/1553560094000/image?w=240&h=240&bg_color=000000&opacity=100&_version=00_09_000",
+      "email": "test2@campusid.eu",
+      "password": "1234"
+    },
+    {
+      "id": 3,
+      "classId": 1,
+      "name": "Smith",
+      "firstname": "Jerry",
+      "avatar": "https://drawcentral.com/wp-content/uploads/2018/11/How-To-Draw-Jerry-Rick-And-Morty-Main-1170x1008.jpg",
+      "email": "test3@campusid.eu",
+      "password": "1234"
+    },
+    {
+      "id": 4
     }
+  ],
+  "courses": [
+    {
+      "id": 1,
+      "idCourse": 1,
+      "idTypeCourse": "ID-City",
+      "idMatter": "Contribution des ...",
+      "idTeacher": "Aucun",
+      "dateStart": "2020-04-10 11:00:00",
+      "dateEnd": "2020-04-10 13:00:00",
+      "presentTeacher": false,
+      "comments": "string",
+      "backgroundColor": "red",
+      "barColor": "red",
+      "fontColor": "#000"
+    },
+    {
+      "id": 2,
+      "idCourse": 2,
+      "idTypeCourse": "ID-City",
+      "idMatter": "Contribution des ...",
+      "idTeacher": "Aucun",
+      "dateStart": "2020-04-10 11:00:00",
+      "dateEnd": "2020-04-10 13:00:00",
+      "presentTeacher": false,
+      "comments": "string",
+      "backgroundColor": "red",
+      "barColor": "red",
+      "fontColor": "#000"
+    },
+    {
+      "id": 3,
+      "idCourse": 3,
+      "idTypeCourse": "ID-City",
+      "idMatter": "Contribution des ...",
+      "idTeacher": "Aucun",
+      "dateStart": "2020-04-10 11:00:00",
+      "dateEnd": "2020-04-10 13:00:00",
+      "presentTeacher": false,
+      "comments": "string",
+      "backgroundColor": "red",
+      "barColor": "red",
+      "fontColor": "#000"
+    },
+    {
+      "idCourse": 4,
+      "idTypeCourse": "ID-City",
+      "idMatter": "Contribution des ...",
+      "idTeacher": "Aucun",
+      "dateStart": "2020-04-10 11:00:00",
+      "dateEnd": "2020-04-10 13:00:00",
+      "presentTeacher": false,
+      "comments": "string",
+      "backgroundColor": "red",
+      "barColor": "red",
+      "fontColor": "#000"
+    },
+    {
+      "idCourse": 5,
+      "idTypeCourse": "ID-City",
+      "idMatter": "Contribution des ...",
+      "idTeacher": "Aucun",
+      "dateStart": "2020-04-10 11:00:00",
+      "dateEnd": "2020-04-10 13:00:00",
+      "presentTeacher": false,
+      "comments": "string",
+      "backgroundColor": "red",
+      "barColor": "red",
+      "fontColor": "#000"
+    },
+    {
+      "idCourse": 6,
+      "idTypeCourse": "ID-City",
+      "idMatter": "Contribution des ...",
+      "idTeacher": "Aucun",
+      "dateStart": "2020-04-10 11:00:00",
+      "dateEnd": "2020-04-10 13:00:00",
+      "presentTeacher": false,
+      "comments": "string",
+      "backgroundColor": "red",
+      "barColor": "red",
+      "fontColor": "#000"
+    }
+  ]
 }

@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
+//@ts-nocheck
+
+import React, { useState, useEffect } from 'react';
+
 import {
     Dialog,
     DialogActions,
@@ -12,45 +13,52 @@ import {
 
 import CustomInput from 'common/components/CustomInput';
 import ButtonCustom from 'common/components/ButtonCustom';
-import { setUser } from 'common/state/actions';
-import { getUser } from 'api';
+import { allowAuthentication, fetchUser } from 'api';
 
 export default function FormDialog() {
-    const dispatch = useDispatch();
-    const authentication_key = 'toto';
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
     const [isAuthenticated, setIsAuthenticated] = useState(
         !!localStorage.getItem('id_token')
     );
 
     const [open, setOpen] = React.useState(true);
 
-    const handleClickOpen = () => {
-        setOpen(true);
-    };
-
     const handleClose = () => {
-        //setOpen(false);
+        // setOpen(false);
     };
 
-    const callBackButton = (event: any) => {
-        console.log('event');
-        console.log(event);
-        ////////DB TEST TO REMOVE
-        getUser(1).then(res => dispatch(setUser(res)));
-        localStorage.setItem('id_token', authentication_key);
+    const callBackButton = () => {
+        if (email && password) {
+            allowAuthentication(email, password).then(response =>
+                fetchUser(response)
+                    .then(res => {
+                        if (res[0]) {
+                            localStorage.setItem(
+                                'user',
+                                JSON.stringify(res[0])
+                            );
+                            window.location.assign(`/planning`);
+                        }
+                    })
+                    //remplacer le console log quand un système de logs sera en place !!!
+                    .catch(console.log('une erreur est survenue'))
+            );
+        }
+    };
+
+    const inputMailComputed = (event: any) => {
+        setEmail(event.target.value);
+    };
+
+    const inputPasswordComputed = (event: any) => {
+        setPassword(event.target.value);
+    };
+
+    useEffect(() => {
         setIsAuthenticated(!!localStorage.getItem('id_token'));
-        ///////
-    };
-
-    const inputMailComputed = (value: any) => {
-        console.log('Value ID : ');
-        console.log(value.target.value);
-    };
-
-    const inputPasswordComputed = (value: any) => {
-        console.log('value Password : ');
-        console.log(value.target.value);
-    };
+    }, []);
 
     return (
         <div>
@@ -104,17 +112,14 @@ export default function FormDialog() {
                 />
 
                 <DialogActions style={{ display: 'flex' }}>
-                    <Link to="/index" style={{ textDecoration: 'none' }}>
-                        <div
-                            style={{ margin: 'auto', backgroundColor: 'white' }}
-                        >
-                            <ButtonCustom
-                                callBack={callBackButton}
-                                typeButton="contained"
-                                valueButton="Se connecter"
-                            />
-                        </div>
-                    </Link>
+                    <div style={{ margin: 'auto', backgroundColor: 'white' }}>
+                        <ButtonCustom
+                            disabled={!password || !email}
+                            callBack={callBackButton}
+                            typeButton="contained"
+                            valueButton="Se connecter"
+                        />
+                    </div>
                 </DialogActions>
             </Dialog>
         </div>

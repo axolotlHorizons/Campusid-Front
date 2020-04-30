@@ -14,7 +14,7 @@ import {
 import CardMedia from '@material-ui/core/CardMedia';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 
-import { getUser } from 'common/state/selectors';
+import { getUserData } from 'common/state/selectors';
 
 import styles from './style';
 import ButtonCustom from '../ButtonCustom';
@@ -26,10 +26,10 @@ type User = {
 };
 const Header = () => {
     const classes = styles();
-    const auth = !!localStorage.getItem('id_token');
+    const auth = !!localStorage.getItem('user');
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
     const open = Boolean(anchorEl);
-    const user: User = useSelector(getUser);
+    const user: User = useSelector(getUserData);
     const handleMenu = (event: React.MouseEvent<HTMLElement>) => {
         setAnchorEl(event.currentTarget);
     };
@@ -39,7 +39,8 @@ const Header = () => {
     };
 
     const disconnected = () => {
-        localStorage.removeItem('id_token');
+        localStorage.removeItem('user');
+        window.location.assign(`/`);
     };
 
     return (
@@ -71,7 +72,7 @@ const Header = () => {
                             >
                                 {user?.avatar ? (
                                     <img
-                                        width="20%"
+                                        width="50px"
                                         src={user.avatar}
                                         alt="avatar"
                                     />

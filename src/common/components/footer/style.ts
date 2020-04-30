@@ -6,14 +6,14 @@ export default createUseStyles({
         height: 'auto',
     },
     uselessIcons: {
-        width: "100%",
-        display: "flex",
-        color: "white",
-        height: "20%",
-        paddingTop: "10px",
-        marginBottom: "10px"
+        width: '100%',
+        display: 'flex',
+        color: 'white',
+        height: '20%',
+        paddingTop: '10px',
+        marginBottom: '10px',
     },
     marginAuto: {
-        margin: 'auto'
+        margin: 'auto',
     },
 });

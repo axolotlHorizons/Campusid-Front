@@ -6,8 +6,11 @@ import commonReducer from './common/state/reducers';
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
+const initialReduxState = {};
+
 const store = createStore(
     commonReducer,
+    initialReduxState,
     composeEnhancer(applyMiddleware(thunk))
 );
 

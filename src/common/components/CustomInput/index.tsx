@@ -55,12 +55,7 @@ export default function CustomInput(props: any) {
     let placeholder = props.placeholder;
     let hasIcon = props.hasIcon;
 
-    console.log('heeeeere', label, hasIcon);
-
-    let inputComputed = (value: any) => {
-        console.log('value');
-        console.log(value.target.value);
-    };
+    let inputComputed = (value: any) => {};
 
     //const classes = useStyles();
     return (
