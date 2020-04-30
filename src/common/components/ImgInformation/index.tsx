@@ -84,31 +84,27 @@ export default function ImageAvatars(props:any) {
 
     const returnDialog = () => {
         return (
-        <div>
-            <Dialog
-                open={open}
-                onClose={handleClose}
-                aria-labelledby="alert-dialog-title"
-                aria-describedby="alert-dialog-description"
-            >
-                <DialogTitle id="alert-dialog-title">{"Use Google's location service?"}</DialogTitle>
-                <DialogContent>
-                    <DialogContentText id="alert-dialog-description">
-                        Let Google help apps determine location. This means sending anonymous location data to
-                        Google, even when no apps are running.
-                    </DialogContentText>
-                </DialogContent>
-                <DialogActions>
-                    <Button onClick={handleClose} color="primary">
-                        Disagree
-                    </Button>
-                    <Button onClick={handleClose} color="primary" autoFocus>
-                        Agree
-                    </Button>
-                </DialogActions>
-            </Dialog>
-        </div>
-    )};
+            <div>
+                <Dialog
+                    open={open}
+                    onClose={handleClose}
+                    aria-labelledby="alert-dialog-title"
+                    aria-describedby="alert-dialog-description"
+                >
+                    <DialogTitle id="alert-dialog-title">{props.eleve.name} {props.eleve.lastName}</DialogTitle>
+                    <DialogContent>
+                        <DialogContentText id="alert-dialog-description">
+                            scolarite@campusid.com
+                        </DialogContentText>
+                    </DialogContent>
+                    <DialogActions>
+                        <Button onClick={handleClose} color="primary">
+                            Fermé
+                        </Button>
+                    </DialogActions>
+                </Dialog>
+            </div>
+        )};
 
 
     function FormRow() {
@@ -124,7 +120,8 @@ export default function ImageAvatars(props:any) {
                                 <ListItemText style={{marginRight: "4px"}} primary={props.eleve.name} />
                                 <ListItemText primary={props.eleve.lastName} />
                             </ListItem>
-                            <Button variant="contained" color="primary" disableElevation>
+                            <Button variant="contained" color="primary" disableElevation onClick={handleClickOpen}
+                            >
                                 Message
                             </Button>
                         </Grid>
@@ -138,7 +135,7 @@ export default function ImageAvatars(props:any) {
     }
 
     return (
-        <div className={classes.root} style={{width: "250px", margin: "auto"}}>
+        <div className={classes.root} style={{width: "250px"}}>
             <Card>
                 <Grid container spacing={0}>
                     <FormRow />
