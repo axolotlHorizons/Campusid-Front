@@ -5,7 +5,11 @@ import PlanningComp from '../../common/components/Planning/index';
 const Planning = () => {
     const classes = styles();
 
-    return <PlanningComp />;
+    return (
+        <div className={classes.containerPlanning}>
+            <PlanningComp />
+        </div>
+    );
 };
 
 export default Planning;

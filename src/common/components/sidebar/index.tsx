@@ -157,7 +157,6 @@ const Sidebar = () => {
                             button
                             divider={true}
                             style={{
-                                marginTop: '10px',
                                 paddingTop: '25px',
                                 paddingBottom: '25px',
                             }}
@@ -178,7 +177,6 @@ const Sidebar = () => {
                             button
                             divider={true}
                             style={{
-                                marginTop: '10px',
                                 paddingTop: '25px',
                                 paddingBottom: '25px',
                             }}

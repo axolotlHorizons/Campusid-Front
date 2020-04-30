@@ -18,12 +18,23 @@ const useStyles = makeStyles((theme: Theme) =>
             flex: '1 0 auto',
         },
         backgroundValid: {
-            backgroundColor: 'rgba(1, 152, 117, 1)',
+            backgroundColor: 'rgba(30, 130, 76, 1)',
             color: "white"
         },
         backgroundInvalid: {
-            backgroundColor: 'orange',
+            backgroundColor: 'rgba(214, 69, 65, 1)',
             color: "white"
+        },
+        logo: {
+            width: "50px",
+            height: "50px"
+        },
+        column: {
+            flexBasis: '6.33%',
+        },
+        marginCenterY: {
+            marginTop: "auto",
+            marginBottom: "auto"
         }
     })
 );
