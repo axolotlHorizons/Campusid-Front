@@ -420,7 +420,7 @@ const Grades = () => {
                 }
                 objToPush.average = objToPush.average / matieres[y].results.length;
             }
-            matiereAverage.push(objToPush.average);
+            matiereAverage.push(objToPush);
         }
       return <GraphsContainer dataAverage={matiereAverage}/>
     };
