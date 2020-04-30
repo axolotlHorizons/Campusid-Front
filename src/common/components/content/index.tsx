@@ -6,6 +6,7 @@ import ExternalLinks from 'pages/external-links';
 import Grades from 'pages/grades';
 import News from 'pages/news';
 import Planning from 'pages/planning';
+import Trombinoscope from 'pages/trombinoscopes';
 
 import styles from './style';
 
@@ -18,6 +19,7 @@ const Content = () => {
                 <Route path="/configuration" children={<Configuration />} />
                 <Route path="/external-links" children={<ExternalLinks />} />
                 <Route path="/grades" children={<Grades />} />
+                <Route path="/trombinoscope" children={<Trombinoscope />} />
                 <Route path="/news" children={<News />} />
                 <Route path="/planning" children={<Planning />} />
             </Switch>

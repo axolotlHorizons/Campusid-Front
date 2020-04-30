@@ -1,5 +1,3 @@
-//@ts-nocheck
-
 import React, { useState, useEffect } from 'react';
 
 import {
@@ -11,17 +9,20 @@ import {
     FormControlLabel,
 } from '@material-ui/core';
 
-import CustomInput from 'common/components/CustomInput';
-import ButtonCustom from 'common/components/ButtonCustom';
 import { allowAuthentication, fetchUser } from 'api';
 
-export default function FormDialog() {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+import CustomInput from 'common/components/CustomInput';
+import ButtonCustom from 'common/components/ButtonCustom';
 
+import styles from './style';
+
+export default function FormDialog() {
+    const classes = styles();
     const [isAuthenticated, setIsAuthenticated] = useState(
         !!localStorage.getItem('id_token')
     );
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
 
     const [open, setOpen] = React.useState(true);
 
@@ -31,7 +32,7 @@ export default function FormDialog() {
 
     const callBackButton = () => {
         if (email && password) {
-            allowAuthentication(email, password).then(response =>
+            allowAuthentication(email, password)?.then(response =>
                 fetchUser(response)
                     .then(res => {
                         if (res[0]) {
@@ -43,7 +44,7 @@ export default function FormDialog() {
                         }
                     })
                     //remplacer le console log quand un système de logs sera en place !!!
-                    .catch(console.log('une erreur est survenue'))
+                    .catch(() => console.log('une erreur est survenue'))
             );
         }
     };
@@ -61,67 +62,82 @@ export default function FormDialog() {
     }, []);
 
     return (
-        <div>
-            <Dialog
-                style={{
-                    backgroundImage:
-                        "url('https://thumbs.gfycat.com/NeedyFalseGosling-size_restricted.gif')",
-                    backgroundSize: 'cover',
-                }}
-                open={open}
-                onClose={handleClose}
-                PaperProps={{
-                    style: { backgroundColor: '#870D0D', boxShadow: 'none' },
-                }}
-                aria-labelledby="form-dialog-title"
-            >
-                <DialogTitle
-                    style={{ textAlign: 'center', backgroundColor: 'white' }}
-                    id="form-dialog-title"
+        <div className={classes.pageLogin}>
+            <div>
+                <Dialog
+                    className={classes.containerLogin}
+                    style={{
+                        backgroundImage:
+                            "url('https://thumbs.gfycat.com/NeedyFalseGosling-size_restricted.gif')",
+                        backgroundSize: 'cover',
+                    }}
+                    open={open}
+                    onClose={handleClose}
+                    PaperProps={{
+                        style: {
+                            backgroundColor: 'white',
+                            boxShadow: 'none',
+                        },
+                    }}
+                    aria-labelledby="form-dialog-title"
                 >
-                    Connexion
-                </DialogTitle>
-                <DialogContent>
-                    <CustomInput
-                        id="outlined-required"
-                        variant="outlined"
-                        name="N°IDBoard"
-                        type="ID"
-                        style={{ margin: 20, backgroundColor: 'white' }}
-                        size="medium"
-                        callBack={inputMailComputed}
-                        hasIcon={false}
-                    />
-
-                    <CustomInput
-                        id="outlined-required"
-                        variant="outlined"
-                        name="Mot de passe"
-                        type="password"
-                        style={{ margin: 20, backgroundColor: 'white' }}
-                        size="medium"
-                        callBack={inputPasswordComputed}
-                        hasIcon={false}
-                    />
-                </DialogContent>
-                <FormControlLabel
-                    value="Save"
-                    control={<Radio />}
-                    style={{ margin: 20, backgroundColor: '870D0D' }}
-                    label="Se souvenir de moi"
-                />
-
-                <DialogActions style={{ display: 'flex' }}>
-                    <div style={{ margin: 'auto', backgroundColor: 'white' }}>
-                        <ButtonCustom
-                            disabled={!password || !email}
-                            callBack={callBackButton}
-                            typeButton="contained"
-                            valueButton="Se connecter"
+                    <DialogTitle
+                        style={{
+                            textAlign: 'center',
+                            color: 'white',
+                            backgroundColor: '#B70000',
+                            height: '17%',
+                            paddingTop: '50px',
+                        }}
+                        id="form-dialog-title"
+                    >
+                        Connexion
+                    </DialogTitle>
+                    <DialogContent>
+                        <CustomInput
+                            name="N°IDBoard"
+                            type="ID"
+                            style={{ margin: 20, backgroundColor: 'white' }}
+                            size="medium"
+                            color="secondary"
+                            callBack={inputMailComputed}
+                            hasIcon={false}
                         />
-                    </div>
-                </DialogActions>
-            </Dialog>
+
+                        <CustomInput
+                            name="Mot de passe"
+                            type="password"
+                            width="100%"
+                            style={{ margin: 20, backgroundColor: 'white' }}
+                            size="medium"
+                            color="secondary"
+                            callBack={inputPasswordComputed}
+                            hasIcon={false}
+                        />
+                    </DialogContent>
+                    <FormControlLabel
+                        value="Save"
+                        control={<Radio />}
+                        style={{ margin: 20, backgroundColor: '870D0D' }}
+                        label="Se souvenir de moi"
+                    />
+
+                    <DialogActions style={{ display: 'flex' }}>
+                        <div
+                            style={{
+                                margin: 'auto',
+                                backgroundColor: 'white',
+                            }}
+                        >
+                            <ButtonCustom
+                                callBack={callBackButton}
+                                typeButton="contained"
+                                valueButton="Se connecter"
+                            />
+                        </div>
+                    </DialogActions>
+                </Dialog>
+            </div>
         </div>
     );
 }
