@@ -61,7 +61,7 @@ export default function FormDialog() {
                     className={classes.containerLogin}
                     style={{
                         backgroundImage:
-                            "url('https://thumbs.gfycat.com/NeedyFalseGosling-size_restricted.gif')",
+                            "url('https://cdn2.scratch.mit.edu/get_image/gallery/5262616_170x100.png')",
                         backgroundSize: 'cover',
                     }}
                     open={open}
@@ -116,7 +116,7 @@ export default function FormDialog() {
                     />
 
                     <DialogActions style={{ display: 'flex' }}>
-                        <Link to="/index" style={{ textDecoration: 'none' }}>
+                        <Link to="/planning" style={{ textDecoration: 'none' }}>
                             <div
                                 style={{
                                     margin: 'auto',

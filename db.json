@@ -2,9 +2,9 @@
     "student": [
         {
             "id": 1,
-            "name": "Le roi des pigeons",
-            "firstname": "Roucoul",
-            "avatar": "https://www.pokepedia.fr/images/thumb/9/94/Roucool-RFVF.png/250px-Roucool-RFVF.png"
+            "name": "Fname",
+            "firstname": "Lname",
+            "avatar": "https://thispersondoesnotexist.com/image"
         }
     ],
     "comments": [
