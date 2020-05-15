@@ -218,6 +218,8 @@ export default function Planning() {
                     maxTime="18:00:00"
                     eventRender={eventRender}
                     height={850}
+                    fixedWeekCount={false}
+                    firstDay={1}
                 />
             </div>
         </div>

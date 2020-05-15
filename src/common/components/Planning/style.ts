@@ -8,13 +8,17 @@ export default createUseStyles({
         width: 'auto',
         '& .MuiButtonBase-root': {
             backgroundColor: '#B70000',
-            borderRadius: '8px',
+            borderRadius: '2px',
             margin: '3px',
             width: 'auto',
             textAlign: 'center',
             textTransform: 'uppercase',
             alignSelf: 'center',
             marginTop: '3%',
+
+            '&:hover': {
+                backgroundColor: '#918D8C ',
+            },
         },
         '& .MuiButton-text': {
             color: '#FFF',
