@@ -13,6 +13,7 @@ import CustomInput from '../CustomInput';
 function Accordeon(props: any) {
     const classes = useStyles();
     let matieres = props.matieres;
+    let resultsTotale = props.resultsTotale;
 
     const [getMatieres, setMatieres] = useState(matieres.filter((matiere: any) => matiere.name !== ""));
     const matiereInProgress = matieres.map((matiere: any) => matiere.valid === undefined).length;
@@ -47,18 +48,53 @@ function Accordeon(props: any) {
                 <Card className={classes.root}>
                     <div className={classes.details}>
                         <CardContent>
-                            <Typography component="h6" variant="h6">
-                                En cours de validation : {matiereInProgress}
-                            </Typography>
-                            <Typography component="h6" variant="h6">
-                                Validé : {matiereValidation}
-                            </Typography>
-                            <Typography component="h6" variant="h6">
-                                Echoué : {matiereCancelled}
-                            </Typography>
-                            <Typography component="h6" variant="h6">
-                                Crédit obtenu : 45
-                            </Typography>
+                            <div className="content">
+                                <div className="content-card-inProgress" style={{display: "inline-block", width: "25%"}}>
+
+                                    <CardMedia style={{margin: "0px 0px 0px 40%", width: "50px", height: "50px", position: "initial"}}
+                                        image={resultsTotale.inProgress.icon}
+                                        title="En cours de validation.."
+                                    />
+                                    
+                                    <Typography style={{margin: "0px 0px 0px 20%" ,width: "25%", right: "70%", position: "initial", display: "inline"}} component="h6" variant="h6">
+                                    {resultsTotale.inProgress.name} : {matiereInProgress}
+                                    </Typography>
+
+                                </div>
+                                <div className="content-card-validated" style={{display: "inline-block", width: "25%"}}>
+
+                                    <CardMedia style={{margin: "0px 0px 0px 14%", width: "50px", height: "50px", position: "initial"}}
+                                        image={resultsTotale.validated.icon}
+                                        title="Validé"
+                                    />
+
+                                    <Typography style={{margin: "0px 0px 0px 5%", width: "25%", left: "38%", position: "initial", display: "inline"}} component="h6" variant="h6">
+                                    {resultsTotale.validated.name} : {matiereValidation}
+                                    </Typography>
+
+                                </div>
+                                <div className="content-card-failed" style={{display: "inline-block", width: "25%"}}>
+                                    <CardMedia style={{margin: "0px 0px 0px 14%", width: "50px", height: "50px", position: "initial"}}
+                                        image={resultsTotale.failed.icon}
+                                        title="Echoué"
+                                    />
+                                
+                                    <Typography style={{margin: "0px 0px 0px 5%", width: "25%", left: "60%", position: "initial", display: "inline"}} component="h6" variant="h6">
+                                    {resultsTotale.failed.name} : {matiereCancelled}
+                                    </Typography>
+                                </div>
+                                <div className="content-card-obtainedCredits" style={{display: "inline-block", width: "25%"}}>
+                                    <CardMedia style={{margin: "0px 0px 0px 14%", width: "50px", height: "50px", position: "initial"}}
+                                        image={resultsTotale.obtainedCredits.icon}
+                                        title="Crédits"
+                                    />
+
+                                    <Typography style={{margin: "0px 0px 0px 5%", width: "25%", right: "10%", position: "initial", display: "inline"}} component="h6" variant="h6">
+                                    {resultsTotale.obtainedCredits.name} : 45
+                                    </Typography>
+                                </div>
+                            </div>
+
                             <CustomInput
                                 id="outlined-required"
                                 //variant="outlined"
