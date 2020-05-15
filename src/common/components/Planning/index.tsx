@@ -11,6 +11,7 @@ import '@fullcalendar/daygrid/main.css';
 import '@fullcalendar/timegrid/main.css';
 import '@fullcalendar/list/main.css';
 import ButtonCustom from '../ButtonCustom';
+import { text } from '@storybook/addon-knobs';
 
 type EventCourse = {
     idCourse: number;
@@ -54,8 +55,8 @@ const fakesEvents: EventCourse[] = [
         idTeacher: 1,
         teacherName: 'Billy',
         idClass: 1,
-        dateStart: '2020-04-24 09:00:00',
-        dateEnd: '2020-04-24 11:00:00',
+        dateStart: '2020-04-30 09:00:00',
+        dateEnd: '2020-04-30 11:00:00',
         presentTeacher: true,
         comments: 'No comment',
         idClassNavigation: 1,
@@ -63,7 +64,7 @@ const fakesEvents: EventCourse[] = [
         idTeacherNavigation: 1,
         idTypeCourseNavigation: 1,
         title: 'Java',
-        backgroundColor: 'red',
+        backgroundColor: '#ABEBC6',
     },
     {
         idCourse: 2,
@@ -72,8 +73,8 @@ const fakesEvents: EventCourse[] = [
         idTeacher: 2,
         teacherName: 'Jérémy',
         idClass: 2,
-        dateStart: '2020-04-24 11:00:00',
-        dateEnd: '2020-04-24 13:00:00',
+        dateStart: '2020-04-30 11:00:00',
+        dateEnd: '2020-04-30 13:00:00',
         presentTeacher: true,
         comments: 'No comment',
         idClassNavigation: 2,
@@ -81,7 +82,7 @@ const fakesEvents: EventCourse[] = [
         idTeacherNavigation: 2,
         idTypeCourseNavigation: 2,
         title: 'C#',
-        backgroundColor: 'purple',
+        backgroundColor: '#85C1E9',
     },
     {
         idCourse: 1,
@@ -153,7 +154,7 @@ const fakesEvents: EventCourse[] = [
         idTeacherNavigation: 2,
         idTypeCourseNavigation: 2,
         title: 'ID City',
-        backgroundColor: '##FCF3CF ',
+        backgroundColor: '#FCF3CF ',
     },
 ];
 
@@ -177,8 +178,10 @@ export default function Planning() {
 
     const eventRender = ({ event, el, view }: any) => {
         const description = event.extendedProps.description;
-        console.log(description);
-        el.append('Enseignant : ' + description);
+        var div = document.createElement('div');
+        var text = document.createTextNode('Enseignant : ' + description);
+        div.appendChild(text);
+        el.appendChild(div);
     };
 
     return (

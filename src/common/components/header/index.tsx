@@ -71,7 +71,9 @@ const Header = () => {
                             >
                                 {user?.avatar ? (
                                     <img
-                                        width="20%"
+                                        width="60px"
+                                        height="60px"
+                                        style={{borderRadius: "50%"}}
                                         src={user.avatar}
                                         alt="avatar"
                                     />
@@ -119,7 +121,7 @@ const Header = () => {
                                     >
                                         {user?.avatar ? (
                                             <img
-                                                width="50%"
+                                                width="100%"
                                                 src={user.avatar}
                                                 alt="avatar"
                                             />

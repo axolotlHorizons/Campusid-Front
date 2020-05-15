@@ -7,7 +7,10 @@ export default {
 };
 
 export const TabCustoms = () => {
-    let tabArray = ['Note', 'Admin', 'Perso'];
+    let tabArray = [
+        { name: 'Exemple1' },
+        { name: 'Exemple2' },
+    ];
 
     return (
         <div>

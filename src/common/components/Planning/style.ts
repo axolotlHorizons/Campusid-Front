@@ -6,16 +6,15 @@ export default createUseStyles({
         fontSize: '14px',
         paddingBottom: '5%',
         width: 'auto',
-
         '& .MuiButtonBase-root': {
             backgroundColor: '#B70000',
-            color: '',
             borderRadius: '8px',
             margin: '3px',
             width: 'auto',
             textAlign: 'center',
             textTransform: 'uppercase',
             alignSelf: 'center',
+            marginTop: '3%',
         },
         '& .MuiButton-text': {
             color: '#FFF',
@@ -32,6 +31,20 @@ export default createUseStyles({
         margin: '0 auto',
         maxWidth: '900px',
         display: 'flex',
+        color: 'black',
+        '& td.fc-today': {
+            backgroundColor: '#f2f2f2',
+        },
+        '& .fc-event': {
+            border: '1px solid rgb(0,0,0,0.2)',
+        },
+        '& .fc-time-grid-event': {
+            color: 'black',
+            width: '100%',
+            display: 'flex',
+            justifyContent: 'center',
+            flexDirection: 'column',
+        },
         '& th': {
             backgroundColor: '#B70000',
             color: 'white',
@@ -41,8 +54,10 @@ export default createUseStyles({
         '& tr': {
             height: '2rem',
             fontWeight: 'bold',
+            textAlign: 'center',
         },
         '& .fc-title': {
+            color: 'white',
             backgroundColor: 'black',
             borderRadius: '3px',
             margin: '3px',

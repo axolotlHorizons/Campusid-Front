@@ -9,17 +9,15 @@ const Trombinoscope = () => {
     const classes = styles();
 
     const TabEtudiant = [
-        {id: 1, name: "Thierry", lastName: "Dupont", img: "https://" },{id: 1, name: "Thierry", lastName: "Dupont", img: "https://" },{id: 1, name: "Thierry", lastName: "Dupont", img: "https://" },{id: 1, name: "Thierry", lastName: "Dupont", img: "https://" },{id: 1, name: "Thierry", lastName: "Dupont", img: "https://" },{id: 1, name: "Thierry", lastName: "Dupont", img: "https://" },{id: 1, name: "Thierry", lastName: "Dupont", img: "https://" },{id: 1, name: "Thierry", lastName: "Dupont", img: "https://" },{id: 1, name: "Thierry", lastName: "Dupont", img: "https://" }]
+        {id: 1, name: "Jean", lastName: "Yves", img: "https://thispersondoesnotexist.com/image" },{id: 1, name: "Marc", lastName: "Henry", img: "https://thispersondoesnotexist.com/image" },{id: 1, name: "Paul", lastName: "Jacques", img: "https://thispersondoesnotexist.com/image" },{id: 1, name: "Pierre", lastName: "Paul", img: "https://thispersondoesnotexist.com/image" },{id: 1, name: "Prince", lastName: "Mickael", img: "https://thispersondoesnotexist.com/image" },{id: 1, name: "Remy", lastName: "Lannyere", img: "https://thispersondoesnotexist.com/image" },{id: 1, name: "Jerry", lastName: "Dou", img: "https://thispersondoesnotexist.com/image" },{id: 1, name: "Phillipe", lastName: "Row", img: "https://thispersondoesnotexist.com/image" },{id: 1, name: "Black", lastName: "Berry", img: "https://thispersondoesnotexist.com/image" },{id: 1, name: "Sam", lastName: "Sung", img: "https://thispersondoesnotexist.com/image" }]
 
 
     return (
         <div>
-            <Grid container spacing={6}>
-                {TabEtudiant.map(value =>
-                    <Grid container item xs={4} spacing={2}>
+            <Grid container spacing={2}>
+                    {TabEtudiant.map(value =>
                         <ImgInformation eleve={value}></ImgInformation>
-                    </Grid>
-                )}
+                    )}
             </Grid>
         </div>
     );
