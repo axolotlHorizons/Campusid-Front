@@ -217,9 +217,11 @@ export default function Planning() {
                     minTime="09:00:00"
                     maxTime="18:00:00"
                     eventRender={eventRender}
-                    height={850}
                     fixedWeekCount={false}
                     firstDay={1}
+                    allDaySlot={false}
+                    height={700}
+                    footer={false}
                 />
             </div>
         </div>

@@ -4,7 +4,6 @@ export default createUseStyles({
     demoApp: {
         fontFamily: 'Arial, Helvetica Neue, Helvetica, sans-serif',
         fontSize: '14px',
-        paddingBottom: '5%',
         width: 'auto',
         '& .MuiButtonBase-root': {
             backgroundColor: '#B70000',
@@ -34,6 +33,7 @@ export default createUseStyles({
     demoAppCalendar: {
         margin: '0 auto',
         maxWidth: '900px',
+
         display: 'flex',
         color: 'black',
         '& td.fc-today': {
