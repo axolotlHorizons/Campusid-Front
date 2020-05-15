@@ -221,7 +221,7 @@ export default function Planning() {
                     firstDay={1}
                     allDaySlot={false}
                     height={700}
-                    footer={false}
+                    footer={true}
                 />
             </div>
         </div>

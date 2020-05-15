@@ -36,6 +36,7 @@ export default createUseStyles({
 
         display: 'flex',
         color: 'black',
+        '& .fc-divider': { display: 'none' },
         '& td.fc-today': {
             backgroundColor: '#f2f2f2',
         },
