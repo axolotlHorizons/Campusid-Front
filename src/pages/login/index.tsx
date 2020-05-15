@@ -40,13 +40,26 @@ export default function FormDialog() {
                         if (res[0]) {
                             localStorage.setItem(
                                 'user',
-                                JSON.stringify(res[0])
+                                JSON.stringify({
+                                    lastname: res[0].lastname,
+                                    firstname: res[0].firstname,
+                                    avatar: res[0].avatar,
+                                    role: res[0].role,
+                                })
                             );
-                            window.location.assign(`/planning`);
+                            if (res[0].role === 'admin') {
+                                window.location.assign('/admin');
+                            } else {
+                                window.location.assign(`/planning`);
+                            }
                         }
                     })
                     //remplacer le console log quand un système de logs sera en place !!!
-                    .catch(console.log('une erreur est survenue'))
+                    .catch(
+                        console.log(
+                            `une erreur est survenue lors de l'envoie des données`
+                        )
+                    )
             );
         }
     };

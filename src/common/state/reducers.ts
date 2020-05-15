@@ -1,6 +1,6 @@
 import { Reducer } from 'react';
 import { Action } from 'redux';
-import { SET_ERROR_PAGE, SET_COURSES, SET_USER } from './actions';
+import { SET_ERROR_PAGE, SET_COURSES, SET_USER, SET_IS_ADMIN } from './actions';
 
 //The Reducer is listening to all dispatched actions
 const commonReducer: Reducer<Record<string, any>, Action<any>> = (
@@ -22,6 +22,11 @@ const commonReducer: Reducer<Record<string, any>, Action<any>> = (
             return {
                 ...state,
                 courses: action.payload,
+            };
+        case SET_IS_ADMIN:
+            return {
+                ...state,
+                isAdmin: action.payload,
             };
 
         default:

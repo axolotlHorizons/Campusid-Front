@@ -20,8 +20,9 @@ import styles from './style';
 import ButtonCustom from '../ButtonCustom';
 
 type User = {
-    name: string;
+    lastname: string;
     firstname: string;
+    role: string;
     avatar?: string;
 };
 const Header = () => {
@@ -60,7 +61,7 @@ const Header = () => {
                                 className={classes.userName}
                             >
                                 {user
-                                    ? `${user.name} ${user.firstname}`
+                                    ? `${user.lastname} ${user.firstname}`
                                     : 'Nom Prénom'}
                             </Typography>
                             <IconButton
@@ -134,7 +135,7 @@ const Header = () => {
                                         style={{ textAlign: 'center' }}
                                     >
                                         {user
-                                            ? `${user.name} ${user.firstname}`
+                                            ? `${user.lastname} ${user.firstname}`
                                             : 'Nom Prénom'}
                                     </Typography>
                                 </MenuItem>
