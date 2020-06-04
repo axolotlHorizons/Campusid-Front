@@ -34,7 +34,7 @@ function GraphsContainer(props : any) {
 
         chart.legend = new am4charts.Legend();
 
-    }, []);
+    }, [dataAverage]);
 
     return (
         <div>
