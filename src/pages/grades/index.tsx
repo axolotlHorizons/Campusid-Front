@@ -406,8 +406,32 @@ const Grades = () => {
             ],
         },
     ];
+
+    let resultsTotale =
+        {
+            "inProgress": {
+            name: "En cours de validation",
+            icon: "https://image.flaticon.com/icons/svg/325/325211.svg"
+            },
+        
+            "validated": {
+            name: "Validé",
+            icon: "https://image.flaticon.com/icons/svg/390/390973.svg"
+            },
+        
+            "failed": {
+            name: "Echoué",
+            icon: "https://image.flaticon.com/icons/svg/594/594864.svg"
+            },
+        
+            "obtainedCredits": {
+            name: "Crédits obtenu",
+            icon: "https://image.flaticon.com/icons/svg/794/794625.svg"
+            }
+        }
+
     const getComponentAccordeon = () => {
-        return <Accordeon matieres={matieres} />;
+        return <Accordeon resultsTotale = {resultsTotale} matieres={matieres} />;
     };
 
     const getComponentGraphs = () => {
