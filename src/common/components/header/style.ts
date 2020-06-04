@@ -4,8 +4,9 @@ export default createUseStyles({
     container: {
     },
     toolbar: {
-        backgroundColor: '#B70000',
-        paddingLeft: "10px !important"
+        backgroundColor: "#EDEDED",
+        paddingLeft: "10px !important",
+        borderBottom: "1px solid #B70000"
     },
     uselessIcons: {
         width: "100%",
@@ -18,7 +19,7 @@ export default createUseStyles({
     },
     logoCampus: {
       height: "50px",
-      width: "200px",
+      width: "237px",
       backgroundPosition: "top !important"
     },
     marginAuto: {
@@ -29,10 +30,10 @@ export default createUseStyles({
     profileIcon: {
         position: 'absolute',
         right: 0,
-        color: "white"
+        color: "black"
     },
     userName: {
         display: 'inline-block',
-        color: "white"
+        color: "black"
     }
 });

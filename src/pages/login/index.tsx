@@ -16,6 +16,7 @@ import ButtonCustom from 'common/components/ButtonCustom';
 import Button from '@material-ui/core/Button';
 import { setUser } from 'common/state/actions';
 import { getUser } from 'api';
+import CardMedia from '@material-ui/core/CardMedia';
 
 export default function FormDialog() {
     const classes = styles();
@@ -80,13 +81,15 @@ export default function FormDialog() {
                             textAlign: 'center',
                             color: 'white',
                             backgroundColor: '#B70000',
-                            height: '17%',
-                            paddingTop: '50px',
+                            height: '27%',
                         }}
                         id="form-dialog-title"
                     >
-                        <br></br>
-                        Connexion
+                        <CardMedia
+                            className={classes.logoCampus}
+                            image={require('../../common/components/header/CampusIdLogoPhone.png')}
+                            title="Campus ID"
+                        />
                     </DialogTitle>
                     <DialogContent>
                     <br></br>

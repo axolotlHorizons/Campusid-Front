@@ -26,4 +26,10 @@ export default createUseStyles({
             width: '80%',
         },
     },
+    logoCampus: {
+        width: "240px",
+        height: "189px",
+        backgroundSize: "contain",
+        margin: "auto"
+    },
 });
