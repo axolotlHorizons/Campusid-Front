@@ -7,12 +7,13 @@ import {
     DialogActions,
     DialogContent,
     DialogTitle,
-    Radio,
+    Checkbox,
     FormControlLabel,
 } from '@material-ui/core';
 
 import CustomInput from 'common/components/CustomInput';
 import ButtonCustom from 'common/components/ButtonCustom';
+import Button from '@material-ui/core/Button';
 import { setUser } from 'common/state/actions';
 import { getUser } from 'api';
 
@@ -84,9 +85,12 @@ export default function FormDialog() {
                         }}
                         id="form-dialog-title"
                     >
+                        <br></br>
                         Connexion
                     </DialogTitle>
                     <DialogContent>
+                    <br></br>
+                    <br></br>
                         <CustomInput
                             name="N°IDBoard"
                             type="ID"
@@ -96,7 +100,8 @@ export default function FormDialog() {
                             callBack={inputMailComputed}
                             hasIcon={false}
                         />
-
+                        <br></br>
+                        <br></br>
                         <CustomInput
                             name="Mot de passe"
                             type="password"
@@ -110,8 +115,8 @@ export default function FormDialog() {
                     </DialogContent>
                     <FormControlLabel
                         value="Save"
-                        control={<Radio />}
-                        style={{ margin: 20, backgroundColor: '870D0D' }}
+                        control={<Checkbox />}
+                        style={{ margin: 35, backgroundColor: '870D0D' }}
                         label="Se souvenir de moi"
                     />
 
