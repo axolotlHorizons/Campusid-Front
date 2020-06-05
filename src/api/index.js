@@ -32,3 +32,15 @@ export function getGrades(id = null) {
             return response.data;
         });
 }
+
+export function getCourses(id = null) {
+    let path = process.env.REACT_APP_EXTERNAL_COURSES_ROUTE;
+    if (id != null)
+        path += `/${id}`;
+    return axios
+        .get(path)
+        .then(response => {
+            // returning the data here allows the caller to get it through another .then(...)
+            return response.data;
+        });
+}

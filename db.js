@@ -1,6 +1,7 @@
 const coursesJson = require ('./src/utils/jsonExample/Courses.json');
 const internshipJson = require ('./src/utils/jsonExample/Internship.json');
 const personnalInformationJson = require ('./src/utils/jsonExample/PersonnalInformation.json');
+const marksJson = require ('./src/utils/jsonExample/Marks.json');
 
 
 module.exports = () => {
@@ -21,7 +22,8 @@ module.exports = () => {
             }
         ],
         "profile": personnalInformationJson,
-        "grades": coursesJson,
-        "internship": internshipJson
+        "grades": marksJson,
+        "internship": internshipJson,
+        "courses": coursesJson
     };
 };
