@@ -8,3 +8,27 @@ export function getUser(id) {
             return response.data;
         });
 }
+
+export function getInternship(id = null) {
+    let path = process.env.REACT_APP_INTERNSHIP_ROUTE;
+    if (id != null)
+        path += `/${id}`;
+    return axios
+        .get(path)
+        .then(response => {
+            // returning the data here allows the caller to get it through another .then(...)
+            return response.data;
+        });
+}
+
+export function getGrades(id = null) {
+    let path = process.env.REACT_APP_GRADES_ROUTE;
+    if (id != null)
+        path += `/${id}`;
+    return axios
+        .get(path)
+        .then(response => {
+            // returning the data here allows the caller to get it through another .then(...)
+            return response.data;
+        });
+}
