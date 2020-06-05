@@ -29,13 +29,17 @@ function RadarChartContainer(props: any) {
         let valueAxis = chart.yAxes.push(new am4charts.ValueAxis() as any);
         valueAxis.renderer.axisFills.template.fill = chart.colors.getIndex(2);
         valueAxis.renderer.axisFills.template.fillOpacity = 0.05;
+        valueAxis.renderer.maxLabelPosition = 0.99;
 
         /* Create and configure series */
         let series = chart.series.push(new am4charts.RadarSeries());
         series.dataFields.valueY = 'average';
         series.dataFields.categoryX = 'name';
         series.name = 'Notes';
-        series.strokeWidth = 3;
+        series.strokeWidth = 2;
+
+        /* Add cursor */
+        chart.cursor = new am4charts.RadarCursor();
 
         chart.legend = new am4charts.Legend();
     }, [dataAverage]);
