@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import ImageCard from '../Card/ImageCard/index';
 import styles from './style';
+import { getInternship } from '../../../api/index';
 
 function ContainerInternship(props: any) {
     const [internships, setInternships] = useState([]);
+
     useEffect(() => {
+        getInternship();
         setInternships(props.internship);
     }, [props.internship]);
 
