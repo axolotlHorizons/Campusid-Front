@@ -9,13 +9,13 @@ export default createUseStyles({
         '& .MuiPaper-root': {
             width: '60%',
             height: '80%',
-            borderRadius: '8px',
+            borderRadius: '0px',
         },
 
         '& .MuiButtonBase-root': {
             backgroundColor: '#B70000',
             color: 'white',
-            borderRadius: '8px',
+            borderRadius: '0px',
             margin: '8px',
             width: 'auto',
             textAlign: 'center',
@@ -25,5 +25,11 @@ export default createUseStyles({
         '& .MuiFormControl-root': {
             width: '80%',
         },
+    },
+    logoCampus: {
+        width: "240px",
+        height: "189px",
+        backgroundSize: "contain",
+        margin: "auto"
     },
 });

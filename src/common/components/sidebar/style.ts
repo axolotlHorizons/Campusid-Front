@@ -14,4 +14,7 @@ export default createUseStyles({
     label: {
         marginLeft: '12px !important',
     },
+    '& .MuiListItem-divider' : {
+        borderBottom: "1px solid #EDEDED !important"
+    }
 });

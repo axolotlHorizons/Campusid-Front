@@ -35,7 +35,10 @@ const useStyles = makeStyles((theme: Theme) =>
         marginCenterY: {
             marginTop: "auto",
             marginBottom: "auto"
-        }
+        },
+        cardImage : {
+            width: "50px", height: "50px"
+        }    
     })
 );
 

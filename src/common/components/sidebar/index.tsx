@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme: Theme) =>
             color: 'white',
             top: 'unset',
             position: 'unset',
-            boxShadow: 'inset 0px -2px 2px 0px rgba(0,0,0,0.15)',
+            boxShadow: 'inset 0px -2px 2px 0px rgba(0,0,0,0.15)'
         },
         root: {
             display: 'flex',
@@ -139,6 +139,7 @@ const Sidebar = () => {
                                 marginTop: '10px',
                                 paddingTop: '25px',
                                 paddingBottom: '25px',
+                                fontWeight : "bold"
                             }}
                         >
                             <ListItemIcon>
@@ -159,6 +160,7 @@ const Sidebar = () => {
                             style={{
                                 paddingTop: '25px',
                                 paddingBottom: '25px',
+                                fontWeight : "bold"
                             }}
                         >
                             <ListItemIcon>
@@ -179,6 +181,7 @@ const Sidebar = () => {
                             style={{
                                 paddingTop: '25px',
                                 paddingBottom: '25px',
+                                fontWeight : "bold"
                             }}
                         >
                             <ListItemIcon>
@@ -199,6 +202,7 @@ const Sidebar = () => {
                             style={{
                                 paddingTop: '25px',
                                 paddingBottom: '25px',
+                                fontWeight : "bold"
                             }}
                         >
                             <ListItemIcon>
@@ -208,7 +212,7 @@ const Sidebar = () => {
                             </ListItemIcon>
                             <ListItemText
                                 primary={'Actualités'}
-                                style={{ fontSize: 30, color: 'white' }}
+                                style={{ fontSize: 30, color: 'white'}}
                             />
                         </ListItem>
                     </Link>
@@ -216,7 +220,7 @@ const Sidebar = () => {
                         to="/external-links"
                         style={{ textDecoration: 'none' }}
                     >
-                        <ListItem button divider={true}>
+                        <ListItem button divider={true} >
                             <ListItemIcon>
                                 <LinkIcon
                                     style={{ fontSize: 30, color: 'white' }}
@@ -228,6 +232,7 @@ const Sidebar = () => {
                                     fontSize: 30,
                                     color: 'white',
                                     whiteSpace: 'normal',
+                                    fontWeight : "bold"
                                 }}
                             />
                         </ListItem>
@@ -239,10 +244,10 @@ const Sidebar = () => {
                     >
                         <ListItem
                             button
-                            divider={true}
                             style={{
                                 paddingTop: '25px',
                                 paddingBottom: '25px',
+
                             }}
                         >
                             <ListItemIcon>
@@ -252,7 +257,7 @@ const Sidebar = () => {
                             </ListItemIcon>
                             <ListItemText
                                 primary={'Configuration'}
-                                style={{ fontSize: 30, color: 'white' }}
+                                style={{ fontSize: 30, color: 'white', fontWeight : "bold"}}
                             />
                         </ListItem>
                     </Link>
