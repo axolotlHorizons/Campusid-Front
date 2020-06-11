@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './style';
 import TabCustom from 'common/components/TabCustom';
 import Accordeon from 'common/components/Accordeon';
 import GraphsContainer from 'common/components/GraphsContainer';
+import ColumnChartContainer from 'common/components/ColumnChartContainer';
+import RadartChart from 'common/components/RadarChartContainer';
 
 const Grades = () => {
     let matieres = [
@@ -497,31 +499,30 @@ const Grades = () => {
         },
     ];
 
-    let resultsTotale =
-        {
-            "inProgress": {
-            name: "En cours de validation",
-            icon: "https://image.flaticon.com/icons/svg/325/325211.svg"
-            },
-        
-            "validated": {
-            name: "Validé",
-            icon: "https://image.flaticon.com/icons/svg/390/390973.svg"
-            },
-        
-            "failed": {
-            name: "Echoué",
-            icon: "https://image.flaticon.com/icons/svg/594/594864.svg"
-            },
-        
-            "obtainedCredits": {
-            name: "Crédits obtenu",
-            icon: "https://image.flaticon.com/icons/svg/794/794625.svg"
-            }
-        }
+    let resultsTotale = {
+        inProgress: {
+            name: 'En cours de validation',
+            icon: 'https://image.flaticon.com/icons/svg/325/325211.svg',
+        },
+
+        validated: {
+            name: 'Validé',
+            icon: 'https://image.flaticon.com/icons/svg/390/390973.svg',
+        },
+
+        failed: {
+            name: 'Echoué',
+            icon: 'https://image.flaticon.com/icons/svg/594/594864.svg',
+        },
+
+        obtainedCredits: {
+            name: 'Crédits obtenu',
+            icon: 'https://image.flaticon.com/icons/svg/794/794625.svg',
+        },
+    };
 
     const getComponentAccordeon = () => {
-        return <Accordeon resultsTotale = {resultsTotale} matieres={matieres} />;
+        return <Accordeon resultsTotale={resultsTotale} matieres={matieres} />;
     };
 
     const getAspectAverage = (notes: []) => {
@@ -533,10 +534,10 @@ const Grades = () => {
         return average / notes.length;
     };
 
-    const getComponentGraphs = () => {
-        let matiereAverage = [];
-        let coursesAverage = [];
-        let aspectAverages: any = [];
+    const getOngletsWithData = () => {
+        let tmpDomainAverage = [];
+        let tmpCoursesAverage = [];
+        let tmpAspectAverages: any = [];
         let finalAspectAverage: any = [];
 
         for (let y = 0; y < matieres.length; y++) {
@@ -554,28 +555,30 @@ const Grades = () => {
                         average: matieres[y].results[i].note,
                     };
 
-                    if (!aspectAverages[matieres[y].results[i].aspect as any]) {
-                        aspectAverages[
+                    if (
+                        !tmpAspectAverages[matieres[y].results[i].aspect as any]
+                    ) {
+                        tmpAspectAverages[
                             matieres[y].results[i].aspect as any
                         ] = [];
-                        aspectAverages[
+                        tmpAspectAverages[
                             matieres[y].results[i].aspect as any
                         ].push(matieres[y].results[i].note);
                     } else {
-                        aspectAverages[
+                        tmpAspectAverages[
                             matieres[y].results[i].aspect as any
                         ].push(matieres[y].results[i].note);
                     }
-                    coursesAverage.push(courseAverage);
+                    tmpCoursesAverage.push(courseAverage);
                 }
 
                 objToPush.average =
                     objToPush.average / matieres[y].results.length;
             }
-            matiereAverage.push(objToPush);
+            tmpDomainAverage.push(objToPush);
         }
 
-        Object.entries(aspectAverages).forEach(function(aspect, y) {
+        Object.entries(tmpAspectAverages).forEach(function(aspect, y) {
             let notes: any = aspect[1];
             let finalAverage = getAspectAverage(notes);
 
@@ -585,23 +588,42 @@ const Grades = () => {
             });
         });
 
-        console.log(finalAspectAverage);
-
-        return (
-            <GraphsContainer
-                dataAverage={matiereAverage}
-                aspectAverage={finalAspectAverage}
-                coursesAverage={coursesAverage}
-            />
-        );
+        return [
+            { name: 'Note', component: getComponentAccordeon },
+            {
+                name: 'Graphique Camenbert',
+                component: (
+                    <GraphsContainer
+                        dataAverage={tmpDomainAverage}
+                        aspectAverage={finalAspectAverage}
+                        coursesAverage={tmpCoursesAverage}
+                    />
+                ),
+            },
+            {
+                name: 'Graphique Colonne',
+                component: (
+                    <ColumnChartContainer
+                        dataAverage={tmpDomainAverage}
+                        aspectAverage={finalAspectAverage}
+                        coursesAverage={tmpCoursesAverage}
+                    />
+                ),
+            },
+            {
+                name: 'Graphique Radar',
+                component: (
+                    <RadartChart
+                        dataAverage={tmpDomainAverage}
+                        aspectAverage={finalAspectAverage}
+                        coursesAverage={tmpCoursesAverage}
+                    />
+                ),
+            },
+        ];
     };
 
-    let tabArray = [
-        { name: 'Note', component: getComponentAccordeon },
-        { name: 'Graph', component: getComponentGraphs },
-    ];
-
-    return <TabCustom onglets={tabArray}></TabCustom>;
+    return <TabCustom onglets={getOngletsWithData()} />;
 };
 
 export default Grades;
