@@ -8,8 +8,9 @@ import {
     DialogActions,
     DialogContent,
     DialogTitle,
-    Radio,
+    Checkbox,
     FormControlLabel,
+    CardMedia,
 } from '@material-ui/core';
 
 import { userLoginSuccess, userLoginError } from 'common/state/actions';
@@ -100,14 +101,19 @@ export default function FormDialog() {
                         textAlign: 'center',
                         color: 'white',
                         backgroundColor: '#B70000',
-                        height: '17%',
-                        paddingTop: '50px',
+                        height: '27%',
                     }}
                     id="form-dialog-title"
                 >
-                    Connexion
+                    <CardMedia
+                        className={classes.logoCampus}
+                        image={require('../../common/components/header/CampusIdLogoPhone.png')}
+                        title="Campus ID"
+                    />
                 </DialogTitle>
                 <DialogContent>
+                    <br></br>
+                    <br></br>
                     <CustomInput
                         name="N°IDBoard"
                         type="ID"
@@ -117,7 +123,8 @@ export default function FormDialog() {
                         callBack={inputMailComputed}
                         hasIcon={false}
                     />
-
+                    <br></br>
+                    <br></br>
                     <CustomInput
                         name="Mot de passe"
                         type="password"
@@ -128,13 +135,13 @@ export default function FormDialog() {
                         callBack={inputPasswordComputed}
                         hasIcon={false}
                     />
+                    <FormControlLabel
+                        value="Save"
+                        control={<Checkbox />}
+                        style={{ margin: 35, backgroundColor: '870D0D' }}
+                        label="Se souvenir de moi"
+                    />
                 </DialogContent>
-                <FormControlLabel
-                    value="Save"
-                    control={<Radio />}
-                    style={{ margin: 20, backgroundColor: '870D0D' }}
-                    label="Se souvenir de moi"
-                />
 
                 <DialogActions style={{ display: 'flex' }}>
                     <div style={{ margin: 'auto', backgroundColor: 'white' }}>

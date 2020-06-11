@@ -4,17 +4,20 @@ export default createUseStyles({
     demoApp: {
         fontFamily: 'Arial, Helvetica Neue, Helvetica, sans-serif',
         fontSize: '14px',
-        paddingBottom: '5%',
         width: 'auto',
         '& .MuiButtonBase-root': {
             backgroundColor: '#B70000',
-            borderRadius: '8px',
+            borderRadius: '2px',
             margin: '3px',
             width: 'auto',
             textAlign: 'center',
             textTransform: 'uppercase',
             alignSelf: 'center',
             marginTop: '3%',
+
+            '&:hover': {
+                backgroundColor: '#918D8C ',
+            },
         },
         '& .MuiButton-text': {
             color: '#FFF',
@@ -30,8 +33,10 @@ export default createUseStyles({
     demoAppCalendar: {
         margin: '0 auto',
         maxWidth: '900px',
+
         display: 'flex',
         color: 'black',
+        '& .fc-divider': { display: 'none' },
         '& td.fc-today': {
             backgroundColor: '#f2f2f2',
         },
