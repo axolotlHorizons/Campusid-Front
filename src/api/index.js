@@ -37,7 +37,7 @@ export const fetchCourses = idClass => {
 export const uploadAvatar = (newAvatar, userId) => {
     try {
         return axios.patch(`${process.env.REACT_APP_USER_ROUTE}/${userId}`, {
-            newAvatar,
+            avatar: newAvatar,
         });
     } catch (e) {
         return e.response.status;
