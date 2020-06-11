@@ -13,7 +13,7 @@ export const allowAuthentication = (email, password) => {
             alert('Informations incorrectes');
             return;
         })
-        .catch();
+        .catch(err => console.log(err));
 };
 
 export const fetchUser = email => {
@@ -32,4 +32,14 @@ export const fetchCourses = idClass => {
             // returning the data here allows the caller to get it through another .then(...)
             return response.data;
         });
+};
+
+export const uploadAvatar = (newAvatar, userId) => {
+    try {
+        return axios.patch(`${process.env.REACT_APP_USER_ROUTE}/${userId}`, {
+            newAvatar,
+        });
+    } catch (e) {
+        return e.response.status;
+    }
 };

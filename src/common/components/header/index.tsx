@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-
 import {
     AppBar,
     Toolbar,
@@ -9,28 +8,31 @@ import {
     MenuItem,
     Menu,
     Typography,
-    Avatar,
+    CardMedia,
 } from '@material-ui/core';
-import CardMedia from '@material-ui/core/CardMedia';
-import AccountCircle from '@material-ui/icons/AccountCircle';
 
-import { getUserData } from 'common/state/selectors';
+import Avatar from 'common/components/Avatar';
+import AvatarPicker from 'common/components/AvatarPicker';
+import ButtonCustom from 'common/components/ButtonCustom';
+
+import { getUserData, getProfileImage } from 'common/state/selectors';
 
 import styles from './style';
-import ButtonCustom from '../ButtonCustom';
 
 type User = {
     lastname: string;
     firstname: string;
     role: string;
-    avatar?: string;
+    avatar: { image: string | null };
 };
 const Header = () => {
     const classes = styles();
-    const auth = !!localStorage.getItem('user');
+    const auth = !!localStorage.getItem('state');
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
     const open = Boolean(anchorEl);
     const user: User = useSelector(getUserData);
+    const src = useSelector(getProfileImage);
+
     const handleMenu = (event: React.MouseEvent<HTMLElement>) => {
         setAnchorEl(event.currentTarget);
     };
@@ -40,7 +42,7 @@ const Header = () => {
     };
 
     const disconnected = () => {
-        localStorage.removeItem('user');
+        localStorage.removeItem('state');
         window.location.assign(`/`);
     };
 
@@ -53,7 +55,7 @@ const Header = () => {
                         image={require('./campusIdLogo.png')}
                         title="Campus ID"
                     />
-                    {auth && (
+                    {auth && user && (
                         <div className={classes.profileIcon}>
                             <Typography
                                 variant="h6"
@@ -71,15 +73,7 @@ const Header = () => {
                                 onClick={handleMenu}
                                 color="inherit"
                             >
-                                {user?.avatar ? (
-                                    <img
-                                        width="50px"
-                                        src={user.avatar}
-                                        alt="avatar"
-                                    />
-                                ) : (
-                                    <AccountCircle />
-                                )}
+                                <Avatar src={src} nickname={user.firstname} />
                             </IconButton>
                             <Menu
                                 PaperProps={{
@@ -105,30 +99,20 @@ const Header = () => {
                                 onClose={handleClose}
                             >
                                 <MenuItem
-                                    onClick={handleClose}
                                     style={{
                                         background: 'rgba(183, 0, 0, 0.7)',
                                         display: 'block',
                                     }}
+                                    disableGutters
                                 >
-                                    <Avatar
-                                        style={{
-                                            margin: 'auto',
-                                            height: '75px',
-                                            width: '75px',
-                                        }}
-                                        alt="Nom Prénom"
-                                    >
-                                        {user?.avatar ? (
-                                            <img
-                                                width="100%"
-                                                src={user.avatar}
-                                                alt="avatar"
-                                            />
-                                        ) : (
-                                            'NP'
-                                        )}
-                                    </Avatar>
+                                    <AvatarPicker>
+                                        <Avatar
+                                            src={src}
+                                            nickname={user.firstname}
+                                            mode="large"
+                                        />
+                                    </AvatarPicker>
+
                                     <Typography
                                         variant="h6"
                                         component="h6"

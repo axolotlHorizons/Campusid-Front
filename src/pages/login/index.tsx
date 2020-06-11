@@ -1,6 +1,7 @@
 //@ts-nocheck
 
 import React, { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 
 import {
     Dialog,
@@ -11,6 +12,8 @@ import {
     FormControlLabel,
 } from '@material-ui/core';
 
+import { userLoginSuccess, userLoginError } from 'common/state/actions';
+
 import CustomInput from 'common/components/CustomInput';
 import ButtonCustom from 'common/components/ButtonCustom';
 import { allowAuthentication, fetchUser } from 'api';
@@ -18,6 +21,7 @@ import { allowAuthentication, fetchUser } from 'api';
 import styles from './style';
 
 export default function FormDialog() {
+    const dispatch = useDispatch();
     const classes = styles();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -34,33 +38,29 @@ export default function FormDialog() {
 
     const callBackButton = () => {
         if (email && password) {
-            allowAuthentication(email, password).then(response =>
-                fetchUser(response)
-                    .then(res => {
-                        if (res[0]) {
-                            localStorage.setItem(
-                                'user',
-                                JSON.stringify({
-                                    lastname: res[0].lastname,
-                                    firstname: res[0].firstname,
-                                    avatar: res[0].avatar,
-                                    role: res[0].role,
-                                })
-                            );
-                            if (res[0].role === 'admin') {
-                                window.location.assign('/admin');
-                            } else {
-                                window.location.assign(`/planning`);
-                            }
-                        }
-                    })
-                    //remplacer le console log quand un système de logs sera en place !!!
-                    .catch(
-                        console.log(
-                            `une erreur est survenue lors de l'envoie des données`
-                        )
-                    )
-            );
+            allowAuthentication(email, password)
+                .then(response => fetchUser(response))
+                .then(res => {
+                    dispatch(
+                        userLoginSuccess({
+                            lastname: res[0].lastname,
+                            firstname: res[0].firstname,
+                            avatar: res[0].avatar,
+                            role: res[0].role,
+                            id: res[0].id,
+                        })
+                    );
+                })
+                .then(res => {
+                    if (res[0].role === 'admin') {
+                        window.location.assign('/admin');
+                    } else {
+                        window.location.assign(`/planning`);
+                    }
+                })
+                .catch(err => {
+                    dispatch(userLoginError);
+                });
         }
     };
 
