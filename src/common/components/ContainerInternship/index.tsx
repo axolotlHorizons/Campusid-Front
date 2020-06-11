@@ -14,6 +14,7 @@ function ContainerInternship(props: any) {
                 toto.push({
                     mission: internship[1].missionSummary,
                     value: internship[1].title,
+                    companyName: internship[1].companyName,
                 });
             });
             setTest(toto);
@@ -26,18 +27,23 @@ function ContainerInternship(props: any) {
     return test.length > 0 ? (
         <>
             {test.map((item: any) => (
-                <ImageCard
-                    image={''}
-                    title={item.value}
-                    text={item.mission}
-                    hasButton={false}
-                    buttonText={'fdfd'}
-                    altImage={'test'}
-                />
+                <div className="cardInternship">
+                    <ImageCard
+                        image={
+                            'https://studandglobe.com/wp-content/uploads/2019/01/ALERTE-STAGE_Plan-de-travail-1-copie-01.jpg'
+                        }
+                        title={item.value}
+                        text={item.mission}
+                        textCompany={item.companyName}
+                        hasButton={false}
+                        buttonText={'détails'}
+                        altImage={'image offre de stage'}
+                    />
+                </div>
             ))}
         </>
     ) : (
-        <>'toto' </>
+        <> </>
     );
 }
 

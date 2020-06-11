@@ -7,6 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 
 import styles from './style';
+import { StepLineSeriesSegment } from '@amcharts/amcharts4/.internal/charts/series/StepLineSeriesSegment';
 
 type Props = {
     title: string;
@@ -15,6 +16,7 @@ type Props = {
     hasButton: boolean;
     buttonText: string;
     altImage: string;
+    textCompany: string;
 };
 
 export default function ImageCard(props: Props) {
@@ -22,7 +24,15 @@ export default function ImageCard(props: Props) {
         alert('Button clicked ! :D');
     };
 
-    const { image, title, hasButton, buttonText, altImage, text = '' } = props;
+    const {
+        image,
+        title,
+        hasButton,
+        buttonText,
+        altImage,
+        text = '',
+        textCompany = '',
+    } = props;
 
     const classes = styles();
 
@@ -39,9 +49,9 @@ export default function ImageCard(props: Props) {
 
                 <Grid item md={6} xs={12} className={classes.content}>
                     <CardContent>
-                        <Typography variant="h5">{title}</Typography>
+                        <Typography variant="h4">{title}</Typography>
                     </CardContent>
-
+                    <span>{textCompany}</span>
                     <span>{text}</span>
                 </Grid>
                 {hasButton ? (

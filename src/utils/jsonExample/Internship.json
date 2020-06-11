@@ -1,5 +1,4 @@
-[
-  {
+[{
     "idInternshipOffer": 6,
     "idTypeInternshipOffer": 3,
     "reference": "2014-2015",
@@ -24,7 +23,7 @@
     "idInternshipOffer": 7,
     "idTypeInternshipOffer": 4,
     "reference": "2014-2015",
-    "title": "Développeur",
+    "title": "Développeur DOCAPOST",
     "missionSummary": "Créée par la Société Générale en 1970 pour optimiser le traitement de chèques, SG2 s’est ensuite développée sous la marque Experian dans les activités de gestion déléguée des processus métier et moyens de paiements. Extelia est ensuite née en 2008 de la reprise des activités «Externalisation des process clients» du Groupe Experian, par Le Groupe La Poste.\nFort de 30 années d’expertises dans la gestion du service courrier et plus globalement dans la logistique documentaire, Dynapost est une filiale historique du Groupe La Poste sur laquelle DOCAPOST s’est appuyée pour développer son activité de gestion documentaire et de gestion déléguée des processus métier sur site client.\nPar la réunion de ces deux marques Extelia et Dynapost, nous avons voulu répondre à une ambition forte : accélérer le développement de votre business.\nPour ce faire, nous conjuguons nos expertises en optimisation des flux documentaires et des processus de gestion de la relation client pour vous offrir le choix d’une gestion déléguée sur vos sites ou/et sur nos sites mutualisés.\n\nPour notre site de Sophia Antipolis, nous recherchons un(e) stagiaire pour l'été ou un(e) alternant en contrat de professionnalisation pour 2014-2015. Nous proposons plusieurs sujets autour des développements mobiles, du traitement d'image, du NFC de la cryptographie.\n\nPour postuler, envoyer votre candidature à Jean-Luc FRETARD, Directeur de l'Innovation.\n",
     "companyName": "DOCAPOST-BPO",
     "duration": "stage été ou stage alterné",

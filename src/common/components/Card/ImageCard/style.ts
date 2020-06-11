@@ -4,17 +4,28 @@ export default makeStyles((theme: Theme) =>
     createStyles({
         content: {
             padding: theme.spacing(2),
-            margin: '0',
+            marginLeft: '50px',
+            textAlign: 'justify',
+            usermodify: 'read-write-plaintext-only',
+
+            '& .MuiGrid-root': {
+                webkitusermodify: 'read-write-plaintext-only',
+            },
         },
         img: {
-            margin: 'auto',
+            margin: '10%',
+            margingtop: '200px',
             display: 'block',
-            maxWidth: '100%',
-            maxHeight: '100%',
+            maxWidth: '80%',
+            maxHeight: '200px',
         },
 
         buttonContainer: {
             alignSelf: 'flex-end',
+        },
+        span: {
+            textAlign: 'justify',
+            color: 'red',
         },
     })
 );

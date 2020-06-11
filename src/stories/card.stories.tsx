@@ -32,6 +32,7 @@ export const imageCard = () => {
                 hasButton={boolean('With button ?', true)}
                 buttonText={text('Button text', 'Click here')}
                 altImage={text('Alt image ', 'Scoobidooooo')}
+                textCompany={text('company text', '')}
             />
         </div>
     );
