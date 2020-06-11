@@ -11,23 +11,29 @@ const Grades = () => {
             name: 'ALGORITHMIQUE',
             icon: 'https://image.flaticon.com/icons/svg/1925/1925128.svg',
             credit: 1,
-	        valid: true,
+            valid: true,
             results: [
                 {
-                    name: 'ALGO-POO-2 : Algorithmique - La programmation orientée objets - Partie 1',
+                    name:
+                        'ALGO-POO-2 : Algorithmique - La programmation orientée objets - Partie 1',
                     type: 'Ecrit N°1',
                     note: 14,
                     coeficient: 1,
                     moyenneClasse: 12.5,
                     commentaire: 'Travail assez bon',
+                    aspect: 'Théorique',
+                    domain: 'C',
                 },
                 {
-                    name: 'ALGO-POO-2 : Algorithmique - La programmation orientée objets - Partie 1',
+                    name:
+                        'ALGO-POO-2 : Algorithmique - La programmation orientée objets - Partie 1',
                     type: 'Ecrit N°1',
                     note: 14,
                     coeficient: 1,
                     moyenneClasse: 12.5,
                     commentaire: 'Travail assez bon',
+                    aspect: 'Théorique',
+                    domain: 'C',
                 },
             ],
         },
@@ -45,6 +51,8 @@ const Grades = () => {
                     coeficient: 1,
                     moyenneClasse: 6.7,
                     commentaire: "Merci d'avoir participé",
+                    aspect: 'Autre',
+                    domain: 'Autre',
                 },
                 {
                     name: 'AMBID-B2 : AMBASSADEUR B2',
@@ -53,6 +61,8 @@ const Grades = () => {
                     coeficient: 1,
                     moyenneClasse: 6.7,
                     commentaire: "Merci d'avoir participé",
+                    aspect: 'Autre',
+                    domain: 'Autre',
                 },
             ],
         },
@@ -69,6 +79,8 @@ const Grades = () => {
                     coeficient: 1,
                     moyenneClasse: 14,
                     commentaire: "Bon niveau d'anglais !",
+                    aspect: 'Pratique',
+                    domain: 'Anglais',
                 },
                 {
                     name: 'Anglais:Anglais',
@@ -77,6 +89,8 @@ const Grades = () => {
                     coeficient: 1,
                     moyenneClasse: 14,
                     commentaire: "Bon niveau d'anglais !",
+                    aspect: 'Pratique',
+                    domain: 'Anglais',
                 },
             ],
         },
@@ -88,20 +102,26 @@ const Grades = () => {
             valid: true,
             results: [
                 {
-                    name: 'DRT-PROTECT-1 : Droit - La protection Juridique des outils et des productions numériques',
+                    name:
+                        'DRT-PROTECT-1 : Droit - La protection Juridique des outils et des productions numériques',
                     type: 'Ecrit N°1',
                     note: 14,
                     coeficient: 1,
                     moyenneClasse: 10,
                     commentaire: 'Bonne compréhension',
+                    aspect: 'Théorique',
+                    domain: 'Droit',
                 },
                 {
-                    name: 'DRT-PROTECT-1 : Droit - La protection Juridique des outils et des productions numériques',
+                    name:
+                        'DRT-PROTECT-1 : Droit - La protection Juridique des outils et des productions numériques',
                     type: 'Ecrit N°1',
                     note: 14,
                     coeficient: 1,
                     moyenneClasse: 10,
                     commentaire: 'Bonne compréhension',
+                    aspect: 'Théorique',
+                    domain: 'Droit',
                 },
             ],
         },
@@ -113,20 +133,26 @@ const Grades = () => {
             valid: true,
             results: [
                 {
-                    name: 'ELEC-MOTEUR-1 : Electronique - Le contrôle des moteurs',
+                    name:
+                        'ELEC-MOTEUR-1 : Electronique - Le contrôle des moteurs',
                     type: 'Ecrit N°1',
                     note: 15,
                     coeficient: 1,
                     moyenneClasse: 10.5,
                     commentaire: 'Bien joué',
+                    aspect: 'Pratique',
+                    domain: 'Electronique',
                 },
                 {
-                    name: 'ELEC-MOTEUR-1 : Electronique - Le contrôle des moteurs',
+                    name:
+                        'ELEC-MOTEUR-1 : Electronique - Le contrôle des moteurs',
                     type: 'Ecrit N°1',
                     note: 15,
                     coeficient: 1,
                     moyenneClasse: 10.5,
                     commentaire: 'Bien joué',
+                    aspect: 'Pratique',
+                    domain: 'Electronique',
                 },
             ],
         },
@@ -144,6 +170,8 @@ const Grades = () => {
                     coeficient: 1,
                     moyenneClasse: 8,
                     commentaire: 'Un bon commencement en entreprise, bravo',
+                    aspect: 'Pratique',
+                    domain: 'Expérience professionnelle',
                 },
                 {
                     name: 'STAGE : STAGE',
@@ -152,6 +180,8 @@ const Grades = () => {
                     coeficient: 1,
                     moyenneClasse: 8,
                     commentaire: 'Un bon commencement en entreprise, bravo',
+                    aspect: 'Pratique',
+                    domain: 'Expérience professionnelle',
                 },
             ],
         },
@@ -169,6 +199,8 @@ const Grades = () => {
                     coeficient: 1,
                     moyenneClasse: 10,
                     commentaire: 'Moyen, mais une compréhension est présente',
+                    aspect: 'Programmation',
+                    domain: 'Java',
                 },
                 {
                     name: 'JAVA-BASE : Java - Les bases',
@@ -177,6 +209,8 @@ const Grades = () => {
                     coeficient: 1,
                     moyenneClasse: 10,
                     commentaire: 'Moyen, mais une compréhension est présente',
+                    aspect: 'Programmation',
+                    domain: 'Java',
                 },
             ],
         },
@@ -188,20 +222,26 @@ const Grades = () => {
             valid: true,
             results: [
                 {
-                    name: 'JSCRIPT-POO-2 : Javascript - La programmation orientée objets',
+                    name:
+                        'JSCRIPT-POO-2 : Javascript - La programmation orientée objets',
                     type: 'Ecrit N°1',
                     note: 17,
                     coeficient: 1,
                     moyenneClasse: 14,
                     commentaire: 'Une très bonne compréhension !',
+                    aspect: 'Programmation',
+                    domain: 'JS',
                 },
                 {
-                    name: 'JSCRIPT-POO-2 : Javascript - La programmation orientée objets',
+                    name:
+                        'JSCRIPT-POO-2 : Javascript - La programmation orientée objets',
                     type: 'Ecrit N°1',
                     note: 17,
                     coeficient: 1,
                     moyenneClasse: 14,
                     commentaire: 'Une très bonne compréhension !',
+                    aspect: 'Programmation',
+                    domain: 'JS',
                 },
             ],
         },
@@ -213,20 +253,26 @@ const Grades = () => {
             valid: true,
             results: [
                 {
-                    name: 'SQL-BDDR-GEST : SQL - Langage de gestion des données',
+                    name:
+                        'SQL-BDDR-GEST : SQL - Langage de gestion des données',
                     type: 'Ecrit N°1',
                     note: 14,
                     coeficient: 1,
                     moyenneClasse: 10,
                     commentaire: 'Bon travail.',
+                    aspect: 'Programmation',
+                    domain: 'SQL',
                 },
                 {
-                    name: 'SQL-BDDR-GEST : SQL - Langage de gestion des données',
+                    name:
+                        'SQL-BDDR-GEST : SQL - Langage de gestion des données',
                     type: 'Ecrit N°1',
                     note: 14,
                     coeficient: 1,
                     moyenneClasse: 10,
                     commentaire: 'Bon travail.',
+                    aspect: 'Programmation',
+                    domain: 'SQL',
                 },
             ],
         },
@@ -238,20 +284,26 @@ const Grades = () => {
             valid: true,
             results: [
                 {
-                    name: "SOFT-COLLAB-GIT : Outils logiciels - Versionning et collaboration avec Git",
+                    name:
+                        'SOFT-COLLAB-GIT : Outils logiciels - Versionning et collaboration avec Git',
                     type: 'Ecrit N°1',
                     note: 20,
                     coeficient: 1,
                     moyenneClasse: 10,
                     commentaire: 'Parfaitement prêt pour son utilisation !!',
+                    aspect: 'Logiciel',
+                    domain: 'GIT',
                 },
                 {
-                    name: "SOFT-COLLAB-GIT : Outils logiciels - Versionning et collaboration avec Git",
+                    name:
+                        'SOFT-COLLAB-GIT : Outils logiciels - Versionning et collaboration avec Git',
                     type: 'Ecrit N°1',
                     note: 20,
                     coeficient: 1,
                     moyenneClasse: 10,
                     commentaire: 'Parfaitement prêt pour son utilisation !!',
+                    aspect: 'Logiciel',
+                    domain: 'GIT',
                 },
             ],
         },
@@ -263,20 +315,26 @@ const Grades = () => {
             valid: true,
             results: [
                 {
-                    name: 'METH-MER2-MERISE2 : Méthodologie - Merise/2 appliquée aux bases de données relationnelles',
+                    name:
+                        'METH-MER2-MERISE2 : Méthodologie - Merise/2 appliquée aux bases de données relationnelles',
                     type: 'Ecrit N°1',
                     note: 14,
                     coeficient: 1,
                     moyenneClasse: 10,
                     commentaire: 'Pas mal pour un débutant.',
+                    aspect: 'Théorique',
+                    domain: 'Méthodologie',
                 },
                 {
-                    name: 'METH-MER2-MERISE2 : Méthodologie - Merise/2 appliquée aux bases de données relationnelles',
+                    name:
+                        'METH-MER2-MERISE2 : Méthodologie - Merise/2 appliquée aux bases de données relationnelles',
                     type: 'Ecrit N°1',
                     note: 14,
                     coeficient: 1,
                     moyenneClasse: 10,
                     commentaire: 'Pas mal pour un débutant.',
+                    aspect: 'Théorique',
+                    domain: 'Méthodologie',
                 },
             ],
         },
@@ -294,6 +352,8 @@ const Grades = () => {
                     coeficient: 1,
                     moyenneClasse: 11,
                     commentaire: 'Projet interessant.',
+                    aspect: 'Programmation',
+                    domain: 'Projet',
                 },
                 {
                     name: 'PRJ-B2-ENC : Projet individuel de 2ème année',
@@ -302,6 +362,8 @@ const Grades = () => {
                     coeficient: 1,
                     moyenneClasse: 11,
                     commentaire: 'Projet interessant.',
+                    aspect: 'Programmation',
+                    domain: 'Projet',
                 },
             ],
         },
@@ -313,70 +375,90 @@ const Grades = () => {
             valid: false,
             results: [
                 {
-                    name: "ECO-ENT-SI : Economie - Le système d'information (SI) et les processus de l'organisation (décisionnel, opérationnel)",
+                    name:
+                        "ECO-ENT-SI : Economie - Le système d'information (SI) et les processus de l'organisation (décisionnel, opérationnel)",
                     type: 'Ecrit N°1',
                     note: 8,
                     coeficient: 1,
                     moyenneClasse: 12,
                     commentaire: 'Dommage ! Tu étais bien parti',
+                    aspect: 'Théorique',
+                    domain: 'Economie',
                 },
                 {
-                    name: "ECO-ENT-SI : Economie - Le système d'information (SI) et les processus de l'organisation (décisionnel, opérationnel)",
+                    name:
+                        "ECO-ENT-SI : Economie - Le système d'information (SI) et les processus de l'organisation (décisionnel, opérationnel)",
                     type: 'Ecrit N°1',
                     note: 8,
                     coeficient: 1,
                     moyenneClasse: 12,
                     commentaire: 'Dommage ! Tu étais bien parti',
+                    aspect: 'Théorique',
+                    domain: 'Economie',
                 },
             ],
         },
         {
             id: 13,
             name: 'LANGAGE C ET CPP',
-            icon: 'https://seeklogo.com/images/C/c-programming-language-logo-9B32D017B1-seeklogo.com.png',
+            icon:
+                'https://seeklogo.com/images/C/c-programming-language-logo-9B32D017B1-seeklogo.com.png',
             credit: 6.5,
             valid: false,
             results: [
                 {
-                    name: 'CCPP-STR-IMPL-2 : C - Les structures de données complexes et les conteneurs - Implémentation - Partie 2',
+                    name:
+                        'CCPP-STR-IMPL-2 : C - Les structures de données complexes et les conteneurs - Implémentation - Partie 2',
                     type: 'Ecrit N°1',
                     note: 4,
                     coeficient: 1,
                     moyenneClasse: 7.5,
                     commentaire: 'Grosse chute, dommage.',
+                    aspect: 'Programmation',
+                    domain: 'C',
                 },
                 {
-                    name: 'CCPP-STR-IMPL-2 : C - Les structures de données complexes et les conteneurs - Implémentation - Partie 2',
+                    name:
+                        'CCPP-STR-IMPL-2 : C - Les structures de données complexes et les conteneurs - Implémentation - Partie 2',
                     type: 'Ecrit N°1',
                     note: 4,
                     coeficient: 1,
                     moyenneClasse: 7.5,
                     commentaire: 'Grosse chute, dommage.',
+                    aspect: 'Programmation',
+                    domain: 'C',
                 },
             ],
         },
         {
             id: 14,
             name: 'LANGAGE C#',
-            icon: 'https://www.pinclipart.com/picdir/big/124-1248748_c-sharp-logo-png.png',
+            icon:
+                'https://www.pinclipart.com/picdir/big/124-1248748_c-sharp-logo-png.png',
             credit: 6,
             valid: false,
             results: [
                 {
-                    name: 'CSHARP-STR : C# - Les structures de données complexes et les conteneurs',
+                    name:
+                        'CSHARP-STR : C# - Les structures de données complexes et les conteneurs',
                     type: 'Ecrit N°1',
                     note: 4,
                     coeficient: 1,
                     moyenneClasse: 6,
                     commentaire: 'Mauvaise exécution, peu de code.',
+                    aspect: 'Programmation',
+                    domain: 'C#',
                 },
                 {
-                    name: 'CSHARP-STR : C# - Les structures de données complexes et les conteneurs',
-                    type: 'Ecrit N°1',
+                    name:
+                        'CSHARP-STR : C# - Les structures de données complexes et les conteneurs',
+                    type: 'Ecrit N°2',
                     note: 4,
                     coeficient: 1,
                     moyenneClasse: 6,
                     commentaire: 'Mauvaise exécution, peu de code.',
+                    aspect: 'Programmation',
+                    domain: 'C#',
                 },
             ],
         },
@@ -388,20 +470,28 @@ const Grades = () => {
             valid: false,
             results: [
                 {
-                    name: 'PYTHON-RPI-GPIO : Python - Utilisatoin du GPIO du Raspberry Pi',
+                    name:
+                        'PYTHON-RPI-GPIO : Python - Utilisatoin du GPIO du Raspberry Pi',
                     type: 'Ecrit N°1',
                     note: 0,
                     coeficient: 1,
                     moyenneClasse: 8,
-                    commentaire: "Aucun fonctionnement, code incorrecte, vraiment dommage.",
+                    commentaire:
+                        'Aucun fonctionnement, code incorrecte, vraiment dommage.',
+                    aspect: 'Programmation',
+                    domain: 'Python',
                 },
                 {
-                    name: 'PYTHON-RPI-GPIO : Python - Utilisatoin du GPIO du Raspberry Pi',
+                    name:
+                        'PYTHON-RPI-GPIO : Python - Utilisatoin du GPIO du Raspberry Pi',
                     type: 'Ecrit N°1',
                     note: 0,
                     coeficient: 1,
                     moyenneClasse: 8,
-                    commentaire: "Aucun fonctionnement, code incorrecte, vraiment dommage.",
+                    commentaire:
+                        'Aucun fonctionnement, code incorrecte, vraiment dommage.',
+                    aspect: 'Programmation',
+                    domain: 'Python',
                 },
             ],
         },
@@ -434,26 +524,82 @@ const Grades = () => {
         return <Accordeon resultsTotale = {resultsTotale} matieres={matieres} />;
     };
 
+    const getAspectAverage = (notes: []) => {
+        let average = 0;
+        notes.map(note => {
+            average += note;
+        });
+
+        return average / notes.length;
+    };
+
     const getComponentGraphs = () => {
         let matiereAverage = [];
-        for (let y = 0; y < matieres.length; y++){
-            let objToPush = {name: matieres[y].name, average: 0};
-            if (matieres[y].results.length > 0){
-                for (let i = 0; i < matieres[y].results.length; i++){
+        let coursesAverage = [];
+        let aspectAverages: any = [];
+        let finalAspectAverage: any = [];
+
+        for (let y = 0; y < matieres.length; y++) {
+            let objToPush = {
+                name: matieres[y].name,
+                average: 0,
+            };
+
+            if (matieres[y].results.length > 0) {
+                for (let i = 0; i < matieres[y].results.length; i++) {
                     objToPush.average += matieres[y].results[i].note;
+
+                    let courseAverage = {
+                        name: matieres[y].results[i].name,
+                        average: matieres[y].results[i].note,
+                    };
+
+                    if (!aspectAverages[matieres[y].results[i].aspect as any]) {
+                        aspectAverages[
+                            matieres[y].results[i].aspect as any
+                        ] = [];
+                        aspectAverages[
+                            matieres[y].results[i].aspect as any
+                        ].push(matieres[y].results[i].note);
+                    } else {
+                        aspectAverages[
+                            matieres[y].results[i].aspect as any
+                        ].push(matieres[y].results[i].note);
+                    }
+                    coursesAverage.push(courseAverage);
                 }
-                objToPush.average = objToPush.average / matieres[y].results.length;
+
+                objToPush.average =
+                    objToPush.average / matieres[y].results.length;
             }
             matiereAverage.push(objToPush);
         }
-      return <GraphsContainer dataAverage={matiereAverage}/>
+
+        Object.entries(aspectAverages).forEach(function(aspect, y) {
+            let notes: any = aspect[1];
+            let finalAverage = getAspectAverage(notes);
+
+            finalAspectAverage.push({
+                name: aspect[0],
+                average: finalAverage,
+            });
+        });
+
+        console.log(finalAspectAverage);
+
+        return (
+            <GraphsContainer
+                dataAverage={matiereAverage}
+                aspectAverage={finalAspectAverage}
+                coursesAverage={coursesAverage}
+            />
+        );
     };
 
     let tabArray = [
         { name: 'Note', component: getComponentAccordeon },
         { name: 'Graph', component: getComponentGraphs },
     ];
-    const classes = styles();
 
     return <TabCustom onglets={tabArray}></TabCustom>;
 };
