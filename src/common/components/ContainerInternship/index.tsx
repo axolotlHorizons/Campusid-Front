@@ -4,31 +4,40 @@ import styles from './style';
 import { getInternship } from '../../../api/index';
 
 function ContainerInternship(props: any) {
-    const [internships, setInternships] = useState([]);
+    const [test, setTest] = useState([]);
+
+    let toto: any = [];
 
     useEffect(() => {
-        getInternship();
-        setInternships(props.internship);
-    }, [props.internship]);
+        getInternship().then((res: any) => {
+            Object.entries(res).forEach(function(internship: any, index: any) {
+                toto.push({
+                    mission: internship[1].missionSummary,
+                    value: internship[1].title,
+                });
+            });
+            setTest(toto);
+        });
+    }, []);
 
     const classes = styles();
-    return (
-        <div>
-            {internships.map((internship: any, index: any) => {
-                return (
-                    <div className="containerInternship" key={index}>
-                        <ImageCard
-                            image={internship.image}
-                            title={internship.title}
-                            text={internship.text}
-                            hasButton={internship.hashButton}
-                            buttonText={internship.buttonText}
-                            altImage={internship.altImage}
-                        />
-                    </div>
-                );
-            })}
-        </div>
+
+    console.log(test);
+    return test.length > 0 ? (
+        <>
+            {test.map((item: any) => (
+                <ImageCard
+                    image={''}
+                    title={item.value}
+                    text={item.mission}
+                    hasButton={false}
+                    buttonText={'fdfd'}
+                    altImage={'test'}
+                />
+            ))}
+        </>
+    ) : (
+        <>'toto' </>
     );
 }
 
