@@ -2,8 +2,9 @@ import React, { useState, Suspense } from 'react';
 import { useSelector } from 'react-redux';
 import Avatar from 'common/components/Avatar';
 import { AddPhotoAlternate } from '@material-ui/icons';
+import { useCurrentUser } from 'common/hooks';
 
-import { getUserData, getProfileImage } from 'common/state/selectors';
+import { getProfileImage } from 'common/state/selectors';
 import InputFile from './InputFile';
 
 import styles from './style';
@@ -16,10 +17,11 @@ const AvatarEditorDialog = React.lazy(() => import('./AvatarEditorDialog'));
 const AvatarPreviewDialog = React.lazy(() => import('./AvatarPreviewDialog'));
 
 const AvatarPicker = (props: Props) => {
+    const currentUser = useCurrentUser();
+
     const { children } = props;
     const [isModalOpen, setIsModalOpen] = useState<string | null>('');
     const [uploadedImage, setUploadedImage] = useState<string | null>('');
-    const user = useSelector(getUserData);
     const src = useSelector(getProfileImage);
     const classes = styles();
     return (
@@ -36,7 +38,7 @@ const AvatarPicker = (props: Props) => {
                     <span className={classes.container}>
                         <Avatar
                             src={src}
-                            nickname={user.firstname}
+                            nickname={currentUser.firstname}
                             mode="large"
                         />
                         <AddPhotoAlternate className={classes.icon} />
