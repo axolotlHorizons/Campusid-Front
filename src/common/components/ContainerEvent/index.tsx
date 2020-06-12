@@ -15,6 +15,17 @@ function ContainerEvent(props: any) {
             buttonText={'détails'}
             altImage={'offre de stage'}
             textCompany={''}
+            typeDeMission={''}
+            duree={''}
+            start={''}
+            end={''}
+            contact={''}
+            phone={''}
+            mail={''}
+            adress={''}
+            postal={''}
+            ville={''}
+            pays={''}
         />
     );
 }

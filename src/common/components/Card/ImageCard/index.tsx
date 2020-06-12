@@ -17,6 +17,17 @@ type Props = {
     buttonText: string;
     altImage: string;
     textCompany: string;
+    typeDeMission: string;
+    duree: string;
+    start: string;
+    end: string;
+    contact: string;
+    phone: string;
+    mail: string;
+    adress: string;
+    postal: string;
+    ville: string;
+    pays: string;
 };
 
 export default function ImageCard(props: Props) {
@@ -32,12 +43,23 @@ export default function ImageCard(props: Props) {
         altImage,
         text = '',
         textCompany = '',
+        typeDeMission = '',
+        duree = '',
+        start = '',
+        end = '',
+        contact = '',
+        phone = '',
+        mail = '',
+        adress = '',
+        postal = '',
+        ville = '',
+        pays = '',
     } = props;
 
     const classes = styles();
 
     return (
-        <Card>
+        <Card className={classes.Card}>
             <Grid container direction="row">
                 <Grid item container justify="center" md={4} xs={12}>
                     <img
@@ -49,10 +71,27 @@ export default function ImageCard(props: Props) {
 
                 <Grid item md={6} xs={12} className={classes.content}>
                     <CardContent>
-                        <Typography variant="h4">{title}</Typography>
+                        <Typography variant="h4" color="secondary">
+                            {title}
+                        </Typography>
+                        <p>{textCompany}</p>
+
+                        <p>{typeDeMission}</p>
+
+                        <p>{duree}</p>
+                        <p>{start}</p>
+                        <p>{end}</p>
+
+                        <p>{text}</p>
+
+                        <p>{contact}</p>
+                        <p>{phone}</p>
+                        <p>{mail}</p>
+                        <p>{adress}</p>
+                        <p>{postal}</p>
+                        <p>{ville}</p>
+                        <p>{pays}</p>
                     </CardContent>
-                    <span>{textCompany}</span>
-                    <span>{text}</span>
                 </Grid>
                 {hasButton ? (
                     <Grid
