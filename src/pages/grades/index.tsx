@@ -70,10 +70,10 @@ const Grades = () => {
 
         return [
             { name: 'Note', component: getComponentAccordeon },
-            {
-                name: 'Graphique Camenbert',
-                component: <GraphsContainer dataAverage={tmpDomainAverage} />,
-            },
+            // {
+            //     name: 'Graphique Camenbert',
+            //     component: <GraphsContainer dataAverage={tmpDomainAverage} />,
+            // },
             {
                 name: 'Graphique Colonne',
                 component: (
@@ -82,7 +82,7 @@ const Grades = () => {
             },
             {
                 name: 'Graphique Radar',
-                component: <RadartChart dataAverage={tmpDomainAverage} />,
+                component: <RadartChart dataAverage={topFlopDomainAverage} />,
             },
         ];
     };
