@@ -1,7 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-
+import MailOutlineOutlinedIcon from '@material-ui/icons/MailOutlineOutlined';
+import ExitToAppOutlinedIcon from '@material-ui/icons/ExitToAppOutlined';
+import VpnKeyOutlinedIcon from '@material-ui/icons/VpnKeyOutlined';
+import StorageOutlinedIcon from '@material-ui/icons/StorageOutlined';
 import {
     AppBar,
     Toolbar,
@@ -10,6 +13,7 @@ import {
     Menu,
     Typography,
     Avatar,
+    Dialog,
 } from '@material-ui/core';
 import CardMedia from '@material-ui/core/CardMedia';
 import AccountCircle from '@material-ui/icons/AccountCircle';
@@ -18,10 +22,12 @@ import { getUser } from 'common/state/selectors';
 
 import styles from './style';
 import ButtonCustom from '../ButtonCustom';
+import { Button, Grid, GridSpacing,Container, Card, DialogTitle, List, ListItemAvatar, DialogActions, DialogContent, DialogContentText } from '@material-ui/core';
 
 type User = {
     name: string;
     firstname: string;
+    idboard: string;
     avatar?: string;
 };
 const Header = () => {
@@ -32,7 +38,37 @@ const Header = () => {
     const user: User = useSelector(getUser);
     const handleMenu = (event: React.MouseEvent<HTMLElement>) => {
         setAnchorEl(event.currentTarget);
+        
     };
+    const [openMail, setMail] = React.useState(false);
+    const [openMdp, setMdp] = React.useState(false);
+    const [openData, setData] = React.useState(false);
+    
+    const handleClickOpenMail = () => {
+        setMail(true);
+    };
+
+    const handleCloseMail = () => {
+        setMail(false);
+    };
+
+    const handleClickOpenMdp = () => {
+        setMdp(true);
+    };
+
+    const handleCloseMdp = () => {
+        setMdp(false);
+    };
+
+
+    const handleClickOpenData = () => {
+        setData(true);
+    };
+
+    const handleCloseData = () => {
+        setData(false);
+    };
+
 
     const handleClose = () => {
         setAnchorEl(null);
@@ -41,6 +77,79 @@ const Header = () => {
     const disconnected = () => {
         localStorage.removeItem('id_token');
     };
+
+    const returnDialogMail = () => {
+        return (
+            <div>
+                <Dialog
+                    open={openMail}
+                    onClose={handleCloseMail}
+                    aria-labelledby="alert-dialog-title"
+                    aria-describedby="alert-dialog-description"
+                >
+                    <DialogTitle id="alert-dialog-title"></DialogTitle>
+                    <DialogContent>
+                        <DialogContentText id="alert-dialog-description">
+                            Demande administrative
+                        </DialogContentText>
+                    </DialogContent>
+                    Mail:
+                    <DialogActions>
+                        <Button onClick={handleCloseMail} color="primary">
+                            Fermé
+                        </Button>
+                    </DialogActions>
+                </Dialog>
+            </div>
+        )};
+
+        const returnDialogMdp = () => {
+            return (
+                <div>
+                    <Dialog
+                        open={openMdp}
+                        onClose={handleCloseMdp}
+                        aria-labelledby="alert-dialog-title"
+                        aria-describedby="alert-dialog-description"
+                    >
+                        <DialogTitle id="alert-dialog-title"></DialogTitle>
+                        <DialogContent>
+                            <DialogContentText id="alert-dialog-description">
+                                scolarite@campusid.com
+                            </DialogContentText>
+                        </DialogContent>
+                        <DialogActions>
+                            <Button onClick={handleCloseMdp} color="primary">
+                                Fermé
+                            </Button>
+                        </DialogActions>
+                    </Dialog>
+                </div>
+            )};
+
+            const returnDialogData = () => {
+                return (
+                    <div>
+                        <Dialog
+                            open={openData}
+                            onClose={handleCloseData}
+                            aria-labelledby="alert-dialog-title"
+                            aria-describedby="alert-dialog-description"
+                        >
+                            <DialogTitle id="alert-dialog-title"></DialogTitle>
+                            <DialogContent>
+                                <DialogContentText id="alert-dialog-description">
+                                    scolarite@campusid.com
+                                </DialogContentText>
+                            </DialogContent>
+                            <DialogActions>
+                                <Button onClick={handleCloseData} color="primary">
+                                    Fermé
+                                </Button>
+                            </DialogActions>
+                        </Dialog>
+                    </div>
+                )};
 
     return (
         <div className={classes.container}>
@@ -85,8 +194,8 @@ const Header = () => {
                                 PaperProps={{
                                     style: {
                                         width: '250px',
-                                        height: '250px',
-                                        background: 'rgba(183, 0, 0, 0.5)',
+                                        height: 'auto',
+                                        background: 'rgba(183, 0, 0, 0.9)',
                                         color: 'white',
                                     },
                                 }}
@@ -117,7 +226,7 @@ const Header = () => {
                                             height: '75px',
                                             width: '75px',
                                         }}
-                                        alt="Nom Prénom"
+                                        alt="Nom Prénom"                                        
                                     >
                                         {user?.avatar ? (
                                             <img
@@ -137,7 +246,13 @@ const Header = () => {
                                         {user
                                             ? `${user.name} ${user.firstname}`
                                             : 'Nom Prénom'}
+                                            <br></br>
+                                            {user
+                                            ? `${user.idboard}`
+                                            : 'N°IDBOARD'}
+                                            
                                     </Typography>
+                                    
                                 </MenuItem>
                                 <MenuItem onClick={handleClose}>
                                     <div
@@ -146,22 +261,59 @@ const Header = () => {
                                             marginTop: '35px',
                                         }}
                                     >
+                                        <div  className={classes.containerLogin}>
                                         <Link
                                             to="/"
                                             style={{ textDecoration: 'none' }}
+                                            className={classes.containerLogin}
+
                                         >
+
+                                        
+                                            
+                                        
                                             <ButtonCustom
                                                 callBack={disconnected}
                                                 typeButton="contained"
-                                                valueButton="Deconnexion"
+                                                valueButton="se déconnecter"
+                                                icon = {< ExitToAppOutlinedIcon/>}
                                             ></ButtonCustom>
-                                        </Link>
+                                          </Link>
+
+                                            <br></br>
+                                              <ButtonCustom
+                                                callBack={handleClickOpenMail}
+                                                typeButton="contained"
+                                                valueButton="Envoyer un mail"
+                                                icon = {< MailOutlineOutlinedIcon/>}
+                                            ></ButtonCustom>
+                                            <br></br>
+                                              <ButtonCustom
+                                                callBack={handleClickOpenMdp}
+                                                typeButton="contained"
+                                                valueButton="Modifier le MDP"
+                                                icon = {< VpnKeyOutlinedIcon/>}
+
+                                            ></ButtonCustom>
+                                            <br></br>
+                                       
+                                            <ButtonCustom
+                                                callBack={handleClickOpenData}
+                                                typeButton="contained"
+                                                valueButton="Données personnelles"
+                                                icon = {< StorageOutlinedIcon/>}
+                                            ></ButtonCustom>
+                        </div>
                                     </div>
                                 </MenuItem>
                             </Menu>
                         </div>
                     )}
                 </Toolbar>
+                {returnDialogMail()}
+                {returnDialogMdp()}
+                {returnDialogData()}
+
             </AppBar>
         </div>
     );
