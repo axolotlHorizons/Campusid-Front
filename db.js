@@ -7,25 +7,29 @@ const trombinoscope = require('./src/utils/jsonExample/Trombinoscope.json');
 
 module.exports = () => {
     return {
-        "student": [
+        student: [
             {
-                "id": 1,
-                "name": "Fname",
-                "firstname": "Lname",
-                "avatar": "https://thispersondoesnotexist.com/image"
-            }
+                id: 1,
+                classId: 1,
+                lastname: 'Lastname',
+                firstname: 'Firstname',
+                avatar: 'https://thispersondoesnotexist.com/image',
+                email: 'test1@campusid.eu',
+                password: '1234',
+                role: 'student',
+            },
         ],
-        "comments": [
+        comments: [
             {
-                "id": 1,
-                "body": "some comment",
-                "postId": 1
-            }
+                id: 1,
+                body: 'some comment',
+                postId: 1,
+            },
         ],
         "profile": personnalInformationJson,
         "grades": marksJson,
         "internship": internshipJson,
         "courses": coursesJson,
         "trombinoscope": trombinoscope
-    };
+
 };

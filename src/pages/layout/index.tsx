@@ -9,7 +9,6 @@ import styles from './style';
 
 const Layout = () => {
     const classes = styles();
-
     return (
         <>
             <div>

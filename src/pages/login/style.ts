@@ -1,8 +1,6 @@
 import { createUseStyles } from 'react-jss';
 
 export default createUseStyles({
-    pageLogin: {},
-
     containerLogin: {
         width: '100%',
 
