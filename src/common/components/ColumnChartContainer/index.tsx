@@ -10,11 +10,6 @@ import ButtonCustom from './../ButtonCustom/index';
 function ColumnChartContainer(props: any) {
     const classes = styles();
     const dataAverage = props.dataAverage;
-    const aspectAverage = props.aspectAverage;
-    const coursesAverage = props.coursesAverage;
-
-    // Change const name here 
-    const topFlopAverage = props.topFlopAverage;
 
     const [dataChart, setdataChart] = useState(dataAverage);
     const [categoryName, setcategoryName] = useState('name');
@@ -27,40 +22,33 @@ function ColumnChartContainer(props: any) {
         am4core.useTheme(am4themes_animated);
 
         let chartTmp = am4core.create("chartdiv", am4charts.XYChart);
+        chartTmp.padding(40, 40, 40, 40);
 
         chartTmp.hiddenState.properties.opacity = 0;
         chartTmp.data = dataAverage;
 
-        chartTmp.padding(40, 40, 40, 40);
-
-        let categoryAxis = chartTmp.xAxes.push(new am4charts.CategoryAxis());
-        categoryAxis.renderer.grid.template.location = 0;
+        let categoryAxis = chartTmp.yAxes.push(new am4charts.CategoryAxis());
+        categoryAxis.renderer.grid.template.location = 10;
         categoryAxis.dataFields.category = categoryName;
-        categoryAxis.renderer.minGridDistance = 60;
+        categoryAxis.renderer.minGridDistance = 10;
         categoryAxis.renderer.inversed = true;
         categoryAxis.renderer.grid.template.disabled = true;
 
-        let valueAxis = chartTmp.yAxes.push(new am4charts.ValueAxis());
+        let valueAxis = chartTmp.xAxes.push(new am4charts.ValueAxis());
         valueAxis.min = 0;
-        valueAxis.extraMax = 0.1;
-        //valueAxis.rangeChangeEasing = am4core.ease.linear;
-        //valueAxis.rangeChangeDuration = 1500;
 
         let series = chartTmp.series.push(new am4charts.ColumnSeries());
-        series.dataFields.categoryX = categoryName;
-        series.dataFields.valueY = value;
+        series.dataFields.categoryY = categoryName;
+        series.dataFields.valueX = value;
         series.tooltipText = "{valueY.value}"
         series.columns.template.strokeOpacity = 0;
         series.columns.template.column.cornerRadiusTopRight = 10;
         series.columns.template.column.cornerRadiusTopLeft = 10;
-        //series.interpolationDuration = 1500;
-        //series.interpolationEasing = am4core.ease.linear;
         let labelBullet = series.bullets.push(new am4charts.LabelBullet());
-        labelBullet.label.verticalCenter = "bottom";
-        labelBullet.label.dy = -10;
-        labelBullet.label.text = "{values.valueY.workingValue.formatNumber('#.')}";
-
-        chartTmp.zoomOutButton.disabled = true;
+        labelBullet.label.horizontalCenter = "left";
+        labelBullet.label.dx = -10;
+        labelBullet.label.text = "{values.valueX.workingValue.formatNumber('#.0as')}";
+        labelBullet.locationX = 0.0009;
 
         series.columns.template.adapter.add("fill", function (fill, target) {
             if(target.dataItem !== undefined)
@@ -81,36 +69,8 @@ function ColumnChartContainer(props: any) {
 
     }, []);
 
-    const aspectChart = () => {
-        let chartTmp: any = chart || {};
-        chartTmp.data = aspectAverage;
-        setChart(chartTmp);
-    };
-
-    const domainChart = () => {
-        let chartTmp: any = chart || {};
-        chartTmp.data = dataChart;
-        setChart(chartTmp);
-    };
-
-    const coursesChart = () => {
-        let chartTmp: any = chart || {};
-        chartTmp.data = coursesAverage;
-        setChart(chartTmp);
-    };
-
-    // change name here ?
-    const TopFlopChart = () => {
-        let chartTmp: any = chart || {};
-        chartTmp.data = topFlopAverage;
-        setChart(chartTmp);
-    };
-
     return (
         <div>
-            <ButtonCustom valueButton="Domaine" callBack={domainChart} />
-            <ButtonCustom valueButton="Aspect" callBack={aspectChart} />
-            <ButtonCustom valueButton="Cours" callBack={coursesChart} />
             <div id="chartdiv" className={classes.graphStyle}></div>
         </div>
     );

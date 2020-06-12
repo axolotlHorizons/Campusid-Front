@@ -9,8 +9,6 @@ import ButtonCustom from './../ButtonCustom/index';
 function GraphsContainer(props: any) {
     const classes = styles();
     const dataAverage = props.dataAverage;
-    const aspectAverage = props.aspectAverage;
-    const coursesAverage = props.coursesAverage;
 
     const [dataChart, setdataChart] = useState(dataAverage);
     const [categoryName, setcategoryName] = useState('name');
@@ -41,31 +39,11 @@ function GraphsContainer(props: any) {
         chartTmp.legend = new am4charts.Legend();
 
         setChart(chartTmp);
+        
     }, []);
-
-    const aspectChart = () => {
-        let chartTmp: any = chart || {};
-        chartTmp.data = aspectAverage;
-        setChart(chartTmp);
-    };
-
-    const domainChart = () => {
-        let chartTmp: any = chart || {};
-        chartTmp.data = dataChart;
-        setChart(chartTmp);
-    };
-
-    const coursesChart = () => {
-        let chartTmp: any = chart || {};
-        chartTmp.data = coursesAverage;
-        setChart(chartTmp);
-    };
 
     return (
         <div>
-            <ButtonCustom valueButton="Domaine" callBack={domainChart} />
-            <ButtonCustom valueButton="Aspect" callBack={aspectChart} />
-            <ButtonCustom valueButton="Cours" callBack={coursesChart} />
             <div id="chartdiv" className={classes.graphStyle}></div>
         </div>
     );

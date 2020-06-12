@@ -9,21 +9,16 @@ import ButtonCustom from './../ButtonCustom/index';
 function RadarChartContainer(props: any) {
     const classes = styles();
     const dataAverage = props.dataAverage;
-    const aspectAverage = props.aspectAverage;
-    const coursesAverage = props.coursesAverage;
 
     const [dataChart, setdataChart] = useState(dataAverage);
     const [chart, setChart] = useState<am4charts.RadarChart>();
 
     useEffect(() => {
-        /* Chart code */
-        // Themes begin
         am4core.useTheme(am4themes_dataviz);
         am4core.useTheme(am4themes_animated);
-        // Themes end
 
         let chartTmp = am4core.create('chartdiv', am4charts.RadarChart);
-        chartTmp.hiddenState.properties.opacity = 0; // this creates initial fade-in
+        chartTmp.hiddenState.properties.opacity = 0;
         chartTmp.data = dataAverage;
 
         let categoryAxis = chartTmp.xAxes.push(
@@ -38,43 +33,20 @@ function RadarChartContainer(props: any) {
         valueAxis.renderer.axisFills.template.fillOpacity = 0.05;
         valueAxis.renderer.maxLabelPosition = 0.99;
 
-        /* Create and configure series */
         let series = chartTmp.series.push(new am4charts.RadarSeries());
         series.dataFields.valueY = 'average';
         series.dataFields.categoryX = 'name';
         series.name = 'Notes';
         series.strokeWidth = 2;
 
-        /* Add cursor */
         chartTmp.cursor = new am4charts.RadarCursor();
 
         chartTmp.legend = new am4charts.Legend();
         setChart(chartTmp);
     }, []);
 
-    const aspectChart = () => {
-        let chartTmp: any = chart || {};
-        chartTmp.data = aspectAverage;
-        setChart(chartTmp);
-    };
-
-    const domainChart = () => {
-        let chartTmp: any = chart || {};
-        chartTmp.data = dataChart;
-        setChart(chartTmp);
-    };
-
-    const coursesChart = () => {
-        let chartTmp: any = chart || {};
-        chartTmp.data = coursesAverage;
-        setChart(chartTmp);
-    };
-
     return (
         <div>
-            <ButtonCustom valueButton="Domaine" callBack={domainChart} />
-            <ButtonCustom valueButton="Aspect" callBack={aspectChart} />
-            <ButtonCustom valueButton="Cours" callBack={coursesChart} />
             <div id="chartdiv" className={classes.graphStyle}></div>
         </div>
     );
