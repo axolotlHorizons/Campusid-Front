@@ -5,6 +5,7 @@ import { useCurrentUser } from 'common/hooks';
 import Login from 'pages/login';
 import AdminLayout from 'pages/adminLayout';
 import Layout from 'pages/layout';
+import ErrorPage from 'pages/errorPage';
 
 const App: React.FC = () => {
     const currentUser = useCurrentUser();
@@ -19,6 +20,9 @@ const App: React.FC = () => {
                     <Route
                         path="/"
                         render={() => {
+                            if (!currentUser) {
+                                return <ErrorPage />;
+                            }
                             return currentUser.role === 'admin' ? (
                                 <AdminLayout />
                             ) : (
