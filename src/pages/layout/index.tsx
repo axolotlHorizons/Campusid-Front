@@ -11,16 +11,14 @@ const Layout = () => {
     const classes = styles();
     return (
         <>
-            <div>
-                <Header />
-            </div>
+
             <div className={classes.container}>
                 <div>
                     <Sidebar />
                 </div>
                 <Content />
             </div>
-            <Footer />
+
         </>
     );
 };

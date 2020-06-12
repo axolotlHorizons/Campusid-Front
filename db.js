@@ -31,5 +31,5 @@ module.exports = () => {
         "internship": internshipJson,
         "courses": coursesJson,
         "trombinoscope": trombinoscope
-
+    }
 };

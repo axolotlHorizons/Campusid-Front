@@ -216,51 +216,6 @@ const Sidebar = () => {
                             />
                         </ListItem>
                     </Link>
-                    <Link
-                        to="/external-links"
-                        style={{ textDecoration: 'none' }}
-                    >
-                        <ListItem button divider={true} >
-                            <ListItemIcon>
-                                <LinkIcon
-                                    style={{ fontSize: 30, color: 'white' }}
-                                />
-                            </ListItemIcon>
-                            <ListItemText
-                                primary={'Demande administrative'}
-                                style={{
-                                    fontSize: 30,
-                                    color: 'white',
-                                    whiteSpace: 'normal',
-                                    fontWeight : "bold"
-                                }}
-                            />
-                        </ListItem>
-                    </Link>
-                    <Link
-                        to="/configuration"
-                        color="White"
-                        style={{ textDecoration: 'none' }}
-                    >
-                        <ListItem
-                            button
-                            style={{
-                                paddingTop: '25px',
-                                paddingBottom: '25px',
-
-                            }}
-                        >
-                            <ListItemIcon>
-                                <SettingsIcon
-                                    style={{ fontSize: 30, color: 'white' }}
-                                />
-                            </ListItemIcon>
-                            <ListItemText
-                                primary={'Configuration'}
-                                style={{ fontSize: 30, color: 'white', fontWeight : "bold"}}
-                            />
-                        </ListItem>
-                    </Link>
                 </List>
             </Drawer>
         </div>
