@@ -1,10 +1,11 @@
 import { createUseStyles } from 'react-jss';
+import { transparent } from 'material-ui/styles/colors';
 
 export default createUseStyles({
     container: {
     },
     toolbar: {
-        backgroundColor: '#B70000',
+        backgroundColor: "#2d3246",
         paddingLeft: "10px !important"
     },
     uselessIcons: {
@@ -18,7 +19,7 @@ export default createUseStyles({
     },
     logoCampus: {
       height: "50px",
-      width: "200px",
+      width: "237px",
       backgroundPosition: "top !important"
     },
     marginAuto: {
@@ -34,5 +35,20 @@ export default createUseStyles({
     userName: {
         display: 'inline-block',
         color: "white"
-    }
+    },
+    containerLogin: {
+
+    '& .MuiButtonBase-root': {
+        backgroundColor: 'transparent',
+        color: 'White',
+        borderRadius: '0px',
+        margin: 'auto',
+        padding:'20px',
+        width: '250px',
+        textAlign: 'center',
+        textTransform: 'uppercase',
+        alignSelf: 'center',
+    },
+},
+    
 });

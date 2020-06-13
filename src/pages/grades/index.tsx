@@ -1,326 +1,93 @@
-import React from 'react';
-import styles from './style';
+import React, { useState, useEffect } from 'react';
 import TabCustom from 'common/components/TabCustom';
 import Accordeon from 'common/components/Accordeon';
+import GraphsContainer from 'common/components/GraphsContainer';
+import ColumnChartContainer from 'common/components/ColumnChartContainer';
+import RadartChart from 'common/components/RadarChartContainer';
+import { getGrades } from '../../api/index';
+import _ from 'lodash';
 
 const Grades = () => {
-    let matieres = [
-        {
-            id: 0,
-            name: 'JavaScript',
-            icon: '',
-            credit: 4,
-            results: [
-                {
-                    name: 'default-name',
-                    type: 'default-type',
-                    note: 14,
-                    coeficient: 1,
-                    moyenneClasse: 10,
-                    commentaire: 'Bla bla bla',
-                },
-                {
-                    name: 'default-name',
-                },
-            ],
+    const [matieres, setMatieres] = useState<any>([]);
+
+    useEffect(() => {
+        getGrades().then((res: any) => {
+            setMatieres(res);
+        });
+    }, []);
+
+    let resultsTotale = {
+        inProgress: {
+            name: 'En cours de validation',
+            icon: 'https://image.flaticon.com/icons/svg/325/325211.svg',
         },
-        {
-            id: 1,
-            name: 'C++',
-            icon: '',
-            credit: 4,
-            results: [
-                {
-                    name: 'default-name',
-                    type: 'default-type',
-                    note: 14,
-                    coeficient: 1,
-                    moyenneClasse: 10,
-                    commentaire: 'Bla bla bla',
-                },
-                {
-                    name: 'default-name',
-                },
-            ],
+
+        validated: {
+            name: 'Validé',
+            icon: 'https://image.flaticon.com/icons/svg/390/390973.svg',
         },
-        {
-            id: 2,
-            name: 'PHP',
-            icon: '',
-            credit: 4,
-            results: [
-                {
-                    name: 'default-name',
-                    type: 'default-type',
-                    note: 14,
-                    coeficient: 1,
-                    moyenneClasse: 10,
-                    commentaire: 'Bla bla bla',
-                },
-                {
-                    name: 'default-name',
-                },
-            ],
+
+        failed: {
+            name: 'Echoué',
+            icon: 'https://image.flaticon.com/icons/svg/594/594864.svg',
         },
-        {
-            id: 3,
-            name: 'Java',
-            icon: '',
-            credit: 4,
-            results: [
-                {
-                    name: 'default-name',
-                    type: 'default-type',
-                    note: 14,
-                    coeficient: 1,
-                    moyenneClasse: 10,
-                    commentaire: 'Bla bla bla',
-                },
-                {
-                    name: 'default-name',
-                },
-            ],
+
+        obtainedCredits: {
+            name: 'Crédits obtenu',
+            icon: 'https://image.flaticon.com/icons/svg/794/794625.svg',
         },
-        {
-            id: 4,
-            name: 'Algorithmique',
-            icon: '',
-            credit: 4,
-            results: [
-                {
-                    name: 'default-name',
-                    type: 'default-type',
-                    note: 14,
-                    coeficient: 1,
-                    moyenneClasse: 10,
-                    commentaire: 'Bla bla bla',
-                },
-                {
-                    name: 'default-name',
-                },
-            ],
-        },
-        {
-            id: 5,
-            name: 'Ambassadeur',
-            icon: '',
-            credit: 4,
-            results: [
-                {
-                    name: 'default-name',
-                    type: 'default-type',
-                    note: 14,
-                    coeficient: 1,
-                    moyenneClasse: 10,
-                    commentaire: 'Bla bla bla',
-                },
-                {
-                    name: 'default-name',
-                },
-            ],
-        },
-        {
-            id: 6,
-            name: 'Anglais',
-            icon: '',
-            credit: 4,
-            results: [
-                {
-                    name: 'default-name',
-                    type: 'default-type',
-                    note: 14,
-                    coeficient: 1,
-                    moyenneClasse: 10,
-                    commentaire: 'Bla bla bla',
-                },
-                {
-                    name: 'default-name',
-                },
-            ],
-        },
-        {
-            id: 7,
-            name: 'Droit',
-            icon: '',
-            credit: 4,
-            results: [
-                {
-                    name: 'default-name',
-                    type: 'default-type',
-                    note: 14,
-                    coeficient: 1,
-                    moyenneClasse: 10,
-                    commentaire: 'Bla bla bla',
-                },
-                {
-                    name: 'default-name',
-                },
-            ],
-        },
-        {
-            id: 8,
-            name: 'Domotique',
-            icon: '',
-            credit: 4,
-            results: [
-                {
-                    name: 'default-name',
-                    type: 'default-type',
-                    note: 14,
-                    coeficient: 1,
-                    moyenneClasse: 10,
-                    commentaire: 'Bla bla bla',
-                },
-                {
-                    name: 'default-name',
-                },
-            ],
-        },
-        {
-            id: 9,
-            name: 'Experience Professionnelle',
-            icon: '',
-            credit: 4,
-            results: [
-                {
-                    name: 'default-name',
-                    type: 'default-type',
-                    note: 14,
-                    coeficient: 1,
-                    moyenneClasse: 10,
-                    commentaire: 'Bla bla bla',
-                },
-                {
-                    name: 'default-name',
-                },
-            ],
-        },
-        {
-            id: 10,
-            name: 'IdLabs',
-            icon: '',
-            credit: 4,
-            results: [
-                {
-                    name: 'default-name',
-                    type: 'default-type',
-                    note: 14,
-                    coeficient: 1,
-                    moyenneClasse: 10,
-                    commentaire: 'Bla bla bla',
-                },
-                {
-                    name: 'default-name',
-                },
-            ],
-        },
-        {
-            id: 11,
-            name: 'Langage C-CPP',
-            icon: '',
-            credit: 4,
-            results: [
-                {
-                    name: 'default-name',
-                    type: 'default-type',
-                    note: 14,
-                    coeficient: 1,
-                    moyenneClasse: 10,
-                    commentaire: 'Bla bla bla',
-                },
-                {
-                    name: 'default-name',
-                },
-            ],
-        },
-        {
-            id: 12,
-            name: 'Langage CSharp',
-            icon: '',
-            credit: 4,
-            results: [
-                {
-                    name: 'default-name',
-                    type: 'default-type',
-                    note: 14,
-                    coeficient: 1,
-                    moyenneClasse: 10,
-                    commentaire: 'Bla bla bla',
-                },
-                {
-                    name: 'default-name',
-                },
-            ],
-        },
-        {
-            id: 13,
-            name: 'Methodologie',
-            icon: '',
-            credit: 4,
-            results: [
-                {
-                    name: 'default-name',
-                    type: 'default-type',
-                    note: 14,
-                    coeficient: 1,
-                    moyenneClasse: 10,
-                    commentaire: 'Bla bla bla',
-                },
-                {
-                    name: 'default-name',
-                },
-            ],
-        },
-        {
-            id: 14,
-            name: 'Sciences Appliquees',
-            icon: '',
-            credit: 4,
-            results: [
-                {
-                    name: 'default-name',
-                    type: 'default-type',
-                    note: 14,
-                    coeficient: 1,
-                    moyenneClasse: 10,
-                    commentaire: 'Bla bla bla',
-                },
-                {
-                    name: 'default-name',
-                },
-            ],
-        },
-        {
-            id: 15,
-            name: 'Python',
-            icon: '',
-            credit: 4,
-            results: [
-                {
-                    name: 'test',
-                    type: 'default-type',
-                    note: 14,
-                    coeficient: 1,
-                    moyenneClasse: 10,
-                    commentaire: 'Bla bla bla',
-                },
-                {
-                    name: 'default-name',
-                },
-            ],
-        },
-    ];
-    const getComponentAccordeon = () => {
-        return <Accordeon matieres={matieres} />;
     };
 
-    let tabArray = [
-        { name: 'Note', component: getComponentAccordeon },
-        { name: 'Graph', component: 'Ici ce sera les charts' },
-    ];
-    const classes = styles();
+    const getComponentAccordeon = () => {
+        return <Accordeon resultsTotale={resultsTotale} matieres={matieres} />;
+    };
 
-    return <TabCustom onglets={tabArray}></TabCustom>;
+    const getOngletsWithData = () => {
+        let tmpDomainAverage: any = [];
+
+        for (let y = 0; y < matieres.length; y++) {
+            let domainAverageToPush = {
+                name: matieres[y].descriptionDefaultValueDomain,
+                average: matieres[y].mediumOfIdIdentifiant,
+            };
+            tmpDomainAverage.push(domainAverageToPush);
+        }
+
+        const orderAscDomainAverage = _.orderBy(
+            tmpDomainAverage,
+            ['average'],
+            ['asc']
+        );
+        const flopAverage = orderAscDomainAverage.slice(0, 3);
+
+        const orderDescDomainAverage = _.orderBy(
+            tmpDomainAverage,
+            ['average'],
+            ['desc']
+        );
+        const topAverage = orderDescDomainAverage.slice(0, 3);
+        const topFlopDomainAverage = [...flopAverage, ...topAverage];
+
+        return [
+            { name: 'Note', component: getComponentAccordeon },
+            // {
+            //     name: 'Graphique Camenbert',
+            //     component: <GraphsContainer dataAverage={tmpDomainAverage} />,
+            // },
+            {
+                name: 'Graphique Colonne',
+                component: (
+                    <ColumnChartContainer dataAverage={tmpDomainAverage} />
+                ),
+            },
+            {
+                name: 'Graphique Radar',
+                component: <RadartChart dataAverage={topFlopDomainAverage} />,
+            },
+        ];
+    };
+
+    return <TabCustom onglets={getOngletsWithData()} />;
 };
 
 export default Grades;

@@ -16,6 +16,8 @@ import SettingsIcon from '@material-ui/icons/Settings';
 import SpeakerNotesIcon from '@material-ui/icons/SpeakerNotes';
 import GradeIcon from '@material-ui/icons/Grade';
 import LinkIcon from '@material-ui/icons/Link';
+import QueryBuilderIcon from '@material-ui/icons/QueryBuilder';
+import PeopleIcon from '@material-ui/icons/People';
 
 const drawerWidth = 240;
 
@@ -26,7 +28,7 @@ const useStyles = makeStyles((theme: Theme) =>
             color: 'white',
             top: 'unset',
             position: 'unset',
-            boxShadow: 'inset 0px -2px 2px 0px rgba(0,0,0,0.15)',
+            boxShadow: 'inset 0px -2px 2px 0px rgba(0,0,0,0.15)'
         },
         root: {
             display: 'flex',
@@ -129,7 +131,7 @@ const Sidebar = () => {
                     </IconButton>
                 </div>
                 <List>
-                    <Link to="/grades" style={{ textDecoration: 'none' }}>
+                    <Link to="/planning" style={{ textDecoration: 'none' }}>
                         <ListItem
                             button
                             divider={true}
@@ -137,6 +139,28 @@ const Sidebar = () => {
                                 marginTop: '10px',
                                 paddingTop: '25px',
                                 paddingBottom: '25px',
+                                fontWeight : "bold"
+                            }}
+                        >
+                            <ListItemIcon>
+                                <QueryBuilderIcon
+                                    style={{ fontSize: 30, color: 'white' }}
+                                />
+                            </ListItemIcon>
+                            <ListItemText
+                                style={{ fontSize: 30, color: 'white' }}
+                                primary={'Planning'}
+                            />
+                        </ListItem>
+                    </Link>
+                    <Link to="/grades" style={{ textDecoration: 'none' }}>
+                        <ListItem
+                            button
+                            divider={true}
+                            style={{
+                                paddingTop: '25px',
+                                paddingBottom: '25px',
+                                fontWeight : "bold"
                             }}
                         >
                             <ListItemIcon>
@@ -150,6 +174,27 @@ const Sidebar = () => {
                             />
                         </ListItem>
                     </Link>
+                    <Link to="/trombinoscope" style={{ textDecoration: 'none' }}>
+                        <ListItem
+                            button
+                            divider={true}
+                            style={{
+                                paddingTop: '25px',
+                                paddingBottom: '25px',
+                                fontWeight : "bold"
+                            }}
+                        >
+                            <ListItemIcon>
+                                <PeopleIcon
+                                    style={{ fontSize: 30, color: 'white' }}
+                                />
+                            </ListItemIcon>
+                            <ListItemText
+                                style={{ fontSize: 30, color: 'white' }}
+                                primary={'Trombinoscope'}
+                            />
+                        </ListItem>
+                    </Link>
                     <Link to="/news" style={{ textDecoration: 'none' }}>
                         <ListItem
                             button
@@ -157,6 +202,7 @@ const Sidebar = () => {
                             style={{
                                 paddingTop: '25px',
                                 paddingBottom: '25px',
+                                fontWeight : "bold"
                             }}
                         >
                             <ListItemIcon>
@@ -166,51 +212,7 @@ const Sidebar = () => {
                             </ListItemIcon>
                             <ListItemText
                                 primary={'Actualités'}
-                                style={{ fontSize: 30, color: 'white' }}
-                            />
-                        </ListItem>
-                    </Link>
-                    <Link
-                        to="/external-links"
-                        style={{ textDecoration: 'none' }}
-                    >
-                        <ListItem button divider={true}>
-                            <ListItemIcon>
-                                <LinkIcon
-                                    style={{ fontSize: 30, color: 'white' }}
-                                />
-                            </ListItemIcon>
-                            <ListItemText
-                                primary={'Demande administrative'}
-                                style={{
-                                    fontSize: 30,
-                                    color: 'white',
-                                    whiteSpace: 'normal',
-                                }}
-                            />
-                        </ListItem>
-                    </Link>
-                    <Link
-                        to="/configuration"
-                        color="White"
-                        style={{ textDecoration: 'none' }}
-                    >
-                        <ListItem
-                            button
-                            divider={true}
-                            style={{
-                                paddingTop: '25px',
-                                paddingBottom: '25px',
-                            }}
-                        >
-                            <ListItemIcon>
-                                <SettingsIcon
-                                    style={{ fontSize: 30, color: 'white' }}
-                                />
-                            </ListItemIcon>
-                            <ListItemText
-                                primary={'Configuration'}
-                                style={{ fontSize: 30, color: 'white' }}
+                                style={{ fontSize: 30, color: 'white'}}
                             />
                         </ListItem>
                     </Link>

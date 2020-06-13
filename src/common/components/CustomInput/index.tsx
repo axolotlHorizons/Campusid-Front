@@ -55,12 +55,7 @@ export default function CustomInput(props: any) {
     let placeholder = props.placeholder;
     let hasIcon = props.hasIcon;
 
-    console.log('heeeeere', label, hasIcon);
-
-    let inputComputed = (value: any) => {
-        console.log('value');
-        console.log(value.target.value);
-    };
+    let inputComputed = (value: any) => {};
 
     //const classes = useStyles();
     return (
@@ -78,7 +73,7 @@ export default function CustomInput(props: any) {
                         color={color}
                         type={type}
                         placeholder={placeholder}
-                        onChange={value => inputComputed(value)} // TODO CHECK
+                        onChange={value => callBack(value)} // TODO CHECK
                         InputProps={{
                             startAdornment: (
                                 <InputAdornment position="start">

@@ -1,0 +1,47 @@
+[
+  {
+    "idBusinessEntity": 2,
+    "idSalutation": 2,
+    "idTypeBusinessEntity": 2,
+    "idSystemLevel": 4,
+    "idboard": "2020002",
+    "name": "redacted",
+    "firstName": "redacted",
+    "surName": "redacted",
+    "photoPath": "~/Uploads/idBoard/photoname.jpg",
+    "dateOfBirth": "2020-03-20T00:00:00",
+    "placeOfBirth": "Nice",
+    "nationality": "Française",
+    "countryOfBirth": "France",
+    "comments": null,
+    "cardTokenId": null,
+    "idSalutationNavigation": null,
+    "idSystemLevelNavigation": null,
+    "idTypeBusinessEntityNavigation": null,
+    "clientsDataModificationRequests": [],
+    "contactDetails": [
+      {
+        "idContactDetails": 73,
+        "idBusinessEntity": 2,
+        "address1": "redacted",
+        "address2": "redacted",
+        "postalCode": "redacted",
+        "city": "redacted",
+        "country": "France",
+        "dateStart": "2010-12-16T00:00:00",
+        "dateEnd": null
+      }
+    ],
+    "courses": [],
+    "events": [],
+    "informations": [],
+    "internshipConventionRequests": [],
+    "joinEntityClass": [],
+    "joinEntityMessage": [],
+    "logsAlteration": [],
+    "logsCompetences": [],
+    "logsPreEnrolment": [],
+    "marks": [],
+    "roles": []
+  }
+]
