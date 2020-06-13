@@ -1,4 +1,5 @@
 import { createUseStyles } from 'react-jss';
+import { transparent } from 'material-ui/styles/colors';
 
 export default createUseStyles({
     containerLogin: {
@@ -23,6 +24,15 @@ export default createUseStyles({
         '& .MuiFormControl-root': {
             width: '80%',
         },
+        '& .MuiIconButton-colorSecondary:hover' : {
+            backgroundColor: "#B70000"
+        },
+        '& .MuiCheckbox-colorSecondary.Mui-checked:hover' : {
+            backgroundColor: "#B70000"
+        },
+        '& .MuiCheckbox-colorSecondary.Mui-checked' : {
+         color: "white"
+        }
     },
     logoCampus: {
         width: "240px",

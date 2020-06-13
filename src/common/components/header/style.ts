@@ -1,4 +1,5 @@
 import { createUseStyles } from 'react-jss';
+import { transparent } from 'material-ui/styles/colors';
 
 export default createUseStyles({
     container: {
@@ -34,5 +35,20 @@ export default createUseStyles({
     userName: {
         display: 'inline-block',
         color: "white"
-    }
+    },
+    containerLogin: {
+
+    '& .MuiButtonBase-root': {
+        backgroundColor: 'transparent',
+        color: 'White',
+        borderRadius: '0px',
+        margin: 'auto',
+        padding:'20px',
+        width: '250px',
+        textAlign: 'center',
+        textTransform: 'uppercase',
+        alignSelf: 'center',
+    },
+},
+    
 });
