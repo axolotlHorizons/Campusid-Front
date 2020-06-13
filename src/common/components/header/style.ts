@@ -5,7 +5,7 @@ export default createUseStyles({
     container: {
     },
     toolbar: {
-        backgroundColor: '#B70000',
+        backgroundColor: "#2d3246",
         paddingLeft: "10px !important"
     },
     uselessIcons: {
@@ -19,7 +19,7 @@ export default createUseStyles({
     },
     logoCampus: {
       height: "50px",
-      width: "200px",
+      width: "237px",
       backgroundPosition: "top !important"
     },
     marginAuto: {

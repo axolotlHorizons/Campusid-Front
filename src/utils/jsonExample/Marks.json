@@ -1,0 +1,1262 @@
+[
+  {
+    "idDomain": 12,
+    "descriptionDefaultValueDomain": "LANGAGE HTML",
+    "isValidate": true,
+    "mediumOfIdIdentifiant": 10.0,
+    "mediumOfClass": 13.62,
+    "matters": [
+      {
+        "idMatter": 941,
+        "idClass": 27,
+        "reference": "HTML-WEBSTATIC-VERS4",
+        "descriptionDefaultValue": "HTML 4",
+        "ectscredits": 1.5,
+        "marks": [
+          {
+            "idMark": 3590,
+            "idMatter": 941,
+            "idClass": 27,
+            "idTypeEvaluation": 9,
+            "coefficient": 1.0,
+            "value": 6.0,
+            "mediumOfClasses": 13.0,
+            "comments": null,
+            "dateCreation": "2015-02-17T00:00:00",
+            "isJustifiedAbsence": false,
+            "idTypeEvaluationNavigation": {
+              "idTypeEvaluation": 9,
+              "typeDefaultValue": "Ecrit N°1"
+            }
+          }
+        ]
+      },
+      {
+        "idMatter": 940,
+        "idClass": 27,
+        "reference": "HTML-WEBSTATIC-VERS5",
+        "descriptionDefaultValue": "HTML 5",
+        "ectscredits": 1.5,
+        "marks": [
+          {
+            "idMark": 4363,
+            "idMatter": 940,
+            "idClass": 27,
+            "idTypeEvaluation": 9,
+            "coefficient": 1.0,
+            "value": 14.0,
+            "mediumOfClasses": 14.25,
+            "comments": null,
+            "dateCreation": "2015-04-21T00:00:00",
+            "isJustifiedAbsence": false,
+            "idTypeEvaluationNavigation": {
+              "idTypeEvaluation": 9,
+              "typeDefaultValue": "Ecrit N°1"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "idDomain": 18,
+    "descriptionDefaultValueDomain": "LANGAGE PYTHON",
+    "isValidate": false,
+    "mediumOfIdIdentifiant": 1.83,
+    "mediumOfClass": 3.93,
+    "matters": [
+      {
+        "idMatter": 980,
+        "idClass": 27,
+        "reference": "PYTHON-BASE",
+        "descriptionDefaultValue": "Les bases du langage Python",
+        "ectscredits": 0.33,
+        "marks": [
+          {
+            "idMark": 3592,
+            "idMatter": 980,
+            "idClass": 27,
+            "idTypeEvaluation": 9,
+            "coefficient": 1.0,
+            "value": 1.0,
+            "mediumOfClasses": 4.55,
+            "comments": null,
+            "dateCreation": "2014-12-17T00:00:00",
+            "isJustifiedAbsence": false,
+            "idTypeEvaluationNavigation": {
+              "idTypeEvaluation": 9,
+              "typeDefaultValue": "Ecrit N°1"
+            }
+          }
+        ]
+      },
+      {
+        "idMatter": 982,
+        "idClass": 27,
+        "reference": "PYTHON-FICPLAT",
+        "descriptionDefaultValue": "La gestion des fichiers « plats » en langage Python",
+        "ectscredits": 0.33,
+        "marks": [
+          {
+            "idMark": 4743,
+            "idMatter": 982,
+            "idClass": 27,
+            "idTypeEvaluation": 9,
+            "coefficient": 1.0,
+            "value": 0.0,
+            "mediumOfClasses": 2.75,
+            "comments": null,
+            "dateCreation": "2015-04-22T00:00:00",
+            "isJustifiedAbsence": false,
+            "idTypeEvaluationNavigation": {
+              "idTypeEvaluation": 9,
+              "typeDefaultValue": "Ecrit N°1"
+            }
+          }
+        ]
+      },
+      {
+        "idMatter": 981,
+        "idClass": 27,
+        "reference": "PYTHON-STR",
+        "descriptionDefaultValue": "Les structures de données complexes en langage Python (tableaux associatifs)",
+        "ectscredits": 0.34,
+        "marks": [
+          {
+            "idMark": 6552,
+            "idMatter": 981,
+            "idClass": 27,
+            "idTypeEvaluation": 9,
+            "coefficient": 1.0,
+            "value": 4.5,
+            "mediumOfClasses": 4.5,
+            "comments": null,
+            "dateCreation": "2015-06-24T00:00:00",
+            "isJustifiedAbsence": false,
+            "idTypeEvaluationNavigation": {
+              "idTypeEvaluation": 9,
+              "typeDefaultValue": "Ecrit N°1"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "idDomain": 20,
+    "descriptionDefaultValueDomain": "SCIENCES APPLIQUEES",
+    "isValidate": false,
+    "mediumOfIdIdentifiant": 8.8,
+    "mediumOfClass": 10.9,
+    "matters": [
+      {
+        "idMatter": 905,
+        "idClass": 27,
+        "reference": "SC-BASE",
+        "descriptionDefaultValue": "Langage ensemblistes, calcul booléen, proposition et prédicats",
+        "ectscredits": 1.5,
+        "marks": [
+          {
+            "idMark": 3594,
+            "idMatter": 905,
+            "idClass": 27,
+            "idTypeEvaluation": 9,
+            "coefficient": 1.0,
+            "value": 10.0,
+            "mediumOfClasses": 11.5,
+            "comments": null,
+            "dateCreation": "2014-12-15T00:00:00",
+            "isJustifiedAbsence": false,
+            "idTypeEvaluationNavigation": {
+              "idTypeEvaluation": 9,
+              "typeDefaultValue": "Ecrit N°1"
+            }
+          }
+        ]
+      },
+      {
+        "idMatter": 904,
+        "idClass": 27,
+        "reference": "SC-INTRO",
+        "descriptionDefaultValue": "L'arithmétique binaire",
+        "ectscredits": 1.5,
+        "marks": [
+          {
+            "idMark": 3596,
+            "idMatter": 904,
+            "idClass": 27,
+            "idTypeEvaluation": 9,
+            "coefficient": 1.0,
+            "value": 13.0,
+            "mediumOfClasses": 14.0,
+            "comments": null,
+            "dateCreation": "2015-02-16T00:00:00",
+            "isJustifiedAbsence": false,
+            "idTypeEvaluationNavigation": {
+              "idTypeEvaluation": 9,
+              "typeDefaultValue": "Ecrit N°1"
+            }
+          }
+        ]
+      },
+      {
+        "idMatter": 906,
+        "idClass": 27,
+        "reference": "SC-SIMUL-SUITE",
+        "descriptionDefaultValue": "Les outils mathématiques pour la simulation – Les suites numériques",
+        "ectscredits": 1.5,
+        "marks": [
+          {
+            "idMark": 4355,
+            "idMatter": 906,
+            "idClass": 27,
+            "idTypeEvaluation": 9,
+            "coefficient": 1.0,
+            "value": 7.5,
+            "mediumOfClasses": 6.5,
+            "comments": null,
+            "dateCreation": "2015-04-20T00:00:00",
+            "isJustifiedAbsence": false,
+            "idTypeEvaluationNavigation": {
+              "idTypeEvaluation": 9,
+              "typeDefaultValue": "Ecrit N°1"
+            }
+          }
+        ]
+      },
+      {
+        "idMatter": 907,
+        "idClass": 27,
+        "reference": "SC-SIMUL-MAT",
+        "descriptionDefaultValue": "Les outils mathématiques pour la simulation – Les matrices",
+        "ectscredits": 1.5,
+        "marks": [
+          {
+            "idMark": 4357,
+            "idMatter": 907,
+            "idClass": 27,
+            "idTypeEvaluation": 9,
+            "coefficient": 1.0,
+            "value": 1.5,
+            "mediumOfClasses": 8.5,
+            "comments": null,
+            "dateCreation": "2015-04-20T00:00:00",
+            "isJustifiedAbsence": false,
+            "idTypeEvaluationNavigation": {
+              "idTypeEvaluation": 9,
+              "typeDefaultValue": "Ecrit N°1"
+            }
+          }
+        ]
+      },
+      {
+        "idMatter": 908,
+        "idClass": 27,
+        "reference": "SC-SIMUL-DERINT",
+        "descriptionDefaultValue": "Les outils mathématiques pour la simulation – Les dérivées et les intégrales",
+        "ectscredits": 1.5,
+        "marks": [
+          {
+            "idMark": 4576,
+            "idMatter": 908,
+            "idClass": 27,
+            "idTypeEvaluation": 9,
+            "coefficient": 1.0,
+            "value": 12.0,
+            "mediumOfClasses": 14.0,
+            "comments": null,
+            "dateCreation": "2015-06-22T00:00:00",
+            "isJustifiedAbsence": false,
+            "idTypeEvaluationNavigation": {
+              "idTypeEvaluation": 9,
+              "typeDefaultValue": "Ecrit N°1"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "idDomain": 22,
+    "descriptionDefaultValueDomain": "LANGAGE SQL",
+    "isValidate": false,
+    "mediumOfIdIdentifiant": 4.0,
+    "mediumOfClass": 7.75,
+    "matters": [
+      {
+        "idMatter": 946,
+        "idClass": 27,
+        "reference": "SQL-BDDR-DEFIN",
+        "descriptionDefaultValue": "SQL – Le langage de définition des données (CREATE, DROP)",
+        "ectscredits": 1.0,
+        "marks": [
+          {
+            "idMark": 3598,
+            "idMatter": 946,
+            "idClass": 27,
+            "idTypeEvaluation": 9,
+            "coefficient": 1.0,
+            "value": 1.5,
+            "mediumOfClasses": 5.75,
+            "comments": null,
+            "dateCreation": "2015-06-22T00:00:00",
+            "isJustifiedAbsence": false,
+            "idTypeEvaluationNavigation": {
+              "idTypeEvaluation": 9,
+              "typeDefaultValue": "Ecrit N°1"
+            }
+          }
+        ]
+      },
+      {
+        "idMatter": 947,
+        "idClass": 27,
+        "reference": "SQL-BDDR-INTERROG",
+        "descriptionDefaultValue": "SQL – Le langage d'interrogation des données (SELECT, JOIN, ORDER, …)",
+        "ectscredits": 2.0,
+        "marks": [
+          {
+            "idMark": 4841,
+            "idMatter": 947,
+            "idClass": 27,
+            "idTypeEvaluation": 9,
+            "coefficient": 1.0,
+            "value": 6.5,
+            "mediumOfClasses": 9.75,
+            "comments": null,
+            "dateCreation": "2015-02-17T00:00:00",
+            "isJustifiedAbsence": false,
+            "idTypeEvaluationNavigation": {
+              "idTypeEvaluation": 9,
+              "typeDefaultValue": "Ecrit N°1"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "idDomain": 14,
+    "descriptionDefaultValueDomain": "SYSTÈME D'EXPLOITATION LINUX",
+    "isValidate": false,
+    "mediumOfIdIdentifiant": 9.5,
+    "mediumOfClass": 10.0,
+    "matters": [
+      {
+        "idMatter": 919,
+        "idClass": 27,
+        "reference": "LINUX-INTRO",
+        "descriptionDefaultValue": "La présentation de Linux",
+        "ectscredits": 1.0,
+        "marks": [
+          {
+            "idMark": 3600,
+            "idMatter": 919,
+            "idClass": 27,
+            "idTypeEvaluation": 4,
+            "coefficient": 1.0,
+            "value": 10.0,
+            "mediumOfClasses": 8.5,
+            "comments": null,
+            "dateCreation": "2014-12-16T00:00:00",
+            "isJustifiedAbsence": false,
+            "idTypeEvaluationNavigation": {
+              "idTypeEvaluation": 4,
+              "typeDefaultValue": "TP N°1"
+            }
+          }
+        ]
+      },
+      {
+        "idMatter": 913,
+        "idClass": 27,
+        "reference": "LINUX-WEBSTATIC",
+        "descriptionDefaultValue": "Installation d'un serveur Apache",
+        "ectscredits": 1.0,
+        "marks": [
+          {
+            "idMark": 3602,
+            "idMatter": 913,
+            "idClass": 27,
+            "idTypeEvaluation": 9,
+            "coefficient": 1.0,
+            "value": 9.0,
+            "mediumOfClasses": 11.5,
+            "comments": null,
+            "dateCreation": "2015-02-16T00:00:00",
+            "isJustifiedAbsence": false,
+            "idTypeEvaluationNavigation": {
+              "idTypeEvaluation": 9,
+              "typeDefaultValue": "Ecrit N°1"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "idDomain": 24,
+    "descriptionDefaultValueDomain": "SYSTÈME D'EXPLOITATION WINDOWS",
+    "isValidate": true,
+    "mediumOfIdIdentifiant": 13.0,
+    "mediumOfClass": 11.0,
+    "matters": [
+      {
+        "idMatter": 912,
+        "idClass": 27,
+        "reference": "WIN-WEBSTATIC",
+        "descriptionDefaultValue": "Installation d'un serveur IIS",
+        "ectscredits": 1.0,
+        "marks": [
+          {
+            "idMark": 3702,
+            "idMatter": 912,
+            "idClass": 27,
+            "idTypeEvaluation": 9,
+            "coefficient": 1.0,
+            "value": 13.0,
+            "mediumOfClasses": 11.0,
+            "comments": null,
+            "dateCreation": "2015-02-16T00:00:00",
+            "isJustifiedAbsence": false,
+            "idTypeEvaluationNavigation": {
+              "idTypeEvaluation": 9,
+              "typeDefaultValue": "Ecrit N°1"
+            }
+          }
+        ]
+      },
+      {
+        "idMatter": 918,
+        "idClass": 27,
+        "reference": "WIN-INTRO",
+        "descriptionDefaultValue": "La présentation de Windows",
+        "ectscredits": 1.0,
+        "marks": [
+          {
+            "idMark": 4826,
+            "idMatter": 918,
+            "idClass": 27,
+            "idTypeEvaluation": 9,
+            "coefficient": 1.0,
+            "value": 13.0,
+            "mediumOfClasses": 11.0,
+            "comments": null,
+            "dateCreation": "2015-02-16T00:00:00",
+            "isJustifiedAbsence": false,
+            "idTypeEvaluationNavigation": {
+              "idTypeEvaluation": 9,
+              "typeDefaultValue": "Ecrit N°1"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "idDomain": 19,
+    "descriptionDefaultValueDomain": "RESEAUX",
+    "isValidate": false,
+    "mediumOfIdIdentifiant": 5.5,
+    "mediumOfClass": 7.75,
+    "matters": [
+      {
+        "idMatter": 920,
+        "idClass": 27,
+        "reference": "RES-INTRO",
+        "descriptionDefaultValue": "L'introduction aux réseaux",
+        "ectscredits": 1.0,
+        "marks": [
+          {
+            "idMark": 4359,
+            "idMatter": 920,
+            "idClass": 27,
+            "idTypeEvaluation": 9,
+            "coefficient": 1.0,
+            "value": 3.0,
+            "mediumOfClasses": 5.5,
+            "comments": null,
+            "dateCreation": "2015-04-20T00:00:00",
+            "isJustifiedAbsence": false,
+            "idTypeEvaluationNavigation": {
+              "idTypeEvaluation": 9,
+              "typeDefaultValue": "Ecrit N°1"
+            }
+          }
+        ]
+      },
+      {
+        "idMatter": 921,
+        "idClass": 27,
+        "reference": "RES-PROTECT",
+        "descriptionDefaultValue": "La protection des réseaux (Firewall, VPN...)",
+        "ectscredits": 1.0,
+        "marks": [
+          {
+            "idMark": 4590,
+            "idMatter": 921,
+            "idClass": 27,
+            "idTypeEvaluation": 9,
+            "coefficient": 1.0,
+            "value": 8.0,
+            "mediumOfClasses": 10.0,
+            "comments": null,
+            "dateCreation": "2015-06-23T00:00:00",
+            "isJustifiedAbsence": false,
+            "idTypeEvaluationNavigation": {
+              "idTypeEvaluation": 9,
+              "typeDefaultValue": "Ecrit N°1"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "idDomain": 16,
+    "descriptionDefaultValueDomain": "LANGAGE PHP",
+    "isValidate": false,
+    "mediumOfIdIdentifiant": 6.25,
+    "mediumOfClass": 9.88,
+    "matters": [
+      {
+        "idMatter": 935,
+        "idClass": 27,
+        "reference": "PHP-BASE",
+        "descriptionDefaultValue": "Les bases du langage PHP",
+        "ectscredits": 2.0,
+        "marks": [
+          {
+            "idMark": 4361,
+            "idMatter": 935,
+            "idClass": 27,
+            "idTypeEvaluation": 9,
+            "coefficient": 1.0,
+            "value": 11.0,
+            "mediumOfClasses": 14.0,
+            "comments": null,
+            "dateCreation": "2015-04-21T00:00:00",
+            "isJustifiedAbsence": false,
+            "idTypeEvaluationNavigation": {
+              "idTypeEvaluation": 9,
+              "typeDefaultValue": "Ecrit N°1"
+            }
+          }
+        ]
+      },
+      {
+        "idMatter": 938,
+        "idClass": 27,
+        "reference": "PHP-WEBDYNAMIC",
+        "descriptionDefaultValue": "La création d'un site web dynamique en langage PHP",
+        "ectscredits": 2.0,
+        "marks": [
+          {
+            "idMark": 4810,
+            "idMatter": 938,
+            "idClass": 27,
+            "idTypeEvaluation": 9,
+            "coefficient": 1.0,
+            "value": 1.5,
+            "mediumOfClasses": 5.75,
+            "comments": null,
+            "dateCreation": "2015-06-22T00:00:00",
+            "isJustifiedAbsence": false,
+            "idTypeEvaluationNavigation": {
+              "idTypeEvaluation": 9,
+              "typeDefaultValue": "Ecrit N°1"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "idDomain": 10,
+    "descriptionDefaultValueDomain": "ECONOMIE",
+    "isValidate": true,
+    "mediumOfIdIdentifiant": 13.62,
+    "mediumOfClass": 15.44,
+    "matters": [
+      {
+        "idMatter": 965,
+        "idClass": 27,
+        "reference": "ECO-SECTINFO-3",
+        "descriptionDefaultValue": "Économie - Analyse dynamique du secteur informatique - Partie 1",
+        "ectscredits": 1.0,
+        "marks": [
+          {
+            "idMark": 4365,
+            "idMatter": 965,
+            "idClass": 27,
+            "idTypeEvaluation": 9,
+            "coefficient": 1.0,
+            "value": 9.25,
+            "mediumOfClasses": 12.62,
+            "comments": null,
+            "dateCreation": "2015-04-21T00:00:00",
+            "isJustifiedAbsence": false,
+            "idTypeEvaluationNavigation": {
+              "idTypeEvaluation": 9,
+              "typeDefaultValue": "Ecrit N°1"
+            }
+          }
+        ]
+      },
+      {
+        "idMatter": 963,
+        "idClass": 27,
+        "reference": "ECO-SECTINFO-1",
+        "descriptionDefaultValue": "Analyse structurelle du secteur informatique - Partie 1",
+        "ectscredits": 1.5,
+        "marks": [
+          {
+            "idMark": 3588,
+            "idMatter": 963,
+            "idClass": 27,
+            "idTypeEvaluation": 9,
+            "coefficient": 1.0,
+            "value": 18.0,
+            "mediumOfClasses": 18.25,
+            "comments": null,
+            "dateCreation": "2014-12-16T00:00:00",
+            "isJustifiedAbsence": false,
+            "idTypeEvaluationNavigation": {
+              "idTypeEvaluation": 9,
+              "typeDefaultValue": "Ecrit N°1"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "idDomain": 9,
+    "descriptionDefaultValueDomain": "DROIT",
+    "isValidate": true,
+    "mediumOfIdIdentifiant": 13.75,
+    "mediumOfClass": 15.0,
+    "matters": [
+      {
+        "idMatter": 967,
+        "idClass": 27,
+        "reference": "DRT-RELCLT-2",
+        "descriptionDefaultValue": "L’environnement juridique de la production et de la fourniture de services - Partie 2",
+        "ectscredits": 1.0,
+        "marks": [
+          {
+            "idMark": 4604,
+            "idMatter": 967,
+            "idClass": 27,
+            "idTypeEvaluation": 9,
+            "coefficient": 1.0,
+            "value": 13.5,
+            "mediumOfClasses": 14.75,
+            "comments": null,
+            "dateCreation": "2015-06-22T00:00:00",
+            "isJustifiedAbsence": false,
+            "idTypeEvaluationNavigation": {
+              "idTypeEvaluation": 9,
+              "typeDefaultValue": "Ecrit N°1"
+            }
+          }
+        ]
+      },
+      {
+        "idMatter": 968,
+        "idClass": 27,
+        "reference": "DRT-RELCLT-1",
+        "descriptionDefaultValue": "L’environnement juridique de la production et de la fourniture de services - Partie 1",
+        "ectscredits": 1.5,
+        "marks": [
+          {
+            "idMark": 3586,
+            "idMatter": 968,
+            "idClass": 27,
+            "idTypeEvaluation": 9,
+            "coefficient": 1.0,
+            "value": 14.0,
+            "mediumOfClasses": 15.25,
+            "comments": null,
+            "dateCreation": "2015-02-16T00:00:00",
+            "isJustifiedAbsence": false,
+            "idTypeEvaluationNavigation": {
+              "idTypeEvaluation": 9,
+              "typeDefaultValue": "Ecrit N°1"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "idDomain": 6,
+    "descriptionDefaultValueDomain": "LANGAGE C",
+    "isValidate": false,
+    "mediumOfIdIdentifiant": 8.1,
+    "mediumOfClass": 12.0,
+    "matters": [
+      {
+        "idMatter": 934,
+        "idClass": 27,
+        "reference": "C-FICPLAT",
+        "descriptionDefaultValue": "La gestion des fichiers « plats » en langage C",
+        "ectscredits": 0.5,
+        "marks": [
+          {
+            "idMark": 4661,
+            "idMatter": 934,
+            "idClass": 27,
+            "idTypeEvaluation": 9,
+            "coefficient": 1.0,
+            "value": 4.0,
+            "mediumOfClasses": 7.0,
+            "comments": null,
+            "dateCreation": "2015-06-23T00:00:00",
+            "isJustifiedAbsence": false,
+            "idTypeEvaluationNavigation": {
+              "idTypeEvaluation": 9,
+              "typeDefaultValue": "Ecrit N°1"
+            }
+          }
+        ]
+      },
+      {
+        "idMatter": 932,
+        "idClass": 27,
+        "reference": "C-STR",
+        "descriptionDefaultValue": "Les structures de données complexes en langage C (implémentation)",
+        "ectscredits": 0.5,
+        "marks": [
+          {
+            "idMark": 4669,
+            "idMatter": 932,
+            "idClass": 27,
+            "idTypeEvaluation": 9,
+            "coefficient": 1.0,
+            "value": 0.0,
+            "mediumOfClasses": 10.0,
+            "comments": null,
+            "dateCreation": "2015-06-23T00:00:00",
+            "isJustifiedAbsence": false,
+            "idTypeEvaluationNavigation": {
+              "idTypeEvaluation": 9,
+              "typeDefaultValue": "Ecrit N°1"
+            }
+          }
+        ]
+      },
+      {
+        "idMatter": 933,
+        "idClass": 27,
+        "reference": "C-BDDR",
+        "descriptionDefaultValue": "La gestion des bases de données relationnelles en langage C",
+        "ectscredits": 1.0,
+        "marks": [
+          {
+            "idMark": 4677,
+            "idMatter": 933,
+            "idClass": 27,
+            "idTypeEvaluation": 9,
+            "coefficient": 1.0,
+            "value": 11.0,
+            "mediumOfClasses": 11.0,
+            "comments": null,
+            "dateCreation": "2015-06-23T00:00:00",
+            "isJustifiedAbsence": false,
+            "idTypeEvaluationNavigation": {
+              "idTypeEvaluation": 9,
+              "typeDefaultValue": "Ecrit N°1"
+            }
+          }
+        ]
+      },
+      {
+        "idMatter": 927,
+        "idClass": 27,
+        "reference": "C-IHM",
+        "descriptionDefaultValue": "La création d'IHM avec GTK en langage C",
+        "ectscredits": 0.5,
+        "marks": [
+          {
+            "idMark": 4685,
+            "idMatter": 927,
+            "idClass": 27,
+            "idTypeEvaluation": 9,
+            "coefficient": 1.0,
+            "value": 0.0,
+            "mediumOfClasses": 7.0,
+            "comments": null,
+            "dateCreation": "2015-06-23T00:00:00",
+            "isJustifiedAbsence": false,
+            "idTypeEvaluationNavigation": {
+              "idTypeEvaluation": 9,
+              "typeDefaultValue": "Ecrit N°1"
+            }
+          }
+        ]
+      },
+      {
+        "idMatter": 926,
+        "idClass": 27,
+        "reference": "C-DEVENV-MAKEFILE",
+        "descriptionDefaultValue": "La création d'application en langage C en utilisant les makefiles et gdb",
+        "ectscredits": 0.45,
+        "marks": [
+          {
+            "idMark": 5460,
+            "idMatter": 926,
+            "idClass": 27,
+            "idTypeEvaluation": 9,
+            "coefficient": 1.0,
+            "value": 4.0,
+            "mediumOfClasses": 8.5,
+            "comments": null,
+            "dateCreation": "2015-04-21T00:00:00",
+            "isJustifiedAbsence": false,
+            "idTypeEvaluationNavigation": {
+              "idTypeEvaluation": 9,
+              "typeDefaultValue": "Ecrit N°1"
+            }
+          }
+        ]
+      },
+      {
+        "idMatter": 925,
+        "idClass": 27,
+        "reference": "C-DOC",
+        "descriptionDefaultValue": "La documentation du code C avec doxygen",
+        "ectscredits": 0.45,
+        "marks": [
+          {
+            "idMark": 5461,
+            "idMatter": 925,
+            "idClass": 27,
+            "idTypeEvaluation": 9,
+            "coefficient": 1.0,
+            "value": 20.0,
+            "mediumOfClasses": 20.0,
+            "comments": "rattrapage du 20/02/2017",
+            "dateCreation": "2015-04-21T00:00:00",
+            "isJustifiedAbsence": false,
+            "idTypeEvaluationNavigation": {
+              "idTypeEvaluation": 9,
+              "typeDefaultValue": "Ecrit N°1"
+            }
+          }
+        ]
+      },
+      {
+        "idMatter": 930,
+        "idClass": 27,
+        "reference": "C-BASE",
+        "descriptionDefaultValue": "Les bases du langage C",
+        "ectscredits": 0.9,
+        "marks": [
+          {
+            "idMark": 3582,
+            "idMatter": 930,
+            "idClass": 27,
+            "idTypeEvaluation": 9,
+            "coefficient": 1.0,
+            "value": 14.0,
+            "mediumOfClasses": 13.5,
+            "comments": "rattrapage du 20/02/2017",
+            "dateCreation": "2015-02-17T00:00:00",
+            "isJustifiedAbsence": false,
+            "idTypeEvaluationNavigation": {
+              "idTypeEvaluation": 9,
+              "typeDefaultValue": "Ecrit N°1"
+            }
+          }
+        ]
+      },
+      {
+        "idMatter": 976,
+        "idClass": 27,
+        "reference": "C-SYNT2D",
+        "descriptionDefaultValue": "La synthèse d'images 2D avec OpenGL et GLFW en langage C",
+        "ectscredits": 0.5,
+        "marks": [
+          {
+            "idMark": 6550,
+            "idMatter": 976,
+            "idClass": 27,
+            "idTypeEvaluation": 9,
+            "coefficient": 1.0,
+            "value": 0.0,
+            "mediumOfClasses": 9.0,
+            "comments": null,
+            "dateCreation": "2015-06-24T00:00:00",
+            "isJustifiedAbsence": false,
+            "idTypeEvaluationNavigation": {
+              "idTypeEvaluation": 9,
+              "typeDefaultValue": "Ecrit N°1"
+            }
+          }
+        ]
+      },
+      {
+        "idMatter": 929,
+        "idClass": 27,
+        "reference": "C-SIMUL-MAT",
+        "descriptionDefaultValue": "La simulation numérique avec les matrices en langage C",
+        "ectscredits": 0.25,
+        "marks": [
+          {
+            "idMark": 6570,
+            "idMatter": 929,
+            "idClass": 27,
+            "idTypeEvaluation": 9,
+            "coefficient": 1.0,
+            "value": 8.0,
+            "mediumOfClasses": 14.0,
+            "comments": "rattrapages du 20/02/2017",
+            "dateCreation": "2015-04-20T00:00:00",
+            "isJustifiedAbsence": false,
+            "idTypeEvaluationNavigation": {
+              "idTypeEvaluation": 9,
+              "typeDefaultValue": "Ecrit N°1"
+            }
+          }
+        ]
+      },
+      {
+        "idMatter": 1890,
+        "idClass": 27,
+        "reference": "C-SIMUL SUITE",
+        "descriptionDefaultValue": "La simulation numérique avec les suites en langage C",
+        "ectscredits": 0.45,
+        "marks": [
+          {
+            "idMark": 6576,
+            "idMatter": 1890,
+            "idClass": 27,
+            "idTypeEvaluation": 9,
+            "coefficient": 1.0,
+            "value": 20.0,
+            "mediumOfClasses": 20.0,
+            "comments": "rattrapages du 20/02/2017",
+            "dateCreation": "2015-04-20T00:00:00",
+            "isJustifiedAbsence": false,
+            "idTypeEvaluationNavigation": {
+              "idTypeEvaluation": 9,
+              "typeDefaultValue": "Ecrit N°1"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "idDomain": 13,
+    "descriptionDefaultValueDomain": "LANGAGE JAVASCRIPT",
+    "isValidate": false,
+    "mediumOfIdIdentifiant": 2.0,
+    "mediumOfClass": 7.75,
+    "matters": [
+      {
+        "idMatter": 939,
+        "idClass": 27,
+        "reference": "JSCRIPT-BASE",
+        "descriptionDefaultValue": "Les bases du langage Javascript",
+        "ectscredits": 1.0,
+        "marks": [
+          {
+            "idMark": 4735,
+            "idMatter": 939,
+            "idClass": 27,
+            "idTypeEvaluation": 9,
+            "coefficient": 1.0,
+            "value": 2.0,
+            "mediumOfClasses": 7.75,
+            "comments": null,
+            "dateCreation": "2015-04-20T00:00:00",
+            "isJustifiedAbsence": false,
+            "idTypeEvaluationNavigation": {
+              "idTypeEvaluation": 9,
+              "typeDefaultValue": "Ecrit N°1"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "idDomain": 1,
+    "descriptionDefaultValueDomain": "ANGLAIS",
+    "isValidate": true,
+    "mediumOfIdIdentifiant": 13.83,
+    "mediumOfClass": 14.75,
+    "matters": [
+      {
+        "idMatter": 953,
+        "idClass": 27,
+        "reference": "ANG-SECTINFO-A-1",
+        "descriptionDefaultValue": "Anglais sur le thème de l'informatique - Partie 1 – Groupe A",
+        "ectscredits": 5.0,
+        "marks": [
+          {
+            "idMark": 4751,
+            "idMatter": 953,
+            "idClass": 27,
+            "idTypeEvaluation": 4,
+            "coefficient": 1.0,
+            "value": 10.0,
+            "mediumOfClasses": 11.5,
+            "comments": null,
+            "dateCreation": "2015-06-23T00:00:00",
+            "isJustifiedAbsence": false,
+            "idTypeEvaluationNavigation": {
+              "idTypeEvaluation": 4,
+              "typeDefaultValue": "TP N°1"
+            }
+          },
+          {
+            "idMark": 3575,
+            "idMatter": 953,
+            "idClass": 27,
+            "idTypeEvaluation": 2,
+            "coefficient": 1.0,
+            "value": 15.0,
+            "mediumOfClasses": 16.5,
+            "comments": null,
+            "dateCreation": "2015-02-16T00:00:00",
+            "isJustifiedAbsence": false,
+            "idTypeEvaluationNavigation": {
+              "idTypeEvaluation": 2,
+              "typeDefaultValue": "Ecrit N°2"
+            }
+          },
+          {
+            "idMark": 3574,
+            "idMatter": 953,
+            "idClass": 27,
+            "idTypeEvaluation": 9,
+            "coefficient": 1.0,
+            "value": 16.5,
+            "mediumOfClasses": 16.25,
+            "comments": null,
+            "dateCreation": "2014-12-15T00:00:00",
+            "isJustifiedAbsence": false,
+            "idTypeEvaluationNavigation": {
+              "idTypeEvaluation": 9,
+              "typeDefaultValue": "Ecrit N°1"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "idDomain": 7,
+    "descriptionDefaultValueDomain": "LANGAGE CSS",
+    "isValidate": false,
+    "mediumOfIdIdentifiant": 7.67,
+    "mediumOfClass": 11.33,
+    "matters": [
+      {
+        "idMatter": 942,
+        "idClass": 27,
+        "reference": "CSS-WEBSTATIC-2",
+        "descriptionDefaultValue": "CSS 2",
+        "ectscredits": 0.6,
+        "marks": [
+          {
+            "idMark": 4818,
+            "idMatter": 942,
+            "idClass": 27,
+            "idTypeEvaluation": 9,
+            "coefficient": 1.0,
+            "value": 8.5,
+            "mediumOfClasses": 10.5,
+            "comments": null,
+            "dateCreation": "2015-06-22T00:00:00",
+            "isJustifiedAbsence": false,
+            "idTypeEvaluationNavigation": {
+              "idTypeEvaluation": 9,
+              "typeDefaultValue": "Ecrit N°1"
+            }
+          }
+        ]
+      },
+      {
+        "idMatter": 943,
+        "idClass": 27,
+        "reference": "CSS-WEBSTATIC-3",
+        "descriptionDefaultValue": "CSS 3",
+        "ectscredits": 0.6,
+        "marks": [
+          {
+            "idMark": 4837,
+            "idMatter": 943,
+            "idClass": 27,
+            "idTypeEvaluation": 9,
+            "coefficient": 1.0,
+            "value": 8.5,
+            "mediumOfClasses": 10.5,
+            "comments": null,
+            "dateCreation": "2015-06-22T00:00:00",
+            "isJustifiedAbsence": false,
+            "idTypeEvaluationNavigation": {
+              "idTypeEvaluation": 9,
+              "typeDefaultValue": "Ecrit N°1"
+            }
+          }
+        ]
+      },
+      {
+        "idMatter": 944,
+        "idClass": 27,
+        "reference": "CSS-WEBSTATIC-1",
+        "descriptionDefaultValue": "CSS 1",
+        "ectscredits": 0.8,
+        "marks": [
+          {
+            "idMark": 3584,
+            "idMatter": 944,
+            "idClass": 27,
+            "idTypeEvaluation": 9,
+            "coefficient": 1.0,
+            "value": 6.0,
+            "mediumOfClasses": 13.0,
+            "comments": null,
+            "dateCreation": "2015-02-17T00:00:00",
+            "isJustifiedAbsence": false,
+            "idTypeEvaluationNavigation": {
+              "idTypeEvaluation": 9,
+              "typeDefaultValue": "Ecrit N°1"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "idDomain": 4,
+    "descriptionDefaultValueDomain": "ARCHITECTURE DES SYSTEMES D'INFORMATION",
+    "isValidate": false,
+    "mediumOfIdIdentifiant": 7.5,
+    "mediumOfClass": 8.75,
+    "matters": [
+      {
+        "idMatter": 973,
+        "idClass": 27,
+        "reference": "ARCHI-INTRO-ELEC",
+        "descriptionDefaultValue": "Du transistor au micro-processeur et à la mémoire",
+        "ectscredits": 1.0,
+        "marks": [
+          {
+            "idMark": 4833,
+            "idMatter": 973,
+            "idClass": 27,
+            "idTypeEvaluation": 9,
+            "coefficient": 1.0,
+            "value": 7.0,
+            "mediumOfClasses": 9.0,
+            "comments": null,
+            "dateCreation": "2015-04-22T00:00:00",
+            "isJustifiedAbsence": false,
+            "idTypeEvaluationNavigation": {
+              "idTypeEvaluation": 9,
+              "typeDefaultValue": "Ecrit N°1"
+            }
+          }
+        ]
+      },
+      {
+        "idMatter": 917,
+        "idClass": 27,
+        "reference": "ARCHI-INTRO-MACH",
+        "descriptionDefaultValue": "L'ordinateur et ses périphériques",
+        "ectscredits": 1.0,
+        "marks": [
+          {
+            "idMark": 3578,
+            "idMatter": 917,
+            "idClass": 27,
+            "idTypeEvaluation": 4,
+            "coefficient": 1.0,
+            "value": 8.0,
+            "mediumOfClasses": 8.5,
+            "comments": null,
+            "dateCreation": "2014-11-04T00:00:00",
+            "isJustifiedAbsence": false,
+            "idTypeEvaluationNavigation": {
+              "idTypeEvaluation": 4,
+              "typeDefaultValue": "TP N°1"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "idDomain": 8,
+    "descriptionDefaultValueDomain": "CULTURE ET SOCIETE",
+    "isValidate": true,
+    "mediumOfIdIdentifiant": 10.0,
+    "mediumOfClass": 11.6,
+    "matters": [
+      {
+        "idMatter": 983,
+        "idClass": 27,
+        "reference": "CULT-INTRO-1",
+        "descriptionDefaultValue": "Culture informatique – Partie 1 (calculateurs mécaniques et électromécaniques, et 3 premières génération)",
+        "ectscredits": 1.0,
+        "marks": [
+          {
+            "idMark": 4839,
+            "idMatter": 983,
+            "idClass": 27,
+            "idTypeEvaluation": 9,
+            "coefficient": 1.0,
+            "value": 10.0,
+            "mediumOfClasses": 11.6,
+            "comments": null,
+            "dateCreation": "2015-04-21T00:00:00",
+            "isJustifiedAbsence": false,
+            "idTypeEvaluationNavigation": {
+              "idTypeEvaluation": 9,
+              "typeDefaultValue": "Ecrit N°1"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "idDomain": 5,
+    "descriptionDefaultValueDomain": "LANGAGE ASSEMBLEUR POUR MICROPROCESSEUR INTEL X86",
+    "isValidate": false,
+    "mediumOfIdIdentifiant": 5.0,
+    "mediumOfClass": 7.0,
+    "matters": [
+      {
+        "idMatter": 977,
+        "idClass": 27,
+        "reference": "ASMX86-BASE",
+        "descriptionDefaultValue": "Les bases du langage assembleur x86",
+        "ectscredits": 1.0,
+        "marks": [
+          {
+            "idMark": 3580,
+            "idMatter": 977,
+            "idClass": 27,
+            "idTypeEvaluation": 9,
+            "coefficient": 1.0,
+            "value": 5.0,
+            "mediumOfClasses": 7.0,
+            "comments": null,
+            "dateCreation": "2014-12-17T00:00:00",
+            "isJustifiedAbsence": false,
+            "idTypeEvaluationNavigation": {
+              "idTypeEvaluation": 9,
+              "typeDefaultValue": "Ecrit N°1"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

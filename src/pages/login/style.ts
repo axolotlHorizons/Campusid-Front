@@ -2,8 +2,6 @@ import { createUseStyles } from 'react-jss';
 import { transparent } from 'material-ui/styles/colors';
 
 export default createUseStyles({
-    pageLogin: {},
-
     containerLogin: {
         width: '100%',
 
@@ -35,5 +33,11 @@ export default createUseStyles({
         '& .MuiCheckbox-colorSecondary.Mui-checked' : {
          color: "white"
         }
+    },
+    logoCampus: {
+        width: "240px",
+        height: "189px",
+        backgroundSize: "contain",
+        margin: "auto"
     },
 });
