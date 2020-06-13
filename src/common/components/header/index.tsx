@@ -15,22 +15,18 @@ import Avatar from 'common/components/Avatar';
 import AvatarPicker from 'common/components/AvatarPicker';
 import ButtonCustom from 'common/components/ButtonCustom';
 
-import { getUserData, getProfileImage } from 'common/state/selectors';
+import { useCurrentUser } from 'common/hooks';
+import { getProfileImage } from 'common/state/selectors';
 
 import styles from './style';
 
-type User = {
-    lastname: string;
-    firstname: string;
-    role: string;
-    avatar: { image: string | null };
-};
 const Header = () => {
     const classes = styles();
     const auth = !!localStorage.getItem('state');
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
     const open = Boolean(anchorEl);
-    const user: User = useSelector(getUserData);
+    const currentUser = useCurrentUser();
+
     const src = useSelector(getProfileImage);
 
     const handleMenu = (event: React.MouseEvent<HTMLElement>) => {
@@ -55,15 +51,15 @@ const Header = () => {
                         image={require('./campusIdLogo.png')}
                         title="Campus ID"
                     />
-                    {auth && user && (
+                    {auth && currentUser && (
                         <div className={classes.profileIcon}>
                             <Typography
                                 variant="h6"
                                 component="h6"
                                 className={classes.userName}
                             >
-                                {user
-                                    ? `${user.lastname} ${user.firstname}`
+                                {currentUser
+                                    ? `${currentUser.lastname} ${currentUser.firstname}`
                                     : 'Nom Prénom'}
                             </Typography>
                             <IconButton
@@ -73,7 +69,10 @@ const Header = () => {
                                 onClick={handleMenu}
                                 color="inherit"
                             >
-                                <Avatar src={src} nickname={user.firstname} />
+                                <Avatar
+                                    src={src}
+                                    nickname={currentUser?.firstname}
+                                />
                             </IconButton>
                             <Menu
                                 PaperProps={{
@@ -108,7 +107,7 @@ const Header = () => {
                                     <AvatarPicker>
                                         <Avatar
                                             src={src}
-                                            nickname={user.firstname}
+                                            nickname={currentUser.firstname}
                                             mode="large"
                                         />
                                     </AvatarPicker>
@@ -118,8 +117,8 @@ const Header = () => {
                                         component="h6"
                                         style={{ textAlign: 'center' }}
                                     >
-                                        {user
-                                            ? `${user.lastname} ${user.firstname}`
+                                        {currentUser
+                                            ? `${currentUser.lastname} ${currentUser.firstname}`
                                             : 'Nom Prénom'}
                                     </Typography>
                                 </MenuItem>

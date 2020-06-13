@@ -1,10 +1,11 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 import SimpleDialog from 'common/components/SimpleDialog';
 import Avatar from 'common/components/Avatar';
 
-import { getUserData } from 'common/state/selectors';
+import { useCurrentUser } from 'common/hooks';
+
 import { updateAvatar } from 'common/state/actions';
 
 import AvatarEditorDialogActions from '../AvatarEditorDialogActions';
@@ -29,15 +30,15 @@ const AvatarPreviewDialog = ({
 }: Props) => {
     const dispatch = useDispatch();
     const classes = styles();
-    const user = useSelector(getUserData);
+    const currentUser = useCurrentUser();
 
     const errorMessage =
-        user.avatar.avatarUploadError &&
+        currentUser?.avatar?.avatarUploadError &&
         'Une erreur vient de se produire, veuillez réessayer plus tard';
 
     const onSubmit = async () => {
         try {
-            dispatch(updateAvatar(null, user.id, onClose));
+            dispatch(updateAvatar(null, currentUser?.id, onClose));
         } catch (e) {
             console.log(e);
         }
@@ -51,7 +52,7 @@ const AvatarPreviewDialog = ({
             onSubmit={onSubmit}
             submitButtonDisabled={!!uploadedImage}
             submitButtonText="Sauvegarder"
-            isSubmitLoading={user.avatar.avatarUploading}
+            isSubmitLoading={currentUser?.avatar?.avatarUploading}
             showActionBar
             showHorizontalRule
             error={errorMessage}
@@ -61,7 +62,7 @@ const AvatarPreviewDialog = ({
                 <div className={classes.avatarPreviewContainer}>
                     <Avatar
                         src={uploadedImage || ''}
-                        nickname={user.firstname}
+                        nickname={currentUser.firstname}
                         mode="large"
                     />
                 </div>

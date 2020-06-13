@@ -1,30 +1,35 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import { getUserData, getIsAdmin } from 'common/state/selectors';
-
+import { useCurrentUser } from 'common/hooks';
 import Login from 'pages/login';
 import AdminLayout from 'pages/adminLayout';
 import Layout from 'pages/layout';
+import ErrorPage from 'pages/errorPage';
 
 const App: React.FC = () => {
-    const isLogged = !!useSelector(getUserData);
-    const isAdmin = !!useSelector(getIsAdmin);
+    const currentUser = useCurrentUser();
     return (
         <>
             <BrowserRouter>
                 <Switch>
-                    {!isLogged && (
-                        <Route path="/" exact>
-                            <Login />
-                        </Route>
+                    {!currentUser && (
+                        <Route path="/" exact render={() => <Login />} />
                     )}
 
-                    <Route path="/">
-                        {isAdmin && <AdminLayout />}
-                        {!isAdmin && <Layout />}
-                    </Route>
+                    <Route
+                        path="/"
+                        render={() => {
+                            if (!currentUser) {
+                                return <ErrorPage />;
+                            }
+                            return currentUser.role === 'admin' ? (
+                                <AdminLayout />
+                            ) : (
+                                <Layout />
+                            );
+                        }}
+                    />
                 </Switch>
             </BrowserRouter>
         </>

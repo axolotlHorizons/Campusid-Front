@@ -17,7 +17,7 @@ const Avatar = ({ src, nickname, mode = 'responsive' }: Props) => {
             classes={{ root: classnames(classes.avatar, classes[mode]) }}
             alt={nickname}
         >
-            {nickname.length > 1 && nickname[0].toUpperCase()}
+            {nickname && nickname.length > 1 && nickname[0].toUpperCase()}
         </MUIAvatar>
     );
 };

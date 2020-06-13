@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import Cropper from 'react-easy-crop';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { updateAvatar } from 'common/state/actions';
 import SimpleDialog from 'common/components/SimpleDialog';
-import { getUserData } from 'common/state/selectors';
+
+import { useCurrentUser } from 'common/hooks';
 
 import AvatarEditorDialogActions from '../AvatarEditorDialogActions';
 import getCroppedImg from './cropImage';
@@ -94,9 +95,8 @@ const AvatarEditorDialog = ({
     setFileDataHandler,
     deleteHandler,
 }: Props) => {
-    const classes = styles();
     const dispatch = useDispatch();
-    const user = useSelector(getUserData);
+    const currentUser = useCurrentUser();
 
     const [cropperInfos, setCropperInfos] = useState<{
         croppedArea: CroppedArea;
@@ -104,7 +104,7 @@ const AvatarEditorDialog = ({
     } | null>(null);
 
     const errorMessage =
-        user.avatar.avatarUploadError &&
+        currentUser?.avatar?.avatarUploadError &&
         'Une erreur vient de se produire, veuillez réessayer plus tard';
 
     const onSubmit = async () => {
@@ -115,7 +115,7 @@ const AvatarEditorDialog = ({
                 cropperInfos?.rotation
             );
             try {
-                dispatch(updateAvatar(croppedImage, user.id, onClose));
+                dispatch(updateAvatar(croppedImage, currentUser.id, onClose));
             } catch (e) {
                 console.log(e);
             }

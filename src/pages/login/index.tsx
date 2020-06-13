@@ -13,11 +13,16 @@ import {
     CardMedia,
 } from '@material-ui/core';
 
-import { userLoginSuccess, userLoginError } from 'common/state/actions';
+import { allowAuthentication, fetchUser } from 'api';
+
+import {
+    userLogin,
+    userLoginSuccess,
+    userLoginError,
+} from 'common/state/actions';
 
 import CustomInput from 'common/components/CustomInput';
 import ButtonCustom from 'common/components/ButtonCustom';
-import { allowAuthentication, fetchUser } from 'api';
 
 import styles from './style';
 
@@ -37,31 +42,34 @@ export default function FormDialog() {
         // setOpen(false);
     };
 
-    const callBackButton = () => {
+    const callBackButton = async () => {
         if (email && password) {
-            allowAuthentication(email, password)
-                .then(response => fetchUser(response))
-                .then(res => {
-                    dispatch(
-                        userLoginSuccess({
-                            lastname: res[0].lastname,
-                            firstname: res[0].firstname,
-                            avatar: res[0].avatar,
-                            role: res[0].role,
-                            id: res[0].id,
-                        })
-                    );
-                })
-                .then(res => {
-                    if (res[0].role === 'admin') {
-                        window.location.assign('/admin');
-                    } else {
-                        window.location.assign(`/planning`);
-                    }
-                })
-                .catch(err => {
-                    dispatch(userLoginError);
-                });
+            try {
+                await allowAuthentication(email, password)
+                    .then(response => fetchUser(response))
+                    .then(res => {
+                        dispatch(
+                            userLogin({
+                                lastname: res[0].lastname,
+                                firstname: res[0].firstname,
+                                avatar: res[0].avatar,
+                                role: res[0].role,
+                                id: res[0].id,
+                                email: res[0].email,
+                            })
+                        );
+                    })
+                    .then(res => {
+                        dispatch(userLoginSuccess);
+                        if (res[0].role === 'admin') {
+                            window.location.assign('/admin');
+                        } else {
+                            window.location.assign(`/planning`);
+                        }
+                    });
+            } catch (err) {
+                dispatch(userLoginError);
+            }
         }
     };
 
