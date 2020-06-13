@@ -12,7 +12,6 @@ import {
     MenuItem,
     Menu,
     Typography,
-    Avatar,
     Dialog,
     CardMedia,
 } from '@material-ui/core';
@@ -220,24 +219,13 @@ const Header = () => {
                                     }}
                                     disableGutters
                                 >
-                                    <Avatar
-                                        style={{
-                                            margin: 'auto',
-                                            height: '75px',
-                                            width: '75px',
-                                        }}
-                                        alt="Nom Prénom"                                        
-                                    >
-                                        {user?.avatar ? (
-                                            <img
-                                                width="100%"
-                                                src={user.avatar}
-                                                alt="avatar"
-                                            />
-                                        ) : (
-                                            'NP'
-                                        )}
-                                    </Avatar>
+                                    <AvatarPicker>
+                                        <Avatar
+                                            src={src}
+                                            nickname={currentUser.firstname}
+                                            mode="large"
+                                        />
+                                    </AvatarPicker>
 
                                     <Typography
                                         variant="h6"
@@ -247,11 +235,6 @@ const Header = () => {
                                         {currentUser
                                             ? `${currentUser.lastname} ${currentUser.firstname}`
                                             : 'Nom Prénom'}
-                                            <br></br>
-                                            {user
-                                            ? `${user.idboard}`
-                                            : 'N°IDBOARD'}
-                                            
                                     </Typography>
                                     
                                 </MenuItem>
