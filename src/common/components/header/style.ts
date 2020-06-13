@@ -4,9 +4,8 @@ export default createUseStyles({
     container: {
     },
     toolbar: {
-        backgroundColor: "#EDEDED",
-        paddingLeft: "10px !important",
-        borderBottom: "1px solid #B70000"
+        backgroundColor: "#2d3246",
+        paddingLeft: "10px !important"
     },
     uselessIcons: {
         width: "100%",
@@ -30,10 +29,10 @@ export default createUseStyles({
     profileIcon: {
         position: 'absolute',
         right: 0,
-        color: "black"
+        color: "white"
     },
     userName: {
         display: 'inline-block',
-        color: "black"
+        color: "white"
     }
 });

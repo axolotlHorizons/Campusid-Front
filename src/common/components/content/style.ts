@@ -2,9 +2,11 @@ import { createUseStyles } from 'react-jss';
 
 export default createUseStyles({
     container: {
-        backgroundColor: '#C2C2C2',
-        minHeight: 1080,
+        backgroundColor: '#999999',
         width: '100%',
-        padding: 32,
+
     },
+    containerContent: {
+        padding: 32
+    }
 });
