@@ -32,6 +32,18 @@ export const imageCard = () => {
                 hasButton={boolean('With button ?', true)}
                 buttonText={text('Button text', 'Click here')}
                 altImage={text('Alt image ', 'Scoobidooooo')}
+                textCompany={text('company text', '')}
+                typeDeMission={text('company text', '')}
+                duree={text('duree text', '')}
+                start={text('date start text', '')}
+                end={text('date end text', '')}
+                contact={text('contact text', '')}
+                phone={text('phone text', '')}
+                mail={text('mail text', '')}
+                adress={text('adress text', '')}
+                postal={text('postal text', '')}
+                ville={text('ville text', '')}
+                pays={text('pays text', '')}
             />
         </div>
     );
